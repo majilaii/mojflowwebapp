@@ -91,18 +91,18 @@
 
     body.mf-modal-open{overflow:hidden}
 
-    /* ---------- Navbar -20% (proportionally shrink padding, logo width and nav text) ---------- */
+    /* ---------- Navbar (slimmer, but keep original nav text size to preserve hover-ghost clipping) ---------- */
     .c-header{padding:52.8px 8vw !important}
     @media screen and (max-width:767px){.c-header{padding:24px 6vw !important}}
     .c-headerLogo,
-    .c-headerLogo_img{width:5.71vw !important;min-width:80px !important;max-width:80px !important}
-    .c-headerNav_items{margin-right:28px !important}
-    .c-headerNav_a,.headerNav_inner{font-size:.8em !important}
-    .c-hamburgerBtn{transform:scale(.8);transform-origin:right center}
+    .c-headerLogo_img{width:6.4vw !important;min-width:96px !important;max-width:110px !important}
+    .c-headerNav_items{margin-right:30px !important}
+    .c-headerNav_a{overflow:hidden}
+    .c-hamburgerBtn{transform:scale(.85);transform-origin:right center}
 
-    /* Lang pill follows the smaller navbar */
-    .mf-lang{top:14px;right:96px}
-    @media (max-width:767px){.mf-lang{top:11px;right:60px}}
+    /* Lang pill follows the slimmer navbar */
+    .mf-lang{top:16px;right:104px}
+    @media (max-width:767px){.mf-lang{top:12px;right:64px}}
   </style>
 </head>
 
