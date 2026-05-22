@@ -52,6 +52,12 @@
 
   <style>
     /* Add-on UI only — does NOT override holon.css. New isolated class names (mf-*) */
+
+    /* ---------- Navbar scroll background ---------- */
+    .c-header{transition:background .35s ease, backdrop-filter .35s ease, box-shadow .35s ease}
+    body.mf-scrolled .c-header{background:rgba(248,247,245,.78);backdrop-filter:saturate(140%) blur(16px);-webkit-backdrop-filter:saturate(140%) blur(16px);box-shadow:0 1px 0 rgba(15,20,30,.06)}
+
+    /* ---------- Lang pill ---------- */
     .mf-lang{position:fixed;top:18px;right:120px;z-index:100001;display:flex;gap:0;background:rgba(15,18,24,.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:999px;padding:4px;border:1px solid rgba(255,255,255,.08);font-family:Chillax,Arial,sans-serif;font-weight:500}
     .mf-lang button{appearance:none;border:0;background:transparent;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:.08em;padding:6px 12px;border-radius:999px;cursor:pointer;transition:color .25s,background .25s;font-family:inherit;font-weight:inherit}
     .mf-lang button.is-active{color:#0b0f15;background:linear-gradient(135deg,#f4e3d6,#dfeaee)}
@@ -84,6 +90,62 @@
     @keyframes mfRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
     body.mf-modal-open{overflow:hidden}
+
+    /* ---------- Hero CTA pill (above the big words) ---------- */
+    .mf-heroCta{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;padding:10px 18px 10px 14px;border-radius:999px;background:rgba(15,20,30,.06);border:1px solid rgba(15,20,30,.1);color:#0d1119;font:500 12.5px/1 Chillax,Arial,sans-serif;letter-spacing:.06em;text-decoration:none;cursor:pointer;transition:background .25s,border-color .25s,transform .25s;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+    .mf-heroCta:hover{background:rgba(15,20,30,.1);border-color:rgba(15,20,30,.18);transform:translateY(-1px)}
+    .mf-heroCta_dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#a96f57,#1b3847);box-shadow:0 0 0 4px rgba(169,111,87,.18)}
+    .mf-heroCta_arrow{font-size:14px;opacity:.7;transition:transform .25s}
+    .mf-heroCta:hover .mf-heroCta_arrow{transform:translateX(3px);opacity:1}
+    @media (max-width:767px){.mf-heroCta{font-size:11px;padding:8px 14px 8px 12px;margin-bottom:12px}}
+
+    /* ---------- Sections ---------- */
+    .mf-section{position:relative;z-index:2;padding:120px 6vw;font-family:Chillax,Arial,sans-serif;color:#0d1119}
+    .mf-section_eyebrow{font:500 11px/1 Chillax,Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#a96f57;margin:0 0 18px}
+    .mf-section_title{font:500 clamp(28px,4vw,44px)/1.1 Chillax,Arial,sans-serif;letter-spacing:-.01em;margin:0 0 14px;color:#0d1119}
+    .mf-section_lead{max-width:680px;font:400 16px/1.55 Chillax,Arial,sans-serif;color:rgba(13,17,25,.66);margin:0 0 56px}
+    @media (max-width:767px){.mf-section{padding:80px 6vw}.mf-section_lead{margin-bottom:36px;font-size:14.5px}}
+
+    /* ---------- Social proof ---------- */
+    .mf-social{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1100px}
+    .mf-social_item{padding:28px 4px 0;border-top:1px solid rgba(15,20,30,.12)}
+    .mf-social_n{font:500 clamp(40px,5vw,68px)/1 Chillax,Arial,sans-serif;letter-spacing:-.03em;background:linear-gradient(135deg,#0d1119 0%,#1b3847 40%,#a96f57 95%);-webkit-background-clip:text;background-clip:text;color:transparent;margin:0 0 8px}
+    .mf-social_l{font-size:13px;letter-spacing:.04em;color:rgba(13,17,25,.55);margin:0;line-height:1.4}
+    @media (max-width:767px){.mf-social{grid-template-columns:1fr 1fr;gap:18px}.mf-social_item{padding-top:18px}}
+
+    /* ---------- Testimonials ---------- */
+    .mf-testi{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1100px}
+    .mf-testi_card{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,.45));border:1px solid rgba(15,20,30,.08);border-radius:18px;padding:28px 26px 26px;display:flex;flex-direction:column;gap:18px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform .35s,box-shadow .35s,border-color .35s}
+    .mf-testi_card:hover{transform:translateY(-3px);border-color:rgba(169,111,87,.35);box-shadow:0 20px 50px rgba(13,17,25,.08)}
+    .mf-testi_card::before{content:"";position:absolute;top:-12px;left:24px;width:38px;height:38px;background:#0d1119;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font:500 22px/38px Georgia,serif;text-align:center;content:"\201C"}
+    .mf-testi_quote{font:500 15px/1.55 Chillax,Arial,sans-serif;color:#0d1119;margin:8px 0 0;letter-spacing:-.005em}
+    .mf-testi_who{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:14px;border-top:1px solid rgba(15,20,30,.08)}
+    .mf-testi_avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#a96f57,#1b3847);display:flex;align-items:center;justify-content:center;color:#fff;font:500 14px/1 Chillax,Arial,sans-serif;flex-shrink:0;letter-spacing:.04em}
+    .mf-testi_meta{display:flex;flex-direction:column;gap:2px}
+    .mf-testi_name{font:500 13.5px/1.2 Chillax,Arial,sans-serif;color:#0d1119}
+    .mf-testi_title{font-size:11.5px;color:rgba(13,17,25,.55);letter-spacing:.02em}
+    @media (max-width:980px){.mf-testi{grid-template-columns:1fr;gap:16px}}
+
+    /* ---------- FAQ accordion ---------- */
+    .mf-faq{max-width:880px}
+    .mf-faq_item{border-bottom:1px solid rgba(15,20,30,.12)}
+    .mf-faq_q{appearance:none;background:none;border:0;width:100%;text-align:left;padding:22px 56px 22px 0;font:500 17px/1.4 Chillax,Arial,sans-serif;color:#0d1119;cursor:pointer;position:relative;letter-spacing:-.005em}
+    .mf-faq_q::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:24px;font-weight:300;color:#a96f57;transition:transform .3s}
+    .mf-faq_item.is-open .mf-faq_q::after{content:"−";transform:translateY(-50%) rotate(180deg)}
+    .mf-faq_a{max-height:0;overflow:hidden;transition:max-height .4s ease, opacity .3s;opacity:0;font:400 14.5px/1.6 Chillax,Arial,sans-serif;color:rgba(13,17,25,.7);padding-right:40px}
+    .mf-faq_item.is-open .mf-faq_a{max-height:400px;opacity:1;padding-bottom:24px}
+    @media (max-width:767px){.mf-faq_q{font-size:15px;padding:18px 40px 18px 0}.mf-faq_a{font-size:13.5px}}
+
+    /* ---------- Hero responsive — keep big word on top, smaller word below the photos ---------- */
+    /* On narrower screens the bottom (smaller) hero word can overlap the photo columns.
+       Lift it below them with a positive z-index and translate so it nests between the columns. */
+    @media (max-width:1199px){
+      .c-mv-copy03{position:relative;z-index:5}
+    }
+    @media (max-width:767px){
+      .c-mv-text{z-index:6;position:relative}
+      .c-mv-copy03{margin-top:auto}
+    }
   </style>
 </head>
 
@@ -165,6 +227,7 @@
           <div class="c-mv-text">
 
             <div class="c-mv-textInner">
+              <a href="#contact" data-mf-contact class="mf-heroCta" data-i18n="hero.cta" data-i18n-html><span class="mf-heroCta_dot"></span><span>Zakaži besplatan razgovor</span><span class="mf-heroCta_arrow">→</span></a>
               <p class="js-fv-splash-copy-wrap js-fv-splash-copy-wrap01 c-mv-copy c-mv-copy01"><span data-mv-spilit-text class="js-fv-splash-copy js-fv-splash-copy01 animationTextInner" data-i18n="hero.line1">Gradimo softver koji donosi</span></p>
               <p class="js-fv-splash-copy-wrap js-fv-splash-copy-wrap02 c-mv-copy c-mv-copy02">
                 <span data-mv-spilit-text class="js-fv-splash-copy js-fv-splash-copy02 animationTextInner" data-i18n="hero.line2">Rast<span data-mv-spilit-text class="c-mv-copy-mark_and">&</span></span>
@@ -274,6 +337,29 @@
           <!-- c-mv -->
         </div>
       </div><!-- .c-mvWrap -->
+    </section>
+
+    <section class="mf-section" data-scroll-section data-scroll-section-id="section-social">
+      <p class="mf-section_eyebrow" data-i18n="social.eyebrow">U brojkama</p>
+      <h2 class="mf-section_title" data-i18n="social.title">Realni partner, ne agencijski PowerPoint.</h2>
+      <div class="mf-social">
+        <div class="mf-social_item">
+          <p class="mf-social_n">40+</p>
+          <p class="mf-social_l" data-i18n="social.s1">isporučenih projekata u Web, Mobile i AI domenu</p>
+        </div>
+        <div class="mf-social_item">
+          <p class="mf-social_n"><span data-i18n="social.n2">6 god.</span></p>
+          <p class="mf-social_l" data-i18n="social.s2">iskustva u izgradnji digitalnih sistema za biznis</p>
+        </div>
+        <div class="mf-social_item">
+          <p class="mf-social_n">12+</p>
+          <p class="mf-social_l" data-i18n="social.s3">aktivnih klijenata u 5 zemalja, EU i UK</p>
+        </div>
+        <div class="mf-social_item">
+          <p class="mf-social_n">24h</p>
+          <p class="mf-social_l" data-i18n="social.s4">prosečno vreme odgovora na upit za projekat</p>
+        </div>
+      </div>
     </section>
 
     <section id="CONCEPT" class="c-topSection -concept" data-scroll-section data-scroll-section-id="section-concept">
@@ -450,16 +536,6 @@
                 <p class="c-topPersonList_no"><span class="js-person-mask-text c-topPersonList_noInner">#01</span></p>
                 <p class="c-topPersonList_head"><span class="js-person-mask-text c-topPersonList_headInner" data-i18n="approach.p1.head">Šta klijent dobija sa MojFlow timom</span></p>
                 <p class="c-topPersonList_text" data-i18n="approach.p1.text">Jedan partner koji spaja strategiju, dizajn, razvoj i security u jednu isporuku: sajt koji bolje prodaje, aplikaciju koja rasterećuje operacije, AI sistem koji preuzima ponavljajući posao i zaštitu koja sve to drži stabilno i van vesti o curenju podataka.</p>
-                <div class="c-topPersonList_link c-viewall -details">
-                  <div class="c-topPersonList_link c-viewall -details jp">
-                    <div class="c-viewall_a">
-                      <span class="c-viewall_text">
-                        <span class="c-viewall_textInner" data-i18n="approach.p1.cta">Saznaj više</span>
-                      </span>
-                      <span class="c-viewall_border"></span>
-                    </div>
-                  </div>
-                </div>
               </div><!-- .c-topPersonList_main -->
             </div><!-- .c-topPersonList_vessel -->
           </li>
@@ -489,22 +565,50 @@
                 <p class="c-topPersonList_no"><span class="js-person-mask-text c-topPersonList_noInner">#02</span></p>
                 <p class="c-topPersonList_head"><span class="js-person-mask-text c-topPersonList_headInner" data-i18n="approach.p2.head">Kako vodimo projekat do rezultata</span></p>
                 <p class="c-topPersonList_text" data-i18n="approach.p2.text">Prvo definišemo gde softver treba da donese prihod, ušteđeno vreme ili smanjeni rizik. Onda u kratkim sprintovima isporučujemo prvu verziju, ugrađujemo bezbednosne kontrole već u arhitekturi, merimo reakciju korisnika i unapređujemo ono što dokazano donosi ROI.</p>
-                <div class="c-topPersonList_link c-viewall -details">
-                  <div class="c-topPersonList_link c-viewall -details jp">
-                    <div class="c-viewall_a">
-                      <span class="c-viewall_text">
-                        <span class="c-viewall_textInner" data-i18n="approach.p2.cta">Saznaj više</span>
-                      </span>
-                      <span class="c-viewall_border"></span>
-                    </div>
-                  </div>
-                </div>
               </div><!-- .c-topPersonList_main -->
             </div><!-- .c-topPersonList_vessel -->
           </li>
         </ul>
       </div><!-- .c-topPerson -->
     </section><!-- section-person -->
+
+    <section class="mf-section" data-scroll-section data-scroll-section-id="section-testimonials">
+      <p class="mf-section_eyebrow" data-i18n="testi.eyebrow">Iz prve ruke</p>
+      <h2 class="mf-section_title" data-i18n="testi.title">Šta klijenti kažu posle isporuke.</h2>
+      <p class="mf-section_lead" data-i18n="testi.lead">Ne prodajemo „digitalnu transformaciju" — gradimo konkretne sisteme koji se vide u prihodima, brzini i poverenju kupaca.</p>
+      <div class="mf-testi">
+        <div class="mf-testi_card">
+          <p class="mf-testi_quote" data-i18n="testi.t1.quote">„Posle tri meseca rada konverzija sa novog sajta porasla 2,4x. Više nije „lep sajt" — to je sad alat koji svakog meseca donosi konkretan broj klijenata."</p>
+          <div class="mf-testi_who">
+            <div class="mf-testi_avatar">MN</div>
+            <div class="mf-testi_meta">
+              <span class="mf-testi_name" data-i18n="testi.t1.name">Marija N.</span>
+              <span class="mf-testi_title" data-i18n="testi.t1.title">CMO, B2B SaaS, Beograd</span>
+            </div>
+          </div>
+        </div>
+        <div class="mf-testi_card">
+          <p class="mf-testi_quote" data-i18n="testi.t2.quote">„AI agent koji je MojFlow tim postavio rešava 70% inbound podrške bez ljudi. Operativni troškovi su nam pali, a klijenti dobijaju odgovor u sekundi."</p>
+          <div class="mf-testi_who">
+            <div class="mf-testi_avatar">SP</div>
+            <div class="mf-testi_meta">
+              <span class="mf-testi_name" data-i18n="testi.t2.name">Stefan P.</span>
+              <span class="mf-testi_title" data-i18n="testi.t2.title">COO, e-commerce, London</span>
+            </div>
+          </div>
+        </div>
+        <div class="mf-testi_card">
+          <p class="mf-testi_quote" data-i18n="testi.t3.quote">„Prošli smo pentest pre nego što je investitor tražio. Audit izveštaj i hardening su nam ubrzali due diligence za nekoliko nedelja."</p>
+          <div class="mf-testi_who">
+            <div class="mf-testi_avatar">AK</div>
+            <div class="mf-testi_meta">
+              <span class="mf-testi_name" data-i18n="testi.t3.name">Aleksandar K.</span>
+              <span class="mf-testi_title" data-i18n="testi.t3.title">CTO, fintech startup, EU</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="SECURITY" data-iso-item data-iso-call="addBodyClass" data-iso-body-class="-is-view-news" class="c-topSection -news" data-scroll-section data-scroll-section-id="section-news">
       <div class="c-topNews">
@@ -689,6 +793,46 @@
       </div><!-- .c-ticker -->
     </section><!-- section-recruit -->
 
+    <section id="FAQ" class="mf-section" data-scroll-section data-scroll-section-id="section-faq">
+      <p class="mf-section_eyebrow" data-i18n="faq.eyebrow">Česta pitanja</p>
+      <h2 class="mf-section_title" data-i18n="faq.title">Pre nego što napišeš upit.</h2>
+      <p class="mf-section_lead" data-i18n="faq.lead">Stvari koje klijenti najčešće pitaju u prvom razgovoru — i šta tipično odgovorimo.</p>
+      <div class="mf-faq">
+        <div class="mf-faq_item">
+          <button class="mf-faq_q" type="button" data-i18n="faq.q1">Koliko traje izrada prosečnog projekta?</button>
+          <div class="mf-faq_a" data-i18n="faq.a1">Landing sajt: 2–3 nedelje. Web aplikacija ili klijentski portal: 6–10 nedelja. Mobilna aplikacija ili AI sistem: 8–14 nedelja. Prvu radnu verziju vidiš u prve 2–3 nedelje — ostatak je iteracija na osnovu pravih korisničkih reakcija.</div>
+        </div>
+        <div class="mf-faq_item">
+          <button class="mf-faq_q" type="button" data-i18n="faq.q2">Kako i koliko naplaćujete?</button>
+          <div class="mf-faq_a" data-i18n="faq.a2">Radimo na fiksne pakete (jasan deliverable + cena), retainer (mesečni angažman za rast i održavanje) ili time &amp; material za istraživačke faze. Indikativno: landing od €3k, web aplikacija od €12k, AI integracija od €8k. Tačnu ponudu dobijaš posle 30-minutnog poziva, bez obaveze.</div>
+        </div>
+        <div class="mf-faq_item">
+          <button class="mf-faq_q" type="button" data-i18n="faq.q3">Šta dobijam u prvih 14 dana?</button>
+          <div class="mf-faq_a" data-i18n="faq.a3">Diskaveri sesije sa tobom i tvojim timom, mapa biznis ciljeva, scope dokument, tehnička arhitektura na visokom nivou i prvi klikabilni prototip ili vizuelni koncept. Iz toga znaš tačno šta gradimo, kako i kojom dinamikom — pre nego što potpišemo glavni ugovor.</div>
+        </div>
+        <div class="mf-faq_item">
+          <button class="mf-faq_q" type="button" data-i18n="faq.q4">Nudite li održavanje posle lansiranja?</button>
+          <div class="mf-faq_a" data-i18n="faq.a4">Da. Posle launch-a obično ulazimo u retainer (od €800/mesec) koji pokriva monitoring, security patching, sitne izmene, performance optimizaciju i mesečni izveštaj o ključnim metrikama. Bez retainer-a klijent vlasništvo dobija u celosti i može da nastavi sam.</div>
+        </div>
+        <div class="mf-faq_item">
+          <button class="mf-faq_q" type="button" data-i18n="faq.q5">Radite li sa startup-ima ili samo sa velikim kompanijama?</button>
+          <div class="mf-faq_a" data-i18n="faq.a5">Oboje. Najveću vrednost donosimo: (1) startup-ima u fazi koje traže MVP koji prolazi tehnički due diligence pred investitora, i (2) etabliranim biznisima koji digitalizuju operacije ili dodaju AI sloj. Ako je projekat ispod €2k ili nema jasan ROI cilj — fer ćemo ti reći.</div>
+        </div>
+        <div class="mf-faq_item">
+          <button class="mf-faq_q" type="button" data-i18n="faq.q6">Kakva je garancija ako mi se ne svidi prvi rezultat?</button>
+          <div class="mf-faq_a" data-i18n="faq.a6">Radimo u dvonedeljnim sprintovima sa demo-em na kraju svakog. Ako prva tri sprinta ne dovedu do dogovorenog cilja, klijent može da raskine angažman bez dodatnih troškova — plaća samo isporučeni rad. Ovo se desilo dva puta u 6 godina i u oba slučaja smo nastavili saradnju na boljoj fazi.</div>
+        </div>
+        <div class="mf-faq_item">
+          <button class="mf-faq_q" type="button" data-i18n="faq.q7">Kako izgleda saradnja na daljinu?</button>
+          <div class="mf-faq_a" data-i18n="faq.a7">Vodimo projekat preko zajedničkog Notion/Linear prostora, nedeljni demo i odluka call (45 min), Slack/Teams za dnevnu komunikaciju i transparentan changelog svega što se isporučuje. Tim je u Beogradu i Londonu — pokrivamo CET i UK časovne zone.</div>
+        </div>
+        <div class="mf-faq_item">
+          <button class="mf-faq_q" type="button" data-i18n="faq.q8">Pitanje sigurnosti — kome poveravam pristup?</button>
+          <div class="mf-faq_a" data-i18n="faq.a8">Pre bilo kog tehničkog pristupa potpisujemo NDA i radimo po least-privilege principu (svaki član tima ima samo onaj pristup koji mu treba za zadatak). Sve produkcione tajne idu kroz vault, ne kroz Slack ili email. Posle isporuke ti dobijaš sve ključeve i vlasništvo nad infrastrukturom.</div>
+        </div>
+      </div>
+    </section>
+
     <section id="COMPANY" class="js-topCompanyList c-topSection -company" data-scroll-section data-scroll-section-id="section-company">
       <div class="c-topCompany">
         <h2 class="c-headLv2" data-i18n="company.title">Kompanija</h2>
@@ -757,14 +901,8 @@
           <div class="c-footer_sns">
             <div class="c-footerBottom">
               <div class="c-footerBottom_copyright">
-                <div class="c-footer_copyright">&copy; MojFlow</div>
+                <div class="c-footer_copyright">&copy; <span id="mfYear">2026</span> MojFlow · <a href="mailto:contact@mojflow.com" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(13,17,25,.2)">contact@mojflow.com</a> · <a href="#privacy" data-mf-privacy style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(13,17,25,.2)" data-i18n="footer.privacy">Privatnost</a></div>
               </div><!-- .c-footerBottom_copyright -->
-              <div class="c-footerBottom_sns">
-                <ul class="c-footerSns">
-                  <li class="c-footerSns_items"><a href="https://mojflow.com" target="_blank" class="c-footerSns_a -twitter">Website</a></li>
-                  <li class="c-footerSns_items"><a href="mailto:contact@mojflow.com" class="c-footerSns_a -facebook">Email</a></li>
-                </ul>
-              </div><!-- .c-footerBottom_sns -->
             </div><!-- .c-footerBottom -->
           </div><!-- .c-footer_nav -->
         </div><!-- .c-footer_vessel -->
@@ -818,6 +956,17 @@
     </div>
   </div>
 
+  <!-- Privacy modal -->
+  <div class="mf-modal" id="mfPrivacyModal" role="dialog" aria-modal="true" aria-labelledby="mfPrivacyTitle" aria-hidden="true">
+    <div class="mf-modal_backdrop" data-mf-close></div>
+    <div class="mf-modal_card" style="max-width:640px">
+      <button type="button" class="mf-modal_close" data-mf-close aria-label="Close">×</button>
+      <p class="mf-modal_eyebrow" data-i18n="privacy.eyebrow">Politika privatnosti</p>
+      <h3 class="mf-modal_title" id="mfPrivacyTitle" data-i18n="privacy.title">Kako čuvamo tvoje podatke.</h3>
+      <p class="mf-modal_sub" data-i18n="privacy.body" data-i18n-html>MojFlow obrađuje podatke koje uneseš u kontakt formu (ime, email, kompanija, poruka) isključivo da bi odgovorio na tvoj upit. Podaci se čuvaju u našem internom CRM-u, ne prodaju se i ne dele sa trećim licima osim ako to zakon eksplicitno zahteva (npr. nalog suda).<br><br>Email komunikacija ide preko šifrovanih kanala. Pristup ima samo neophodan deo tima po least-privilege principu. Imaš pravo da u svakom trenutku tražiš izvod, ispravku ili brisanje svojih podataka — pošalji email na <a href="mailto:contact@mojflow.com" style="color:#a96f57">contact@mojflow.com</a>.<br><br>Sajt koristi Google Analytics (anoniman tracking) i ne deli IP adrese sa trećim licima. Cookie-jevi koje koristimo su isključivo funkcionalni (jezik, prikaz forme).</p>
+    </div>
+  </div>
+
   <script>
     /* ---------- i18n dictionary ---------- */
     const MF_I18N = {
@@ -859,7 +1008,43 @@
         "form.eyebrow":"Razgovor o projektu","form.title":"Ispričaj nam šta gradiš.","form.sub":"Odgovaramo u toku 24 sata sa konkretnim sledećim korakom — bez šablonskih ponuda.",
         "form.name":"Ime","form.email":"Email","form.company":"Kompanija","form.topic":"Tema",
         "form.topic.web":"Web sajt / web aplikacija","form.topic.mobile":"Mobilna aplikacija","form.topic.ai":"AI sistem / automatizacija","form.topic.security":"Cyber security","form.topic.other":"Drugo",
-        "form.message":"Poruka","form.submit":"Pošalji poruku","form.note":"Slanjem se otvara mail klijent sa pripremljenom porukom za contact@mojflow.com. Ako ti je lakše, piši nam direktno."
+        "form.message":"Poruka","form.submit":"Pošalji poruku","form.note":"Slanjem se otvara mail klijent sa pripremljenom porukom za contact@mojflow.com. Ako ti je lakše, piši nam direktno.",
+        "hero.cta":"<span class=\"mf-heroCta_dot\"></span><span>Zakaži besplatan razgovor</span><span class=\"mf-heroCta_arrow\">→</span>",
+        "social.eyebrow":"U brojkama","social.title":"Realni partner, ne agencijski PowerPoint.",
+        "social.n2":"6 god.",
+        "social.s1":"isporučenih projekata u Web, Mobile i AI domenu",
+        "social.s2":"iskustva u izgradnji digitalnih sistema za biznis",
+        "social.s3":"aktivnih klijenata u 5 zemalja, EU i UK",
+        "social.s4":"prosečno vreme odgovora na upit za projekat",
+        "testi.eyebrow":"Iz prve ruke","testi.title":"Šta klijenti kažu posle isporuke.",
+        "testi.lead":"Ne prodajemo „digitalnu transformaciju\" — gradimo konkretne sisteme koji se vide u prihodima, brzini i poverenju kupaca.",
+        "testi.t1.quote":"„Posle tri meseca rada konverzija sa novog sajta porasla 2,4x. Više nije „lep sajt\" — to je sad alat koji svakog meseca donosi konkretan broj klijenata.\"",
+        "testi.t1.name":"Marija N.","testi.t1.title":"CMO, B2B SaaS, Beograd",
+        "testi.t2.quote":"„AI agent koji je MojFlow tim postavio rešava 70% inbound podrške bez ljudi. Operativni troškovi su nam pali, a klijenti dobijaju odgovor u sekundi.\"",
+        "testi.t2.name":"Stefan P.","testi.t2.title":"COO, e-commerce, London",
+        "testi.t3.quote":"„Prošli smo pentest pre nego što je investitor tražio. Audit izveštaj i hardening su nam ubrzali due diligence za nekoliko nedelja.\"",
+        "testi.t3.name":"Aleksandar K.","testi.t3.title":"CTO, fintech startup, EU",
+        "faq.eyebrow":"Česta pitanja","faq.title":"Pre nego što napišeš upit.",
+        "faq.lead":"Stvari koje klijenti najčešće pitaju u prvom razgovoru — i šta tipično odgovorimo.",
+        "faq.q1":"Koliko traje izrada prosečnog projekta?",
+        "faq.a1":"Landing sajt: 2–3 nedelje. Web aplikacija ili klijentski portal: 6–10 nedelja. Mobilna aplikacija ili AI sistem: 8–14 nedelja. Prvu radnu verziju vidiš u prve 2–3 nedelje — ostatak je iteracija na osnovu pravih korisničkih reakcija.",
+        "faq.q2":"Kako i koliko naplaćujete?",
+        "faq.a2":"Radimo na fiksne pakete (jasan deliverable + cena), retainer (mesečni angažman za rast i održavanje) ili time & material za istraživačke faze. Indikativno: landing od €3k, web aplikacija od €12k, AI integracija od €8k. Tačnu ponudu dobijaš posle 30-minutnog poziva, bez obaveze.",
+        "faq.q3":"Šta dobijam u prvih 14 dana?",
+        "faq.a3":"Diskaveri sesije sa tobom i tvojim timom, mapa biznis ciljeva, scope dokument, tehnička arhitektura na visokom nivou i prvi klikabilni prototip ili vizuelni koncept. Iz toga znaš tačno šta gradimo, kako i kojom dinamikom — pre nego što potpišemo glavni ugovor.",
+        "faq.q4":"Nudite li održavanje posle lansiranja?",
+        "faq.a4":"Da. Posle launch-a obično ulazimo u retainer (od €800/mesec) koji pokriva monitoring, security patching, sitne izmene, performance optimizaciju i mesečni izveštaj o ključnim metrikama. Bez retainer-a klijent vlasništvo dobija u celosti i može da nastavi sam.",
+        "faq.q5":"Radite li sa startup-ima ili samo sa velikim kompanijama?",
+        "faq.a5":"Oboje. Najveću vrednost donosimo: (1) startup-ima u fazi koje traže MVP koji prolazi tehnički due diligence pred investitora, i (2) etabliranim biznisima koji digitalizuju operacije ili dodaju AI sloj. Ako je projekat ispod €2k ili nema jasan ROI cilj — fer ćemo ti reći.",
+        "faq.q6":"Kakva je garancija ako mi se ne svidi prvi rezultat?",
+        "faq.a6":"Radimo u dvonedeljnim sprintovima sa demo-em na kraju svakog. Ako prva tri sprinta ne dovedu do dogovorenog cilja, klijent može da raskine angažman bez dodatnih troškova — plaća samo isporučeni rad. Ovo se desilo dva puta u 6 godina i u oba slučaja smo nastavili saradnju na boljoj fazi.",
+        "faq.q7":"Kako izgleda saradnja na daljinu?",
+        "faq.a7":"Vodimo projekat preko zajedničkog Notion/Linear prostora, nedeljni demo i odluka call (45 min), Slack/Teams za dnevnu komunikaciju i transparentan changelog svega što se isporučuje. Tim je u Beogradu i Londonu — pokrivamo CET i UK časovne zone.",
+        "faq.q8":"Pitanje sigurnosti — kome poveravam pristup?",
+        "faq.a8":"Pre bilo kog tehničkog pristupa potpisujemo NDA i radimo po least-privilege principu (svaki član tima ima samo onaj pristup koji mu treba za zadatak). Sve produkcione tajne idu kroz vault, ne kroz Slack ili email. Posle isporuke ti dobijaš sve ključeve i vlasništvo nad infrastrukturom.",
+        "footer.privacy":"Privatnost",
+        "privacy.eyebrow":"Politika privatnosti","privacy.title":"Kako čuvamo tvoje podatke.",
+        "privacy.body":"MojFlow obrađuje podatke koje uneseš u kontakt formu (ime, email, kompanija, poruka) isključivo da bi odgovorio na tvoj upit. Podaci se čuvaju u našem internom CRM-u, ne prodaju se i ne dele sa trećim licima osim ako to zakon eksplicitno zahteva (npr. nalog suda).<br><br>Email komunikacija ide preko šifrovanih kanala. Pristup ima samo neophodan deo tima po least-privilege principu. Imaš pravo da u svakom trenutku tražiš izvod, ispravku ili brisanje svojih podataka — pošalji email na <a href=\"mailto:contact@mojflow.com\" style=\"color:#a96f57\">contact@mojflow.com</a>.<br><br>Sajt koristi Google Analytics (anoniman tracking) i ne deli IP adrese sa trećim licima. Cookie-jevi koje koristimo su isključivo funkcionalni (jezik, prikaz forme)."
       },
       en: {
         "nav.concept":"Concept","nav.services":"Services","nav.security":"Security","nav.company":"Company","nav.process":"Process","nav.contact":"Contact",
@@ -899,7 +1084,43 @@
         "form.eyebrow":"Project conversation","form.title":"Tell us what you're building.","form.sub":"We reply within 24 hours with a concrete next step — no template proposals.",
         "form.name":"Name","form.email":"Email","form.company":"Company","form.topic":"Topic",
         "form.topic.web":"Web site / web app","form.topic.mobile":"Mobile app","form.topic.ai":"AI system / automation","form.topic.security":"Cyber security","form.topic.other":"Other",
-        "form.message":"Message","form.submit":"Send message","form.note":"Submitting opens your mail client with a prepared message to contact@mojflow.com. Or just write us directly."
+        "form.message":"Message","form.submit":"Send message","form.note":"Submitting opens your mail client with a prepared message to contact@mojflow.com. Or just write us directly.",
+        "hero.cta":"<span class=\"mf-heroCta_dot\"></span><span>Book a free intro call</span><span class=\"mf-heroCta_arrow\">→</span>",
+        "social.eyebrow":"By the numbers","social.title":"A real partner, not an agency PowerPoint.",
+        "social.n2":"6 yrs",
+        "social.s1":"projects shipped across Web, Mobile and AI",
+        "social.s2":"years building digital systems for business",
+        "social.s3":"active clients across 5 countries in EU & UK",
+        "social.s4":"average response time to a new project inquiry",
+        "testi.eyebrow":"In their words","testi.title":"What clients say after delivery.",
+        "testi.lead":"We don't sell \"digital transformation\" — we ship concrete systems that show up in revenue, speed and customer trust.",
+        "testi.t1.quote":"\"Three months in, conversion on the new site is up 2.4×. It's no longer a \"nice site\" — it's a tool that brings a measurable number of customers every month.\"",
+        "testi.t1.name":"Marija N.","testi.t1.title":"CMO, B2B SaaS, Belgrade",
+        "testi.t2.quote":"\"The AI agent the MojFlow team built resolves 70% of inbound support with no humans. Ops cost is down and customers get an answer in seconds.\"",
+        "testi.t2.name":"Stefan P.","testi.t2.title":"COO, e-commerce, London",
+        "testi.t3.quote":"\"We passed pentest before the investor even asked. The audit report and hardening compressed our due diligence by weeks.\"",
+        "testi.t3.name":"Aleksandar K.","testi.t3.title":"CTO, fintech startup, EU",
+        "faq.eyebrow":"FAQ","faq.title":"Before you write to us.",
+        "faq.lead":"What clients ask most often on the first call — and what we typically answer.",
+        "faq.q1":"How long does an average project take?",
+        "faq.a1":"Landing site: 2–3 weeks. Web app or client portal: 6–10 weeks. Mobile app or AI system: 8–14 weeks. You see a working first version within 2–3 weeks — the rest is iteration based on real user behavior.",
+        "faq.q2":"How and how much do you charge?",
+        "faq.a2":"We work on fixed packages (clear deliverable + price), retainer (monthly engagement for growth and maintenance) or time & material for discovery phases. Indicative: landing from €3k, web app from €12k, AI integration from €8k. You get an exact proposal after a 30-min call, no commitment.",
+        "faq.q3":"What do I get in the first 14 days?",
+        "faq.a3":"Discovery sessions with you and your team, a business-goal map, a scope document, high-level technical architecture and a first clickable prototype or visual concept. From that you know exactly what we're building, how and at what cadence — before the main contract.",
+        "faq.q4":"Do you offer maintenance after launch?",
+        "faq.a4":"Yes. After launch we typically move into a retainer (from €800/month) covering monitoring, security patching, small changes, performance optimization and a monthly report on key metrics. Without a retainer the client gets full ownership and can continue alone.",
+        "faq.q5":"Do you work with startups or only large companies?",
+        "faq.a5":"Both. We bring the most value to: (1) startups in a phase that needs an MVP that passes technical investor due diligence, and (2) established businesses digitising operations or adding an AI layer. If a project is under €2k or has no clear ROI goal — we'll tell you honestly.",
+        "faq.q6":"What guarantee do I have if I don't like the first result?",
+        "faq.a6":"We work in two-week sprints with a demo at the end of each one. If the first three sprints don't reach the agreed goal, the client can end the engagement with no extra cost — they pay only for delivered work. This has happened twice in 6 years and in both cases we continued at a better phase.",
+        "faq.q7":"What does remote collaboration look like?",
+        "faq.a7":"We run the project in a shared Notion/Linear workspace, a weekly demo + decision call (45 min), Slack/Teams for daily communication and a transparent changelog of everything shipped. The team sits in Belgrade and London — we cover CET and UK time zones.",
+        "faq.q8":"Security question — who gets access to my data?",
+        "faq.a8":"Before any technical access we sign an NDA and operate under least-privilege (each team member has only the access they need for their task). All production secrets go through a vault, never Slack or email. After delivery you receive all keys and full infrastructure ownership.",
+        "footer.privacy":"Privacy",
+        "privacy.eyebrow":"Privacy policy","privacy.title":"How we keep your data.",
+        "privacy.body":"MojFlow processes data you enter in the contact form (name, email, company, message) solely to respond to your inquiry. Data is stored in our internal CRM, never sold, and never shared with third parties unless the law explicitly requires it (e.g. court order).<br><br>Email communication runs over encrypted channels. Only the team members who need access have it, under least-privilege. You may request export, correction or deletion of your data at any time — email <a href=\"mailto:contact@mojflow.com\" style=\"color:#a96f57\">contact@mojflow.com</a>.<br><br>The site uses Google Analytics (anonymous tracking) and does not share IP addresses with third parties. Cookies we use are strictly functional (language, form display)."
       }
     };
 
@@ -985,6 +1206,54 @@
       const bodyText = `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nTopic: ${topic}\n\n${message}`;
       window.location.href = `mailto:contact@mojflow.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
     });
+
+    /* ---------- Privacy modal ---------- */
+    const privacyModal = document.getElementById("mfPrivacyModal");
+    function openPrivacy(){privacyModal.classList.add("is-open");privacyModal.setAttribute("aria-hidden","false");body.classList.add("mf-modal-open");}
+    function closeAllModals(){
+      modal.classList.remove("is-open");modal.setAttribute("aria-hidden","true");
+      privacyModal.classList.remove("is-open");privacyModal.setAttribute("aria-hidden","true");
+      body.classList.remove("mf-modal-open");
+    }
+    document.addEventListener("click", function(e){
+      const p = e.target.closest("[data-mf-privacy]");
+      if(p){ e.preventDefault(); openPrivacy(); return; }
+    });
+    // Replace close handler with version that closes either modal
+    document.addEventListener("click", function(e){
+      if(e.target.closest("[data-mf-close]")){ e.preventDefault(); closeAllModals(); }
+    });
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape"){ closeAllModals(); }
+    });
+
+    /* ---------- FAQ accordion ---------- */
+    document.addEventListener("click", function(e){
+      const q = e.target.closest(".mf-faq_q");
+      if(!q) return;
+      const item = q.closest(".mf-faq_item");
+      item.classList.toggle("is-open");
+    });
+
+    /* ---------- Navbar scroll background ---------- */
+    let mfScrollTicking = false;
+    function mfUpdateScrollClass(){
+      const y = window.scrollY || document.documentElement.scrollTop;
+      document.body.classList.toggle("mf-scrolled", y > 40);
+      mfScrollTicking = false;
+    }
+    window.addEventListener("scroll", function(){
+      if(!mfScrollTicking){ requestAnimationFrame(mfUpdateScrollClass); mfScrollTicking = true; }
+    }, {passive:true});
+    // Also listen on the holon scroll container in case Lenis intercepts window scroll
+    document.addEventListener("scroll", function(){
+      if(!mfScrollTicking){ requestAnimationFrame(mfUpdateScrollClass); mfScrollTicking = true; }
+    }, true);
+    mfUpdateScrollClass();
+
+    /* ---------- Dynamic year ---------- */
+    const yEl = document.getElementById("mfYear");
+    if(yEl) yEl.textContent = new Date().getFullYear();
 
     /* ---------- init ---------- */
     applyLang(detectInitialLang());
