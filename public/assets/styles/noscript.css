@@ -1,0 +1,28 @@
+@charset "utf-8";
+body.-is-scroll-disable{
+  overflow: visible;
+}
+#pageSplash{
+  display: none;
+}
+.c-topService{
+  background-color: rgba(23, 23, 23, 0.88);
+  color: #fff;
+}
+.c-topServiceBox_image > .imageItemWrap{
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+.c-topServiceBox_main .-no1{
+  margin-bottom: 5vw;
+}
+.c-footer_header{
+  opacity: 1;
+}
+.c-footer_nav{
+  opacity: 1;
+}
+.c-footer_sns{
+  opacity: 1;
+}

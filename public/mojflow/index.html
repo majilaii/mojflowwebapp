@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#" lang="sr">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-17MD9S27V0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-17MD9S27V0');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="MojFlow gradi web sajtove, web aplikacije, mobilne aplikacije, AI sisteme i cyber security rešenja koja kompanijama donose rast, efikasnost i otpornost." lang="sr">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MojFlow — Web, mobile, AI i Cyber Security">
+  <meta property="og:description" content="Gradimo digitalne sisteme i bezbednosna rešenja koja kompanije pretvaraju u sigurnije, brže i profitabilnije organizacije.">
+  <meta property="og:url" content="https://mojflow.com/">
+  <meta property="og:image" content="https://mojflow.com/ogp.png">
+  <meta property="og:site_name" content="MojFlow — Web, mobile, AI i Cyber Security">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MojFlow — Web, mobile, AI i Cyber Security" />
+  <meta name="twitter:description" content="Gradimo digitalne sisteme i bezbednosna rešenja koja kompanije pretvaraju u sigurnije, brže i profitabilnije organizacije." />
+  <meta name="twitter:image" content="https://mojflow.com/ogp.png" />
+
+  <link rel="shortcut icon" href="/favicon.jpg">
+  <link rel="apple-touch-icon" type="image/png" href="https://mojflow.com/ogp.png">
+
+  <title>MojFlow — Web, mobile, AI i Cyber Security</title>
+  <script src="/assets/js/lib/beforeDomLoaded.min.js?ver=1.0.4"></script>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'fop4xcn',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+
+  <link href="https://api.fontshare.com/v2/css?f[]=chillax@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/styles/holon.css?ver=1.0.5">
+  <noscript>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/noscript.css?ver=1.0.4">
+  </noscript>
+
+  <style>
+    /* Add-on UI only — does NOT override holon.css. New isolated class names (mf-*) */
+    .mf-lang{position:fixed;top:18px;right:120px;z-index:100001;display:flex;gap:0;background:rgba(15,18,24,.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:999px;padding:4px;border:1px solid rgba(255,255,255,.08);font-family:Chillax,Arial,sans-serif;font-weight:500}
+    .mf-lang button{appearance:none;border:0;background:transparent;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:.08em;padding:6px 12px;border-radius:999px;cursor:pointer;transition:color .25s,background .25s;font-family:inherit;font-weight:inherit}
+    .mf-lang button.is-active{color:#0b0f15;background:linear-gradient(135deg,#f4e3d6,#dfeaee)}
+    .mf-lang button:hover:not(.is-active){color:#fff}
+    @media (max-width:767px){.mf-lang{top:14px;right:74px;padding:3px}.mf-lang button{font-size:10px;padding:4px 9px}}
+
+    /* Contact modal */
+    .mf-modal{position:fixed;inset:0;z-index:100002;display:none;align-items:center;justify-content:center;padding:20px}
+    .mf-modal.is-open{display:flex}
+    .mf-modal_backdrop{position:absolute;inset:0;background:rgba(8,10,14,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);animation:mfFade .35s ease}
+    .mf-modal_card{position:relative;width:min(540px,100%);background:#0d1119;color:#f4f4f4;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:36px 32px 30px;box-shadow:0 30px 80px rgba(0,0,0,.6);font-family:Chillax,Arial,sans-serif;animation:mfRise .45s cubic-bezier(.2,.7,.2,1)}
+    .mf-modal_close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.06);border:0;color:#fff;font-size:18px;cursor:pointer;transition:background .2s}
+    .mf-modal_close:hover{background:rgba(255,255,255,.14)}
+    .mf-modal_eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#a96f57;margin:0 0 10px}
+    .mf-modal_title{font-size:24px;font-weight:500;margin:0 0 8px;line-height:1.2}
+    .mf-modal_sub{font-size:13.5px;line-height:1.55;color:rgba(255,255,255,.62);margin:0 0 22px}
+    .mf-form{display:grid;gap:12px}
+    .mf-form_row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+    @media (max-width:520px){.mf-form_row{grid-template-columns:1fr}}
+    .mf-field{display:flex;flex-direction:column;gap:6px}
+    .mf-field label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+    .mf-field input,.mf-field select,.mf-field textarea{appearance:none;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;color:#fff;font:inherit;font-size:14px;padding:11px 12px;outline:none;transition:border-color .2s,background .2s;font-family:inherit}
+    .mf-field textarea{min-height:108px;resize:vertical;line-height:1.5}
+    .mf-field input:focus,.mf-field select:focus,.mf-field textarea:focus{border-color:#a96f57;background:rgba(255,255,255,.06)}
+    .mf-submit{margin-top:6px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:999px;border:0;background:linear-gradient(135deg,#1b3847 0%,#a96f57 100%);color:#fff;font:inherit;font-size:14px;letter-spacing:.06em;cursor:pointer;transition:transform .2s,filter .2s}
+    .mf-submit:hover{transform:translateY(-1px);filter:brightness(1.1)}
+    .mf-submit:disabled{opacity:.6;cursor:wait}
+    .mf-modal_note{margin-top:14px;font-size:11.5px;color:rgba(255,255,255,.45);line-height:1.5}
+    @keyframes mfFade{from{opacity:0}to{opacity:1}}
+    @keyframes mfRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+    body.mf-modal-open{overflow:hidden}
+  </style>
+</head>
+
+<body class="-is-scroll-disable">
+
+  <!-- SVG defs: missing clip-path that holon.css references via url(#splashLogoSvg).
+       Without this, the splash gradient shows as a solid rectangle. -->
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+      <clipPath id="splashLogoSvg" clipPathUnits="userSpaceOnUse">
+        <text x="0" y="24" font-family="Chillax, Arial, sans-serif" font-size="30" font-weight="500" letter-spacing="-1.2">MojFlow</text>
+      </clipPath>
+    </defs>
+  </svg>
+
+  <div id="pageSplash" class="c-pageSplash">
+    <div class="js-pageSplashLogo c-pageSplashLogo">
+
+      <div class="js-pageSplashLogoInner c-pageSplashLogo_inner">
+        <img class="c-pageSplashLogoImage" src="/assets/images/common/logo_01.svg" alt="MojFlow">
+      </div>
+    </div>
+  </div>
+
+  <header class="c-header">
+    <div class="c-header_vessel">
+      <div class="c-header_logo">
+        <h1 class="c-headerLogo">
+          <a href="/">
+            <img src="/assets/images/common/logo_01.svg" alt="MojFlow" class="c-headerLogo_img">
+          </a>
+        </h1>
+      </div><!-- .c-header_logo -->
+      <div class="c-header_nav">
+        <ul class="c-headerNav">
+          <li class="c-headerNav_items"><a href="#CONCEPT" class="js-link-scroll js-hover-moveY c-headerNav_a"><span class="js-hover-text headerNav_inner" data-i18n="nav.concept">Koncept</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.concept">Koncept</span></a></li>
+          <li class="c-headerNav_items"><a href="#SERVICE" class="js-link-scroll js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.services">Usluge</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.services">Usluge</span></a></li>
+          <li class="c-headerNav_items"><a href="#SECURITY" class="js-link-scroll js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.security">Bezbednost</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.security">Bezbednost</span></a></li>
+          <li class="c-headerNav_items"><a href="#COMPANY" class="js-link-scroll js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.company">Kompanija</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.company">Kompanija</span></a></li>
+          <li class="c-headerNav_items"><a href="#RECRUIT" class="js-link-scroll js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.process">Proces</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.process">Proces</span></a></li>
+          <li class="c-headerNav_items"><a href="#contact" data-mf-contact class="js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.contact">Kontakt</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.contact">Kontakt</span></a></li>
+        </ul>
+      </div><!-- .c-header_nav -->
+      <div class="c-hamburgerBtn js-hamburgerBtn"><span class="c-hamburger"><span class="c-hamburger_vessel"><span class="c-hamburger_line"></span><span class="c-hamburger_line"></span></span></span></div>
+    </div><!-- .c-header_vessel -->
+  </header><!-- .c-header -->
+
+  <div class="mf-lang" role="group" aria-label="Language">
+    <button type="button" data-lang="sr" class="is-active" aria-label="Srpski">SR</button>
+    <button type="button" data-lang="en" aria-label="English">EN</button>
+  </div>
+
+  <div class="c-navHamburgerW js-navMenuGlobal js-hamburgerGlobalMenu">
+    <div class="c-navHamburgerW_vessel">
+      <nav class="c-navHamburger">
+        <div class="js-hamburgerBtn_close c-navHamburger_close -is-active"><span class="c-hamburger"><span class="c-hamburger_vessel"><span class="c-hamburger_line"></span><span class="c-hamburger_line"></span></span></span></div>
+        <ul class="js-sp-menuc-navHamburger_list c-navHamburger_list">
+          <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#CONCEPT" class="js-sp-menu-item-text js-link-scroll c-navHamburger_listA" data-i18n="nav.concept">Koncept</a></span></li>
+          <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#SERVICE" class="js-sp-menu-item-text js-link-scroll c-navHamburger_listA" data-i18n="nav.services">Usluge</a></span></li>
+          <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#SECURITY" class="js-sp-menu-item-text js-link-scroll c-navHamburger_listA" data-i18n="nav.security">Bezbednost</a></span></li>
+          <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#COMPANY" class="js-sp-menu-item-text js-link-scroll c-navHamburger_listA" data-i18n="nav.company">Kompanija</a></span></li>
+          <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#RECRUIT" class="js-sp-menu-item-text js-link-scroll c-navHamburger_listA" data-i18n="nav.process">Proces</a></span></li>
+          <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#contact" data-mf-contact class="js-sp-menu-item-text c-navHamburger_listA" data-i18n="nav.contact">Kontakt</a></span></li>
+
+          <li class="js-sp-menu-item c-navHamburger_listItems -small"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="https://mojflow.com" target="_blank" class="js-sp-menu-item-text c-navHamburger_listA">Website</a></span></li>
+          <li class="js-sp-menu-item c-navHamburger_listItems -small"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="mailto:contact@mojflow.com" class="js-sp-menu-item-text c-navHamburger_listA">Email</a></span></li>
+        </ul>
+      </nav><!-- .c-navHamburger -->
+    </div><!-- .c-navHamburgerW_vessel -->
+  </div><!-- .c-navHamburgerW -->
+
+  <div class="fixedBackGroundImage"></div>
+
+  <div class="js-scroll-container" data-scroll-container>
+
+    <section class="c-sectionMv" data-scroll-section data-scroll-section-id="section-mv">
+      <div class="c-mvWrap">
+        <div class="c-mvWrapInner">
+          <div class="c-mv-text">
+
+            <div class="c-mv-textInner">
+              <p class="js-fv-splash-copy-wrap js-fv-splash-copy-wrap01 c-mv-copy c-mv-copy01"><span data-mv-spilit-text class="js-fv-splash-copy js-fv-splash-copy01 animationTextInner" data-i18n="hero.line1">Gradimo digitalne sisteme za</span></p>
+              <p class="js-fv-splash-copy-wrap js-fv-splash-copy-wrap02 c-mv-copy c-mv-copy02">
+                <span data-mv-spilit-text class="js-fv-splash-copy js-fv-splash-copy02 animationTextInner" data-i18n="hero.line2">Cyber<span data-mv-spilit-text class="c-mv-copy-mark_and">&</span></span>
+              </p>
+              <p class="js-fv-splash-copy-wrap js-fv-splash-copy-wrap03 c-mv-copy c-mv-copy03"><span data-mv-spilit-text class="js-fv-splash-copy js-fv-splash-copy03 animationTextInner" data-i18n="hero.line3">Rast</span></p>
+            </div>
+
+          </div>
+
+          <div data-parallax-area class="js-mv c-mv" data-photo-num="3">
+
+            <div class="js-holizontalMarqueeMv">
+
+              <div class="-is-current js-clip-boxWrap js-clip-boxWrap01 c-clip-boxWrap c-clip-boxWrap01">
+
+                <div class="js-fv-splash-clip c-clip-box c-clip-box01">
+
+                  <div class="c-clip-boxInner" data-parallax-item data-parallax-start-pos="-10" data-parallax-end-pos="30"
+                  data-parallax-scrub="-1.3">
+                    <div class="-is-current js-clip-imageWrap js-clip-imageWrap01 c-clip-imageWrap c-clip-imageWrap01 image_wrap">
+                      <div class="js-fv-splash-image-scale c-clip-image-prallax">
+                        <div class="js-clip-imageWrapInner js-clip-imageWrapInner01 c-clip-imageWrapInner">
+                            <img class="js-clip-image js-clip-image01 c-clip-image c-clip-image01" src="/assets/images/top/mv/top_mv_sample_photo01-01.jpg" alt="" >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="-is-next js-clip-imageWrap js-clip-imageWrap01 c-clip-imageWrap c-clip-imageWrap01 image_wrap">
+                      <div class="js-clip-imageWrapInner js-clip-imageWrapInner01 c-clip-imageWrapInner">
+                        <div class="js-fv-splash-image-scale c-clip-image-prallax">
+                          <img class="js-clip-image js-clip-image01 c-clip-image c-clip-image01" src="/assets/images/top/mv/top_mv_sample_photo02-01.jpg" alt="" >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="-is-prev js-clip-imageWrap js-clip-imageWrap01 c-clip-imageWrap c-clip-imageWrap01 image_wrap">
+                      <div class="js-clip-imageWrapInner js-clip-imageWrapInner01 c-clip-imageWrapInner">
+                        <div class="js-fv-splash-image-scale c-clip-image-prallax">
+                          <img class="js-clip-image js-clip-image01 c-clip-image c-clip-image01" src="/assets/images/top/mv/top_mv_sample_photo03-01.jpg" alt="" >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="js-fv-splash-clip c-clip-box c-clip-box02">
+
+                  <div class="c-clip-boxInner" data-parallax-item data-parallax-start-pos="-10" data-parallax-end-pos="30"
+                  data-parallax-scrub="-1.3">
+                    <div class="-is-current js-clip-imageWrap js-clip-imageWrap02 c-clip-imageWrap c-clip-imageWrap02 image_wrap">
+                      <div class="js-clip-imageWrapInner js-clip-imageWrapInner02 c-clip-imageWrapInner">
+                        <div class="js-fv-splash-image-scale c-clip-image-prallax">
+                          <img class="js-clip-image js-clip-image02 c-clip-image c-clip-image02" src="/assets/images/top/mv/top_mv_sample_photo01-02.jpg" alt="" >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="-is-next js-clip-imageWrap js-clip-imageWrap02 c-clip-imageWrap c-clip-imageWrap02 image_wrap">
+                      <div class="js-clip-imageWrapInner js-clip-imageWrapInner02 c-clip-imageWrapInner">
+                        <div class="js-fv-splash-image-scale c-clip-image-prallax">
+                          <img class="js-clip-image js-clip-image02 c-clip-image c-clip-image02" src="/assets/images/top/mv/top_mv_sample_photo02-02.jpg" alt="" >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="-is-prev js-clip-imageWrap js-clip-imageWrap02 c-clip-imageWrap c-clip-imageWrap02 image_wrap">
+                      <div class="js-clip-imageWrapInner js-clip-imageWrapInner02 c-clip-imageWrapInner">
+                        <div class="js-fv-splash-image-scale c-clip-image-prallax">
+                          <img class="js-clip-image js-clip-image02 c-clip-image c-clip-image02" src="/assets/images/top/mv/top_mv_sample_photo03-02.jpg" alt="" >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="js-fv-splash-clip c-clip-box c-clip-box03">
+
+                  <div class="c-clip-boxInner" data-parallax-item data-parallax-start-pos="-10" data-parallax-end-pos="30"
+                  data-parallax-scrub="-1.3">
+                    <div class="-is-current js-clip-imageWrap js-clip-imageWrap03 c-clip-imageWrap c-clip-imageWrap03 image_wrap">
+                      <div class="js-fv-splash-image-scale c-clip-image-prallax">
+                      <div class="js-clip-imageWrapInner js-clip-imageWrapInner03 c-clip-imageWrapInner">
+                          <img class="js-clip-image js-clip-image03 c-clip-image c-clip-image03" src="/assets/images/top/mv/top_mv_sample_photo01-03.jpg" alt="" >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="-is-next js-clip-imageWrap js-clip-imageWrap03 c-clip-imageWrap c-clip-imageWrap03 image_wrap">
+                      <div class="js-clip-imageWrapInner js-clip-imageWrapInner03 c-clip-imageWrapInner">
+                        <div class="js-fv-splash-image-scale c-clip-image-prallax">
+                          <img class="js-clip-image js-clip-image03 c-clip-image c-clip-image03" src="/assets/images/top/mv/top_mv_sample_photo02-03.jpg" alt="" >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="-is-prev js-clip-imageWrap js-clip-imageWrap03 c-clip-imageWrap c-clip-imageWrap03 image_wrap">
+                      <div class="js-clip-imageWrapInner js-clip-imageWrapInner03 c-clip-imageWrapInner">
+                        <div class="js-fv-splash-image-scale c-clip-image-prallax">
+                          <img class="js-clip-image js-clip-image03 c-clip-image c-clip-image03" src="/assets/images/top/mv/top_mv_sample_photo03-03.jpg" alt="" >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!-- c-mv -->
+        </div>
+      </div><!-- .c-mvWrap -->
+    </section>
+
+    <section id="CONCEPT" class="c-topSection -concept" data-scroll-section data-scroll-section-id="section-concept">
+      <div class="c-topConcept">
+        <h2 class="c-headLv2" data-i18n="concept.title">Koncept</h2>
+        <div class="c-topConcept_lead">
+          <div class="c-topConcept_lead_clip">
+            <div id="js-topConceptLeadTextWrap" data-iso-item data-iso-point="0.34" class="animationText">
+              <div id="js-topConceptLeadText" class="js-topConceptLeadText animationTextInner c-topConcept_lead_text topConcept_lead_textGradient">MojFlow</div>
+            </div>
+          </div>
+        </div><!-- .c-topConcept_lead -->
+
+        <div class="c-topConcept_body">
+
+          <div class="c-topConceptBox">
+            <h3 class="c-topConceptBox_head" data-i18n="concept.heading">Softver i bezbednost koji rade za prihod, procese i poverenje korisnika</h3>
+            <p class="c-topConceptBox_text" data-i18n="concept.body">MojFlow je product, engineering i security partner za kompanije koje žele više od „lepog ekrana”. Projektujemo i razvijamo web sajtove, web aplikacije, mobilne aplikacije i AI sisteme — i postavljamo sloj cyber security zaštite oko njih. Rezultat je digitalni proizvod koji donosi prihod, ubrzava operacije i izdržava napade.</p>
+          </div><!-- .c-topConceptBox -->
+
+          <div class="c-topConceptStream">
+            <div data-iso-item data-iso-point=".5" class="c-ticker -concept c-topConcept_ticker c-topConceptStream_p">
+              <div class="c-ticker_wrap -ticker01">
+                <p class="c-ticker_text">
+                  <span class="js-ticker-left01 c-ticker_textInner">Build &amp; Secure  Ship &amp; Scale  Strategy &amp; Engineering  </span>
+                  <span class="js-ticker-left01 c-ticker_textInner">Build &amp; Secure  Ship &amp; Scale  Strategy &amp; Engineering  </span>
+                </p>
+              </div><!-- .c-ticker_wrap -->
+            </div>
+            <div data-iso-item data-iso-point=".5" class="c-ticker c-ticker-reverse -concept c-topConcept_ticker c-topConcept_ticker02 c-topConceptStream_p">
+              <div class="c-ticker_wrap -ticker01">
+                <p class="c-ticker_text">
+                  <span class="js-ticker-toRight01 c-ticker_textInner c-ticker-toRight01">  Revenue &amp; Resilience  Product &amp; Protection  Speed &amp; Safety  </span>
+                  <span class="js-ticker-toRight01 c-ticker_textInner c-ticker-toRight01">  Revenue &amp; Resilience  Product &amp; Protection  Speed &amp; Safety  </span>
+                </p>
+              </div><!-- .c-ticker_wrap -->
+            </div>
+            <div data-iso-item data-iso-point=".5" class="c-ticker -concept c-topConcept_ticker c-topConceptStream_p">
+              <div class="c-ticker_wrap -ticker01">
+                <p class="c-ticker_text">
+                  <span class="js-ticker-left02 c-ticker_textInner">Web &amp; Mobile  AI &amp; Automation  Security &amp; Trust  </span>
+                  <span class="js-ticker-left02 c-ticker_textInner">Web &amp; Mobile  AI &amp; Automation  Security &amp; Trust  </span>
+                </p>
+              </div><!-- .c-ticker_wrap -->
+            </div>
+          </div><!-- .c-ticker -->
+
+        </div><!-- .c-topConcept_body -->
+
+      </div><!-- .c-topConcept -->
+    </section><!-- section-concept -->
+
+    <section id="SERVICE" data-iso-item data-iso-point="0.24" data-iso-call="addBodyClass" data-iso-body-class="-is-view-service" class="c-topSection -service" data-scroll-section data-scroll-section-id="section-service">
+      <div class="js-sticky-end-trigger c-topService">
+
+        <div class="c-topService_header">
+          <h2 class="c-headLv2" data-i18n="service.title">Usluge</h2>
+          <p class="c-topService_lead" data-i18n="service.lead" data-i18n-html>Web, mobile i AI proizvodi<br>koji prodaju, automatizuju<br>i skaliraju poslovanje — uz cyber security osnovu od prvog dana.</p>
+        </div><!-- .c-topService_header -->
+
+        <div class="c-topServiceBox">
+          <div class="js-sticky-container c-topServiceBox_vessel">
+
+            <div class="c-topServiceBox_main">
+
+              <div data-sticky-marker data-sticky-marker-content="serviceImg01" class="js-contentMarker c-topServiceBox_mainInner -no1">
+                <p class="c-topServiceBox_en">01 Web Sites &amp; Web Apps</p>
+                <h3 class="c-topServiceBox_head" data-i18n="service.s1.head" data-i18n-html>Sajtovi i web aplikacije<br>koji pretvaraju pažnju u prihod</h3>
+                <p class="c-topServiceBox_text" data-i18n="service.s1.text">Prodajne landing stranice, klijentski portali i SaaS MVP-jevi sa jasnom ponudom, brzim interfejsom i stabilnom tehničkom osnovom. Svaka sekcija i tok mora da podrži konkretan poslovni cilj — više leadova, više konverzija, kraći prodajni ciklus.</p>
+                <ul class="c-topServiceList">
+                  <li class="c-topServiceList_items" data-i18n="service.s1.b1">Prodajni sajtovi i landing stranice</li>
+                  <li class="c-topServiceList_items" data-i18n="service.s1.b2">Klijentski i partner portali</li>
+                  <li class="c-topServiceList_items" data-i18n="service.s1.b3">SaaS MVP-jevi i interni alati</li>
+                </ul>
+
+                <div class="c-topServiceBox_image_sp">
+                  <div class="imageItemWrap">
+                    <figure>
+                      <img class="imageItem showSp" src="/assets/images/top/img_service_01_sp.png" alt="">
+                    </figure>
+                  </div>
+                </div><!-- .c-topServiceBox_image -->
+              </div>
+              <div data-sticky-marker data-sticky-marker-content="serviceImg02" class="js-contentMarker c-topServiceBox_mainInner -no2">
+                <p class="c-topServiceBox_en">02 Mobile, AI &amp; Cyber Security</p>
+                <h3 class="c-topServiceBox_head" data-i18n="service.s2.head" data-i18n-html>Mobilne aplikacije, AI sistemi i<br>cyber security koji štite rast</h3>
+                <p class="c-topServiceBox_text" data-i18n="service.s2.text">Dizajniramo mobilne proizvode, AI agente, RAG sisteme i automatizacije za timove kojima rast više ne sme da zavisi od ručnog rada. Uz svaki sistem isporučujemo i sloj zaštite: pen-test, hardening, monitoring i incident response — da skaliranje ne otvori vrata napadima.</p>
+
+                <div class="c-viewall -details">
+                  <a href="#contact" data-mf-contact class="js-holon-button-mask c-viewall_a">
+                    <span class="c-viewall_text c-viewall_text_hover">
+                      <span class="js-holon-button-text-goast c-viewall_textInner c-viewall_textInnerGoast" data-i18n="cta.contact">Kontakt</span>
+                    </span>
+                    <span class="c-viewall_text">
+                      <span class="js-holon-button-text c-viewall_textInner" data-i18n="cta.contact">Kontakt</span>
+                    </span>
+                    <span class="js-holon-button-icon c-viewall_icon">
+                      <span class="arrowWrap">
+                        <i class="js-holon-button-arrow arrow"></i>
+                        <i class="js-holon-button-arrow arrowGoast"></i>
+                      </span>
+                    </span>
+                    <span class="js-holon-button-border c-viewall_border"></span>
+                  </a>
+                </div>
+
+                <div class="c-topServiceBox_image_sp">
+                  <div class="imageItemWrap">
+                    <figure>
+                      <img class="imageItem" src="/assets/images/top/img_service_02.png" alt="">
+                    </figure>
+                  </div>
+                </div><!-- .c-topServiceBox_image -->
+              </div>
+
+            </div><!-- .c-topServiceBox_main -->
+
+            <div class="js-sticky-pin-content c-topServiceBox_image">
+
+              <div id="serviceImg01" class="imageItemWrap -no1">
+                <figure>
+                  <img class="imageItem showPc" src="/assets/images/top/img_service_01.png" alt="">
+                </figure>
+              </div>
+
+              <div id="serviceImg02" class="imageItemWrap -no2">
+                <figure>
+                  <img class="imageItem" src="/assets/images/top/img_service_02.png" alt="">
+                </figure>
+              </div>
+
+            </div><!-- .c-topServiceBox_image -->
+
+          </div><!-- .c-topServiceBox_vessel -->
+        </div><!-- .c-topServiceBox -->
+
+      </div><!-- .c-topService -->
+    </section><!-- section-service -->
+
+    <section class="c-topSection -person js-area-person" data-scroll-section data-scroll-section-id="section-person">
+      <div class="c-topPerson">
+        <h2 class="c-headLv2" data-i18n="approach.title">Pristup</h2>
+
+        <div data-iso-item="" data-iso-point=".9" class="c-ticker -person c-topPerson_ticker">
+          <div class="c-ticker_wrap -ticker01">
+            <p class="c-ticker_text">
+              <span class="js-ticker-left03 c-ticker_textInner">How we work  How we work  How we work  How we work  </span>
+              <span class="js-ticker-left03 c-ticker_textInner">How we work  How we work  How we work  How we work  </span>
+            </p>
+          </div><!-- .c-ticker_wrap -->
+        </div><!-- .c-ticker -->
+
+        <ul class="c-topPersonList">
+          <li class="js-person-item c-topPersonList_items -no1">
+            <div class="c-topPersonList_vessel">
+              <div class="c-topPersonList_image">
+                <div class="topPersonList_imageInner">
+                  <div class="js-person-clip-image topPersonList_imageItem topPersonList_imageItem01 imageItemWrap" data-anime-start="bottom">
+                    <figure>
+                      <img class="js-person-scale-image imageItem" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="js-person-clip-image topPersonList_imageItem topPersonList_imageItem02 imageItemWrap" data-anime-start="top">
+                    <figure>
+                      <img class="js-person-scale-image imageItem" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy">
+                    </figure>
+                  </div>
+                </div>
+
+                <p class="js-person-image-caption c-topPersonListImageText"><span class="c-topPersonListImageText_vessel">Strategy</span></p>
+
+              </div><!-- .c-topPersonList_image -->
+              <div class="c-topPersonList_main">
+                <p class="c-topPersonList_no"><span class="js-person-mask-text c-topPersonList_noInner">#01</span></p>
+                <p class="c-topPersonList_head"><span class="js-person-mask-text c-topPersonList_headInner" data-i18n="approach.p1.head">Šta klijent dobija sa MojFlow timom</span></p>
+                <p class="c-topPersonList_text" data-i18n="approach.p1.text">Jedan partner koji spaja strategiju, dizajn, razvoj i security u jednu isporuku: sajt koji bolje prodaje, aplikaciju koja rasterećuje operacije, AI sistem koji preuzima ponavljajući posao i zaštitu koja sve to drži stabilno i van vesti o curenju podataka.</p>
+                <div class="c-topPersonList_link c-viewall -details">
+                  <div class="c-topPersonList_link c-viewall -details jp">
+                    <div class="c-viewall_a">
+                      <span class="c-viewall_text">
+                        <span class="c-viewall_textInner" data-i18n="approach.p1.cta">Saznaj više</span>
+                      </span>
+                      <span class="c-viewall_border"></span>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- .c-topPersonList_main -->
+            </div><!-- .c-topPersonList_vessel -->
+          </li>
+          <li class="js-person-item c-topPersonList_items -no2">
+            <div class="c-topPersonList_vessel">
+              <div class="c-topPersonList_image">
+                <div class="topPersonList_imageInner">
+                  <div class="js-person-clip-image topPersonList_imageItem topPersonList_imageItem01 imageItemWrap" data-anime-start="bottom">
+                    <figure>
+                      <img class="js-person-scale-image imageItem" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="js-person-clip-image topPersonList_imageItem topPersonList_imageItem02 imageItemWrap" data-anime-start="top">
+                    <figure>
+                      <img class="js-person-scale-image imageItem" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="js-person-clip-image topPersonList_imageItem topPersonList_imageItem03 imageItemWrap" data-anime-start="bottom">
+                    <figure>
+                      <img class="js-person-scale-image imageItem" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy">
+                    </figure>
+                  </div>
+                </div>
+                <p class="js-person-image-caption c-topPersonListImageText"><span class="c-topPersonListImageText_vessel">Delivery</span></p>
+              </div><!-- .c-topPersonList_image -->
+              <div class="c-topPersonList_main">
+                <p class="c-topPersonList_no"><span class="js-person-mask-text c-topPersonList_noInner">#02</span></p>
+                <p class="c-topPersonList_head"><span class="js-person-mask-text c-topPersonList_headInner" data-i18n="approach.p2.head">Kako vodimo projekat do rezultata</span></p>
+                <p class="c-topPersonList_text" data-i18n="approach.p2.text">Prvo definišemo gde softver treba da donese prihod, ušteđeno vreme ili smanjeni rizik. Onda u kratkim sprintovima isporučujemo prvu verziju, ugrađujemo bezbednosne kontrole već u arhitekturi, merimo reakciju korisnika i unapređujemo ono što dokazano donosi ROI.</p>
+                <div class="c-topPersonList_link c-viewall -details">
+                  <div class="c-topPersonList_link c-viewall -details jp">
+                    <div class="c-viewall_a">
+                      <span class="c-viewall_text">
+                        <span class="c-viewall_textInner" data-i18n="approach.p2.cta">Saznaj više</span>
+                      </span>
+                      <span class="c-viewall_border"></span>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- .c-topPersonList_main -->
+            </div><!-- .c-topPersonList_vessel -->
+          </li>
+        </ul>
+      </div><!-- .c-topPerson -->
+    </section><!-- section-person -->
+
+    <section id="SECURITY" data-iso-item data-iso-call="addBodyClass" data-iso-body-class="-is-view-news" class="c-topSection -news" data-scroll-section data-scroll-section-id="section-news">
+      <div class="c-topNews">
+        <h2 class="c-headLv2" data-i18n="security.title">Cyber Security</h2>
+        <ul class="js-topNewsList c-topNewsList">
+
+          <li class="js-news-item c-topNewsList_items -is-noLink">
+            <span class="c-topNewsList_a">
+              <div class="js-news-border c-topNewsList_a_border"></div>
+              <div class="c-topNewsList_itemInner">
+                <div class="c-topNewsList_info">
+                  <div class="js-news-text c-topNewsList_date" data-i18n="security.i1.tag">01</div>
+                  <div class="js-news-text c-topNewsList_cat" data-i18n="security.i1.cat">PENTEST</div>
+                </div><!-- .c-topNewsList_info -->
+                <div class="c-topNewsList_main">
+                  <p class="js-news-text c-topNewsList_head" data-i18n="security.i1.head">Penetration testing web sajtova, API-ja i mobilnih aplikacija — pre nego što napadač to uradi za vas.</p>
+                </div><!-- .c-topNewsList_main -->
+              </div>
+            </span>
+          </li>
+
+          <li class="js-news-item c-topNewsList_items -is-noLink">
+            <span class="c-topNewsList_a">
+              <div class="js-news-border c-topNewsList_a_border"></div>
+              <div class="c-topNewsList_itemInner">
+                <div class="c-topNewsList_info">
+                  <div class="js-news-text c-topNewsList_date" data-i18n="security.i2.tag">02</div>
+                  <div class="js-news-text c-topNewsList_cat" data-i18n="security.i2.cat">HARDENING</div>
+                </div><!-- .c-topNewsList_info -->
+                <div class="c-topNewsList_main">
+                  <p class="js-news-text c-topNewsList_head" data-i18n="security.i2.head">Cloud i server hardening, identity &amp; access kontrole, zero-trust postavka i bezbedna CI/CD pipeline.</p>
+                </div><!-- .c-topNewsList_main -->
+              </div>
+            </span>
+          </li>
+
+          <li class="js-news-item c-topNewsList_items -is-noLink">
+            <span class="c-topNewsList_a">
+              <div class="js-news-border c-topNewsList_a_border"></div>
+              <div class="c-topNewsList_itemInner">
+                <div class="c-topNewsList_info">
+                  <div class="js-news-text c-topNewsList_date" data-i18n="security.i3.tag">03</div>
+                  <div class="js-news-text c-topNewsList_cat" data-i18n="security.i3.cat">MONITORING</div>
+                </div><!-- .c-topNewsList_info -->
+                <div class="c-topNewsList_main">
+                  <p class="js-news-text c-topNewsList_head" data-i18n="security.i3.head">24/7 monitoring, log korelacija, alarmiranje i incident response — incidenti se otkrivaju u minutima, ne u nedeljama.</p>
+                </div><!-- .c-topNewsList_main -->
+              </div>
+            </span>
+          </li>
+
+          <li class="js-news-item c-topNewsList_items -is-noLink">
+            <span class="c-topNewsList_a">
+              <div class="js-news-border c-topNewsList_a_border"></div>
+              <div class="c-topNewsList_itemInner">
+                <div class="c-topNewsList_info">
+                  <div class="js-news-text c-topNewsList_date" data-i18n="security.i4.tag">04</div>
+                  <div class="js-news-text c-topNewsList_cat" data-i18n="security.i4.cat">COMPLIANCE</div>
+                </div><!-- .c-topNewsList_info -->
+                <div class="c-topNewsList_main">
+                  <p class="js-news-text c-topNewsList_head" data-i18n="security.i4.head">GDPR, ISO 27001 i NIS2 priprema: politike, procedure, dokazi i tehnički kontroli koji prolaze reviziju.</p>
+                </div><!-- .c-topNewsList_main -->
+              </div>
+            </span>
+          </li>
+
+        </ul>
+      </div><!-- .c-topNews -->
+
+      <div id="js-holizontalMarqueeWrap" class="c-topImageSliderWrap" >
+
+        <div class="c-topImageSlider">
+          <div class="c-topImageSliderInner">
+            <div class="js-holizontalMarquee c-homeFeaturesBox_image">
+              <div class="imageItemWrap">
+                <figure>
+                  <img class="imageItem" src="/assets/images/top/img_slider_news_01.jpg" alt="">
+                </figure>
+              </div>
+            </div><!-- .c-homeFeaturesBox_image -->
+            <div class="js-holizontalMarquee c-homeFeaturesBox_image">
+              <div class="imageItemWrap">
+                <figure>
+                  <img class="imageItem" src="/assets/images/top/img_slider_news_02.jpg" alt="">
+                </figure>
+              </div>
+            </div><!-- .c-homeFeaturesBox_image -->
+            <div class="js-holizontalMarquee c-homeFeaturesBox_image">
+              <div class="imageItemWrap">
+                <figure>
+                  <img class="imageItem" src="/assets/images/top/img_slider_news_03.jpg" alt="">
+                </figure>
+              </div>
+            </div><!-- .c-homeFeaturesBox_image -->
+            <div class="js-holizontalMarquee c-homeFeaturesBox_image">
+              <div class="imageItemWrap">
+                <figure>
+                  <img class="imageItem" src="/assets/images/top/img_slider_news_04.jpg" alt="">
+                </figure>
+              </div>
+            </div><!-- .c-homeFeaturesBox_image -->
+            <div class="js-holizontalMarquee c-homeFeaturesBox_image">
+              <div class="imageItemWrap">
+                <figure>
+                  <img class="imageItem" src="/assets/images/top/img_slider_news_05.jpg" alt="">
+                </figure>
+              </div>
+            </div><!-- .c-homeFeaturesBox_image -->
+            <div class="js-holizontalMarquee c-homeFeaturesBox_image">
+              <div class="imageItemWrap">
+                <figure>
+                  <img class="imageItem" src="/assets/images/top/img_slider_news_01.jpg" alt="">
+                </figure>
+              </div>
+            </div><!-- .c-homeFeaturesBox_image -->
+            <div class="js-holizontalMarquee c-homeFeaturesBox_image">
+              <div class="imageItemWrap">
+                <figure>
+                  <img class="imageItem" src="/assets/images/top/img_slider_news_02.jpg" alt="">
+                </figure>
+              </div>
+            </div><!-- .c-homeFeaturesBox_image -->
+            <div class="js-holizontalMarquee c-homeFeaturesBox_image">
+              <div class="imageItemWrap">
+                <figure>
+                  <img class="imageItem" src="/assets/images/top/img_slider_news_03.jpg" alt="">
+                </figure>
+              </div>
+            </div><!-- .c-homeFeaturesBox_image -->
+            <div class="js-holizontalMarquee c-homeFeaturesBox_image">
+              <div class="imageItemWrap">
+                <figure>
+                  <img class="imageItem" src="/assets/images/top/img_slider_news_04.jpg" alt="">
+                </figure>
+              </div>
+            </div><!-- .c-homeFeaturesBox_image -->
+            <div class="js-holizontalMarquee c-homeFeaturesBox_image">
+              <div class="imageItemWrap">
+                <figure>
+                  <img class="imageItem" src="/assets/images/top/img_slider_news_05.jpg" alt="">
+                </figure>
+              </div>
+            </div><!-- .c-homeFeaturesBox_image -->
+          </div>
+        </div><!-- .c-topImageSlider -->
+      </div>
+
+    </section><!-- section-news -->
+
+    <section id="RECRUIT" class="c-topSection -recruit" data-scroll-section data-scroll-section-id="section-recruit">
+      <div class="c-topRecruit">
+        <h2 class="c-headLv2" data-i18n="process.title">Proces</h2>
+        <div class="c-topRecruit_box">
+          <p class="c-topRecruit_lead" data-i18n="process.lead">Tražite tim koji vodi digitalni proizvod od ideje do produkcije — i obezbeđuje ga? MojFlow preuzima strategiju, UX, dizajn, razvoj, AI integracije i cyber security tako da svaki sprint ima jasan poslovni razlog i jasan vlasnik rizika.</p>
+          <div class="c-viewall -details">
+            <a href="#contact" data-mf-contact class="js-holon-button-mask c-viewall_a">
+              <span class="c-viewall_text c-viewall_text_hover">
+                <span class="js-holon-button-text-goast c-viewall_textInner c-viewall_textInnerGoast" data-i18n="cta.startProject">Pokreni projekat</span>
+              </span>
+              <span class="c-viewall_text">
+                <span class="js-holon-button-text c-viewall_textInner" data-i18n="cta.startProject">Pokreni projekat</span>
+              </span>
+              <span class="js-holon-button-icon c-viewall_icon">
+                <span class="arrowWrap">
+                  <i class="js-holon-button-arrow arrow"></i>
+                  <i class="js-holon-button-arrow arrowGoast"></i>
+                </span>
+              </span>
+              <span class="js-holon-button-border c-viewall_border"></span>
+            </a>
+          </div>
+        </div><!-- .c-topRecruit_box -->
+      </div><!-- .c-topRecruit -->
+
+      <div data-iso-item="" data-iso-point=".9" class="c-ticker -company c-topPlay">
+        <div class="c-ticker_wrap -ticker01">
+          <p class="c-ticker_text">
+            <span class="js-ticker-left04 c-ticker_textInner">Build · Secure · Scale  Build · Secure · Scale  </span>
+            <span class="js-ticker-left04 c-ticker_textInner">Build · Secure · Scale  Build · Secure · Scale  </span>
+          </p>
+        </div><!-- .c-ticker_wrap -->
+      </div><!-- .c-ticker -->
+    </section><!-- section-recruit -->
+
+    <section id="COMPANY" class="js-topCompanyList c-topSection -company" data-scroll-section data-scroll-section-id="section-company">
+      <div class="c-topCompany">
+        <h2 class="c-headLv2" data-i18n="company.title">Kompanija</h2>
+        <div class="c-topCompanyData">
+          <dl class="js-company-list c-topCompanyData_dl">
+            <div class="js-company-list-item c-topCompanyData_dlInner">
+              <dt class="js-company-text c-topCompanyData_dt" data-i18n="company.name">Ime</dt>
+              <dd class="js-company-text c-topCompanyData_dd">MojFlow</dd>
+              <div class="js-company-border c-topCompanyData_dl_border"></div>
+            </div>
+            <div class="js-company-list-item c-topCompanyData_dlInner">
+              <dt class="js-company-text c-topCompanyData_dt" data-i18n="company.location">Lokacija</dt>
+              <dd class="js-company-text c-topCompanyData_dd" data-i18n="company.locationVal" data-i18n-html>Beograd + London<br>rad sa klijentima globalno</dd>
+              <div class="js-company-border c-topCompanyData_dl_border"></div>
+            </div>
+            <div class="js-company-list-item c-topCompanyData_dlInner">
+              <dt class="js-company-text c-topCompanyData_dt" data-i18n="company.focus">Fokus</dt>
+              <dd class="js-company-text c-topCompanyData_dd" data-i18n="company.focusVal">Web, mobile, AI sistemi i cyber security</dd>
+              <div class="js-company-border c-topCompanyData_dl_border"></div>
+            </div>
+            <div class="js-company-list-item c-topCompanyData_dlInner">
+              <dt class="js-company-text c-topCompanyData_dt" data-i18n="company.services">Usluge</dt>
+              <dd class="js-company-text c-topCompanyData_dd" data-i18n="company.servicesVal">Web sajtovi, web aplikacije, mobilne aplikacije, AI rešenja, penetration testing, security hardening i monitoring</dd>
+              <div class="js-company-border c-topCompanyData_dl_border"></div>
+            </div>
+            <div class="js-company-list-item c-topCompanyData_dlInner">
+              <dt class="js-company-text c-topCompanyData_dt" data-i18n="company.model">Model rada</dt>
+              <dd class="js-company-text c-topCompanyData_dd" data-i18n="company.modelVal" data-i18n-html>
+                Strategija<br>Dizajn<br>Razvoj<br>Security<br>Lansiranje<br>Održavanje &amp; rast
+              </dd>
+              <div class="js-company-border c-topCompanyData_dl_border"></div>
+            </div>
+            <div class="js-company-list-item c-topCompanyData_dlInner">
+              <dt class="js-company-text c-topCompanyData_dt" data-i18n="company.team">Tim</dt>
+              <dd class="js-company-text c-topCompanyData_dd" data-i18n="company.teamVal">Senior tim za strategiju, UX/UI, engineering, AI delivery i cyber security</dd>
+              <div class="js-company-border c-topCompanyData_dl_border"></div>
+            </div>
+            <div class="js-company-list-item c-topCompanyData_dlInner">
+              <dt class="js-company-text c-topCompanyData_dt" data-i18n="company.contact">Kontakt</dt>
+              <dd class="js-company-text c-topCompanyData_dd"><a href="#contact" data-mf-contact class="c-topCompanyData_ddA c-linkArrow">contact@mojflow.com<div class="c-linkArrow_icon"><span class="arrowWrap"><i class="arrow"></i><i class="arrowGoast"></i></span></div></a></dd>
+              <div class="js-company-border c-topCompanyData_dl_border"></div>
+            </div>
+          </dl>
+        </div><!-- .c-topCompanyData -->
+      </div><!-- .c-topCompany -->
+    </section><!-- section-company -->
+
+    <section data-iso-item data-iso-call="addBodyClass" data-iso-body-class="-is-view-footer" class="c-section -footer" data-scroll-section data-scroll-section-id="section-footer">
+      <footer class="c-footer">
+        <div class="c-footer_vessel">
+          <div class="c-footer_header">
+            <div class="c-footer_logo">
+              <a href="/"><img src="/assets/images/common/logo_01.svg" alt="MojFlow" class="c-footer_logoImg"></a>
+            </div>
+          </div><!-- .c-footer_header -->
+          <div class="c-footer_nav">
+            <ul class="c-footerNav">
+              <li class="c-footerNav_items"><a href="#CONCEPT" class="js-link-scroll c-footerNav_a" data-i18n="nav.concept">Koncept</a></li>
+              <li class="c-footerNav_items"><a href="#SERVICE" class="js-link-scroll c-footerNav_a" data-i18n="nav.services">Usluge</a></li>
+              <li class="c-footerNav_items"><a href="#SECURITY" class="js-link-scroll c-footerNav_a" data-i18n="nav.security">Bezbednost</a></li>
+              <li class="c-footerNav_items"><a href="#COMPANY" class="js-link-scroll c-footerNav_a" data-i18n="nav.company">Kompanija</a></li>
+              <li class="c-footerNav_items"><a href="#RECRUIT" class="js-link-scroll c-footerNav_a" data-i18n="nav.process">Proces</a></li>
+              <li class="c-footerNav_items"><a href="#contact" data-mf-contact class="c-footerNav_a" data-i18n="nav.contact">Kontakt</a></li>
+            </ul>
+          </div><!-- .c-footer_nav -->
+          <div class="c-footer_sns">
+            <div class="c-footerBottom">
+              <div class="c-footerBottom_copyright">
+                <div class="c-footer_copyright">&copy; MojFlow</div>
+              </div><!-- .c-footerBottom_copyright -->
+              <div class="c-footerBottom_sns">
+                <ul class="c-footerSns">
+                  <li class="c-footerSns_items"><a href="https://mojflow.com" target="_blank" class="c-footerSns_a -twitter">Website</a></li>
+                  <li class="c-footerSns_items"><a href="mailto:contact@mojflow.com" class="c-footerSns_a -facebook">Email</a></li>
+                </ul>
+              </div><!-- .c-footerBottom_sns -->
+            </div><!-- .c-footerBottom -->
+          </div><!-- .c-footer_nav -->
+        </div><!-- .c-footer_vessel -->
+      </footer><!-- .c-footer -->
+    </section><!-- section-footer -->
+
+  </div><!-- .js-scroll-container -->
+
+  <!-- Contact modal -->
+  <div class="mf-modal" id="mfContactModal" role="dialog" aria-modal="true" aria-labelledby="mfContactTitle" aria-hidden="true">
+    <div class="mf-modal_backdrop" data-mf-close></div>
+    <div class="mf-modal_card">
+      <button type="button" class="mf-modal_close" data-mf-close aria-label="Close">×</button>
+      <p class="mf-modal_eyebrow" data-i18n="form.eyebrow">Razgovor o projektu</p>
+      <h3 class="mf-modal_title" id="mfContactTitle" data-i18n="form.title">Ispričaj nam šta gradiš.</h3>
+      <p class="mf-modal_sub" data-i18n="form.sub">Odgovaramo u toku 24 sata sa konkretnim sledećim korakom — bez šablonskih ponuda.</p>
+      <form class="mf-form" id="mfContactForm" novalidate>
+        <div class="mf-form_row">
+          <div class="mf-field">
+            <label for="mfName" data-i18n="form.name">Ime</label>
+            <input type="text" id="mfName" name="name" autocomplete="name" required>
+          </div>
+          <div class="mf-field">
+            <label for="mfEmail" data-i18n="form.email">Email</label>
+            <input type="email" id="mfEmail" name="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="mf-form_row">
+          <div class="mf-field">
+            <label for="mfCompany" data-i18n="form.company">Kompanija</label>
+            <input type="text" id="mfCompany" name="company" autocomplete="organization">
+          </div>
+          <div class="mf-field">
+            <label for="mfTopic" data-i18n="form.topic">Tema</label>
+            <select id="mfTopic" name="topic">
+              <option value="web" data-i18n="form.topic.web">Web sajt / web aplikacija</option>
+              <option value="mobile" data-i18n="form.topic.mobile">Mobilna aplikacija</option>
+              <option value="ai" data-i18n="form.topic.ai">AI sistem / automatizacija</option>
+              <option value="security" data-i18n="form.topic.security">Cyber security</option>
+              <option value="other" data-i18n="form.topic.other">Drugo</option>
+            </select>
+          </div>
+        </div>
+        <div class="mf-field">
+          <label for="mfMessage" data-i18n="form.message">Poruka</label>
+          <textarea id="mfMessage" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="mf-submit" data-i18n="form.submit">Pošalji poruku</button>
+        <p class="mf-modal_note" data-i18n="form.note">Slanjem se otvara mail klijent sa pripremljenom porukom za contact@mojflow.com. Ako ti je lakše, piši nam direktno.</p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    /* ---------- i18n dictionary ---------- */
+    const MF_I18N = {
+      sr: {
+        "nav.concept":"Koncept","nav.services":"Usluge","nav.security":"Bezbednost","nav.company":"Kompanija","nav.process":"Proces","nav.contact":"Kontakt",
+        "hero.line1":"Gradimo digitalne sisteme za","hero.line2":"Cyber<span data-mv-spilit-text class=\"c-mv-copy-mark_and\">&</span>","hero.line3":"Rast",
+        "concept.title":"Koncept",
+        "concept.heading":"Softver i bezbednost koji rade za prihod, procese i poverenje korisnika",
+        "concept.body":"MojFlow je product, engineering i security partner za kompanije koje žele više od „lepog ekrana”. Projektujemo i razvijamo web sajtove, web aplikacije, mobilne aplikacije i AI sisteme — i postavljamo sloj cyber security zaštite oko njih. Rezultat je digitalni proizvod koji donosi prihod, ubrzava operacije i izdržava napade.",
+        "service.title":"Usluge",
+        "service.lead":"Web, mobile i AI proizvodi<br>koji prodaju, automatizuju<br>i skaliraju poslovanje — uz cyber security osnovu od prvog dana.",
+        "service.s1.head":"Sajtovi i web aplikacije<br>koji pretvaraju pažnju u prihod",
+        "service.s1.text":"Prodajne landing stranice, klijentski portali i SaaS MVP-jevi sa jasnom ponudom, brzim interfejsom i stabilnom tehničkom osnovom. Svaka sekcija i tok mora da podrži konkretan poslovni cilj — više leadova, više konverzija, kraći prodajni ciklus.",
+        "service.s1.b1":"Prodajni sajtovi i landing stranice","service.s1.b2":"Klijentski i partner portali","service.s1.b3":"SaaS MVP-jevi i interni alati",
+        "service.s2.head":"Mobilne aplikacije, AI sistemi i<br>cyber security koji štite rast",
+        "service.s2.text":"Dizajniramo mobilne proizvode, AI agente, RAG sisteme i automatizacije za timove kojima rast više ne sme da zavisi od ručnog rada. Uz svaki sistem isporučujemo i sloj zaštite: pen-test, hardening, monitoring i incident response — da skaliranje ne otvori vrata napadima.",
+        "approach.title":"Pristup",
+        "approach.p1.head":"Šta klijent dobija sa MojFlow timom",
+        "approach.p1.text":"Jedan partner koji spaja strategiju, dizajn, razvoj i security u jednu isporuku: sajt koji bolje prodaje, aplikaciju koja rasterećuje operacije, AI sistem koji preuzima ponavljajući posao i zaštitu koja sve to drži stabilno i van vesti o curenju podataka.",
+        "approach.p1.cta":"Saznaj više",
+        "approach.p2.head":"Kako vodimo projekat do rezultata",
+        "approach.p2.text":"Prvo definišemo gde softver treba da donese prihod, ušteđeno vreme ili smanjeni rizik. Onda u kratkim sprintovima isporučujemo prvu verziju, ugrađujemo bezbednosne kontrole već u arhitekturi, merimo reakciju korisnika i unapređujemo ono što dokazano donosi ROI.",
+        "approach.p2.cta":"Saznaj više",
+        "security.title":"Cyber Security",
+        "security.i1.tag":"01","security.i1.cat":"PENTEST","security.i1.head":"Penetration testing web sajtova, API-ja i mobilnih aplikacija — pre nego što napadač to uradi za vas.",
+        "security.i2.tag":"02","security.i2.cat":"HARDENING","security.i2.head":"Cloud i server hardening, identity & access kontrole, zero-trust postavka i bezbedna CI/CD pipeline.",
+        "security.i3.tag":"03","security.i3.cat":"MONITORING","security.i3.head":"24/7 monitoring, log korelacija, alarmiranje i incident response — incidenti se otkrivaju u minutima, ne u nedeljama.",
+        "security.i4.tag":"04","security.i4.cat":"COMPLIANCE","security.i4.head":"GDPR, ISO 27001 i NIS2 priprema: politike, procedure, dokazi i tehnički kontroli koji prolaze reviziju.",
+        "process.title":"Proces",
+        "process.lead":"Tražite tim koji vodi digitalni proizvod od ideje do produkcije — i obezbeđuje ga? MojFlow preuzima strategiju, UX, dizajn, razvoj, AI integracije i cyber security tako da svaki sprint ima jasan poslovni razlog i jasan vlasnik rizika.",
+        "company.title":"Kompanija",
+        "company.name":"Ime","company.location":"Lokacija","company.locationVal":"Beograd + London<br>rad sa klijentima globalno",
+        "company.focus":"Fokus","company.focusVal":"Web, mobile, AI sistemi i cyber security",
+        "company.services":"Usluge","company.servicesVal":"Web sajtovi, web aplikacije, mobilne aplikacije, AI rešenja, penetration testing, security hardening i monitoring",
+        "company.model":"Model rada","company.modelVal":"Strategija<br>Dizajn<br>Razvoj<br>Security<br>Lansiranje<br>Održavanje &amp; rast",
+        "company.team":"Tim","company.teamVal":"Senior tim za strategiju, UX/UI, engineering, AI delivery i cyber security",
+        "company.contact":"Kontakt",
+        "cta.contact":"Kontakt","cta.startProject":"Pokreni projekat",
+        "form.eyebrow":"Razgovor o projektu","form.title":"Ispričaj nam šta gradiš.","form.sub":"Odgovaramo u toku 24 sata sa konkretnim sledećim korakom — bez šablonskih ponuda.",
+        "form.name":"Ime","form.email":"Email","form.company":"Kompanija","form.topic":"Tema",
+        "form.topic.web":"Web sajt / web aplikacija","form.topic.mobile":"Mobilna aplikacija","form.topic.ai":"AI sistem / automatizacija","form.topic.security":"Cyber security","form.topic.other":"Drugo",
+        "form.message":"Poruka","form.submit":"Pošalji poruku","form.note":"Slanjem se otvara mail klijent sa pripremljenom porukom za contact@mojflow.com. Ako ti je lakše, piši nam direktno."
+      },
+      en: {
+        "nav.concept":"Concept","nav.services":"Services","nav.security":"Security","nav.company":"Company","nav.process":"Process","nav.contact":"Contact",
+        "hero.line1":"We build digital systems for","hero.line2":"Cyber<span data-mv-spilit-text class=\"c-mv-copy-mark_and\">&</span>","hero.line3":"Growth",
+        "concept.title":"Concept",
+        "concept.heading":"Software and security that work for revenue, operations and user trust",
+        "concept.body":"MojFlow is a product, engineering and security partner for companies that want more than a pretty screen. We design and build web sites, web applications, mobile apps and AI systems — and wrap a cyber security layer around them. The result is a digital product that earns revenue, accelerates operations and withstands attacks.",
+        "service.title":"Services",
+        "service.lead":"Web, mobile and AI products<br>that sell, automate and scale<br>the business — with a cyber security foundation from day one.",
+        "service.s1.head":"Web sites and web apps<br>that turn attention into revenue",
+        "service.s1.text":"Sales landing pages, client portals and SaaS MVPs with a sharp offer, a fast interface and a stable technical foundation. Every section and flow must serve a concrete business goal — more leads, more conversions, shorter sales cycle.",
+        "service.s1.b1":"Sales sites and landing pages","service.s1.b2":"Client and partner portals","service.s1.b3":"SaaS MVPs and internal tools",
+        "service.s2.head":"Mobile, AI systems and<br>cyber security that protect growth",
+        "service.s2.text":"We design mobile products, AI agents, RAG systems and automations for teams whose growth can no longer depend on manual work. With every system we ship a protection layer: pen-tests, hardening, monitoring and incident response — so scaling doesn't open the door to attackers.",
+        "approach.title":"Approach",
+        "approach.p1.head":"What a client gets with the MojFlow team",
+        "approach.p1.text":"One partner who joins strategy, design, engineering and security into a single delivery: a site that sells better, an app that takes load off operations, an AI system that absorbs repetitive work, and protection that keeps it all stable and out of the data-breach news.",
+        "approach.p1.cta":"Learn more",
+        "approach.p2.head":"How we drive a project to outcomes",
+        "approach.p2.text":"First we define where the software should produce revenue, saved hours or reduced risk. Then we ship the first version in short sprints, bake security controls into the architecture, measure user response and double down on what proves ROI.",
+        "approach.p2.cta":"Learn more",
+        "security.title":"Cyber Security",
+        "security.i1.tag":"01","security.i1.cat":"PENTEST","security.i1.head":"Penetration testing of websites, APIs and mobile apps — before an attacker does it for you.",
+        "security.i2.tag":"02","security.i2.cat":"HARDENING","security.i2.head":"Cloud and server hardening, identity & access controls, zero-trust setup and a secure CI/CD pipeline.",
+        "security.i3.tag":"03","security.i3.cat":"MONITORING","security.i3.head":"24/7 monitoring, log correlation, alerting and incident response — incidents surface in minutes, not weeks.",
+        "security.i4.tag":"04","security.i4.cat":"COMPLIANCE","security.i4.head":"GDPR, ISO 27001 and NIS2 readiness: policies, procedures, evidence and technical controls that survive an audit.",
+        "process.title":"Process",
+        "process.lead":"Looking for a team that takes a digital product from idea to production — and secures it on the way? MojFlow owns strategy, UX, design, engineering, AI integration and cyber security, so every sprint has a clear business reason and a clear owner of risk.",
+        "company.title":"Company",
+        "company.name":"Name","company.location":"Location","company.locationVal":"Belgrade + London<br>working with clients globally",
+        "company.focus":"Focus","company.focusVal":"Web, mobile, AI systems and cyber security",
+        "company.services":"Services","company.servicesVal":"Web sites, web apps, mobile apps, AI solutions, penetration testing, security hardening and monitoring",
+        "company.model":"Engagement","company.modelVal":"Strategy<br>Design<br>Engineering<br>Security<br>Launch<br>Maintenance &amp; growth",
+        "company.team":"Team","company.teamVal":"Senior team for strategy, UX/UI, engineering, AI delivery and cyber security",
+        "company.contact":"Contact",
+        "cta.contact":"Contact","cta.startProject":"Start a project",
+        "form.eyebrow":"Project conversation","form.title":"Tell us what you're building.","form.sub":"We reply within 24 hours with a concrete next step — no template proposals.",
+        "form.name":"Name","form.email":"Email","form.company":"Company","form.topic":"Topic",
+        "form.topic.web":"Web site / web app","form.topic.mobile":"Mobile app","form.topic.ai":"AI system / automation","form.topic.security":"Cyber security","form.topic.other":"Other",
+        "form.message":"Message","form.submit":"Send message","form.note":"Submitting opens your mail client with a prepared message to contact@mojflow.com. Or just write us directly."
+      }
+    };
+
+    const MF_LANG_KEY = "mf-lang";
+    const supportedLangs = ["sr","en"];
+
+    function detectInitialLang(){
+      try{
+        const stored = localStorage.getItem(MF_LANG_KEY);
+        if(stored && supportedLangs.includes(stored)) return stored;
+      }catch(e){}
+      const nav = (navigator.language || "sr").toLowerCase();
+      if(nav.startsWith("sr") || nav.startsWith("hr") || nav.startsWith("bs") || nav.startsWith("me")) return "sr";
+      return "en";
+    }
+
+    function applyLang(lang){
+      if(!supportedLangs.includes(lang)) lang = "sr";
+      const dict = MF_I18N[lang];
+      document.documentElement.setAttribute("lang", lang);
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const key = el.getAttribute("data-i18n");
+        const val = dict[key];
+        if(val === undefined) return;
+        if(el.hasAttribute("data-i18n-html") || key.startsWith("hero.line")){
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
+      });
+      document.querySelectorAll(".mf-lang button").forEach(btn=>{
+        btn.classList.toggle("is-active", btn.getAttribute("data-lang")===lang);
+      });
+      try{ localStorage.setItem(MF_LANG_KEY, lang); }catch(e){}
+    }
+
+    document.addEventListener("click", function(e){
+      const btn = e.target.closest(".mf-lang button[data-lang]");
+      if(btn){ applyLang(btn.getAttribute("data-lang")); }
+    });
+
+    /* ---------- Contact modal ---------- */
+    const modal = document.getElementById("mfContactModal");
+    const body = document.body;
+
+    function openModal(){
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden","false");
+      body.classList.add("mf-modal-open");
+      setTimeout(()=>{ const f = modal.querySelector("input,select,textarea"); if(f) f.focus(); }, 60);
+    }
+    function closeModal(){
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden","true");
+      body.classList.remove("mf-modal-open");
+    }
+
+    document.addEventListener("click", function(e){
+      const opener = e.target.closest("[data-mf-contact]");
+      if(opener){ e.preventDefault(); openModal(); return; }
+      if(e.target.closest("[data-mf-close]")){ e.preventDefault(); closeModal(); }
+    });
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+    });
+
+    document.getElementById("mfContactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const fd = new FormData(this);
+      const name = (fd.get("name")||"").toString().trim();
+      const email = (fd.get("email")||"").toString().trim();
+      const company = (fd.get("company")||"").toString().trim();
+      const topic = (fd.get("topic")||"").toString().trim();
+      const message = (fd.get("message")||"").toString().trim();
+      if(!name || !email || !message){
+        this.querySelector(".mf-submit").animate(
+          [{transform:"translateX(0)"},{transform:"translateX(-6px)"},{transform:"translateX(6px)"},{transform:"translateX(0)"}],
+          {duration:280}
+        );
+        return;
+      }
+      const subject = `MojFlow inquiry — ${topic} — ${name}${company?` (${company})`:""}`;
+      const bodyText = `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nTopic: ${topic}\n\n${message}`;
+      window.location.href = `mailto:contact@mojflow.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+    });
+
+    /* ---------- init ---------- */
+    applyLang(detectInitialLang());
+  </script>
+
+  <script defer src="/assets/js/lib/utilityModule.min.js?ver=1.0.4"></script>
+</body>
+
+</html>
