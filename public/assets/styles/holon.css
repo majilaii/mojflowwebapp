@@ -668,7 +668,7 @@ body.-is-view-service .c-headerNav_a {
   display: block;
   width: 100%;
   height: 100%;
-  background: url(/assets/images/common/bg_hamburgermenu_01.png) no-repeat 0 0;
+  background: url(/assets/images/common/bg_hamburgermenu_01.webp) no-repeat 0 0;
   background-size: cover;
 }
 
@@ -873,14 +873,6 @@ footer */
   text-indent: -9999px;
   overflow: hidden;
 }
-.c-footerSns_a.-twitter {
-  background: url(/assets/images/common/icn_twitter_01.svg) no-repeat;
-  background-size: cover;
-}
-.c-footerSns_a.-facebook {
-  background: url(/assets/images/common/icn_facebook_01.svg) no-repeat;
-  background-size: cover;
-}
 @media screen and (max-width: 767px) {
   .c-footerSns_items + .c-footerSns_items {
     margin-left: 0;
@@ -917,7 +909,7 @@ common */
   left: 0;
   width: 100%;
   height: 100vh;
-  background: no-repeat url(/assets/images/common/body_bg.png) 0 0;
+  background: no-repeat url(/assets/images/common/body_bg.webp) 0 0;
   background-size: cover;
   z-index: -1;
   mix-blend-mode: overlay;
