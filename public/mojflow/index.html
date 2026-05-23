@@ -189,9 +189,9 @@
             <div class="c-mv-textInner">
               <p class="js-fv-splash-copy-wrap js-fv-splash-copy-wrap01 c-mv-copy c-mv-copy01"><span data-mv-spilit-text class="js-fv-splash-copy js-fv-splash-copy01 animationTextInner" data-i18n="hero.line1">Gradimo softver koji donosi</span></p>
               <p class="js-fv-splash-copy-wrap js-fv-splash-copy-wrap02 c-mv-copy c-mv-copy02">
-                <span data-mv-spilit-text class="js-fv-splash-copy js-fv-splash-copy02 animationTextInner" data-i18n="hero.line2">Rast<span data-mv-spilit-text class="c-mv-copy-mark_and">&</span></span>
+                <span data-mv-spilit-text class="js-fv-splash-copy js-fv-splash-copy02 animationTextInner" data-i18n="hero.line2">Profit<span data-mv-spilit-text class="c-mv-copy-mark_and">&</span></span>
               </p>
-              <p class="js-fv-splash-copy-wrap js-fv-splash-copy-wrap03 c-mv-copy c-mv-copy03"><span data-mv-spilit-text class="js-fv-splash-copy js-fv-splash-copy03 animationTextInner" data-i18n="hero.line3">Profit</span></p>
+              <p class="js-fv-splash-copy-wrap js-fv-splash-copy-wrap03 c-mv-copy c-mv-copy03"><span data-mv-spilit-text class="js-fv-splash-copy js-fv-splash-copy03 animationTextInner" data-i18n="hero.line3">Rast</span></p>
             </div>
 
           </div>
@@ -819,7 +819,7 @@
     const MF_I18N = {
       sr: {
         "nav.concept":"Koncept","nav.services":"Usluge","nav.security":"Bezbednost","nav.company":"Kompanija","nav.process":"Proces","nav.contact":"Kontakt",
-        "hero.line1":"Gradimo softver koji donosi","hero.line2":"Rast<span data-mv-spilit-text class=\"c-mv-copy-mark_and\">&</span>","hero.line3":"Profit",
+        "hero.line1":"Gradimo softver koji donosi","hero.line2":"Profit<span data-mv-spilit-text class=\"c-mv-copy-mark_and\">&</span>","hero.line3":"Rast",
         "concept.title":"Koncept",
         "concept.heading":"Softver i bezbednost koji rade za prihod, procese i poverenje korisnika",
         "concept.body":"MojFlow je product, engineering i security partner za kompanije koje žele više od „lepog ekrana”. Projektujemo i razvijamo web sajtove, web aplikacije, mobilne aplikacije i AI sisteme, uz cyber security sloj oko njih. Rezultat je digitalni proizvod koji donosi prihod, ubrzava operacije i izdržava napade.",
@@ -859,7 +859,7 @@
       },
       en: {
         "nav.concept":"Concept","nav.services":"Services","nav.security":"Security","nav.company":"Company","nav.process":"Process","nav.contact":"Contact",
-        "hero.line1":"We build software that drives","hero.line2":"Growth<span data-mv-spilit-text class=\"c-mv-copy-mark_and\">&</span>","hero.line3":"Profit",
+        "hero.line1":"We build software that drives","hero.line2":"Profit<span data-mv-spilit-text class=\"c-mv-copy-mark_and\">&</span>","hero.line3":"Scale",
         "concept.title":"Concept",
         "concept.heading":"Software and security that work for revenue, operations and user trust",
         "concept.body":"MojFlow is a product, engineering and security partner for companies that want more than a pretty screen. We design and build web sites, web applications, mobile apps and AI systems, with a cyber security layer around them. The result is a digital product that earns revenue, accelerates operations and withstands attacks.",
@@ -907,9 +907,7 @@
         const stored = localStorage.getItem(MF_LANG_KEY);
         if(stored && supportedLangs.includes(stored)) return stored;
       }catch(e){}
-      const nav = (navigator.language || "sr").toLowerCase();
-      if(nav.startsWith("sr") || nav.startsWith("hr") || nav.startsWith("bs") || nav.startsWith("me")) return "sr";
-      return "en";
+      return "sr";
     }
 
     function applyLang(lang){

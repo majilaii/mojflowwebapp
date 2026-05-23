@@ -2708,7 +2708,7 @@ body:not(.-is-touchDevice)
   font-size: max(10.71vw, 100px);
   top: -70px;
   top: -6.2vw;
-  left: -4.5vw;
+  left: 0;
   padding-right: 20px;
 }
 .c-mv {
@@ -2878,8 +2878,7 @@ body:not(.-is-touchDevice)
     font-size: 16vw;
     top: -46px;
     top: -12.26vw;
-    left: -8px;
-    left: -2.13vw;
+    left: 0;
   }
   .c-mv {
     top: 0;
