@@ -16,21 +16,21 @@
   <meta name="description" content="MojFlow gradi web sajtove, web aplikacije, mobilne aplikacije, AI sisteme i cyber security rešenja koja kompanijama donose rast, efikasnost i otpornost." lang="sr">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="MojFlow — Web, mobile, AI i Cyber Security">
+  <meta property="og:title" content="MojFlow | Web, mobile, AI i Cyber Security">
   <meta property="og:description" content="Gradimo digitalne sisteme i bezbednosna rešenja koja kompanije pretvaraju u sigurnije, brže i profitabilnije organizacije.">
   <meta property="og:url" content="https://mojflow.com/">
   <meta property="og:image" content="https://mojflow.com/ogp.png">
-  <meta property="og:site_name" content="MojFlow — Web, mobile, AI i Cyber Security">
+  <meta property="og:site_name" content="MojFlow | Web, mobile, AI i Cyber Security">
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MojFlow — Web, mobile, AI i Cyber Security" />
+  <meta name="twitter:title" content="MojFlow | Web, mobile, AI i Cyber Security" />
   <meta name="twitter:description" content="Gradimo digitalne sisteme i bezbednosna rešenja koja kompanije pretvaraju u sigurnije, brže i profitabilnije organizacije." />
   <meta name="twitter:image" content="https://mojflow.com/ogp.png" />
 
   <link rel="shortcut icon" href="/favicon.jpg">
   <link rel="apple-touch-icon" type="image/png" href="https://mojflow.com/ogp.png">
 
-  <title>MojFlow — Web, mobile, AI i Cyber Security</title>
+  <title>MojFlow | Web, mobile, AI i Cyber Security</title>
   <script src="/assets/js/lib/beforeDomLoaded.min.js?ver=1.0.4"></script>
   <script>
     (function(d) {
@@ -51,18 +51,19 @@
   </noscript>
 
   <style>
-    /* Add-on UI only — does NOT override holon.css. New isolated class names (mf-*) */
+    /* Add-on UI only: does NOT override holon.css. New isolated class names (mf-*) */
 
     /* ---------- Navbar scroll background ---------- */
     .c-header{transition:background .35s ease, backdrop-filter .35s ease, box-shadow .35s ease}
     body.mf-scrolled .c-header{background:rgba(248,247,245,.78);backdrop-filter:saturate(140%) blur(16px);-webkit-backdrop-filter:saturate(140%) blur(16px);box-shadow:0 1px 0 rgba(15,20,30,.06)}
 
     /* ---------- Lang pill ---------- */
-    .mf-lang{position:fixed;top:18px;right:120px;z-index:100001;display:flex;gap:0;background:rgba(15,18,24,.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:999px;padding:4px;border:1px solid rgba(255,255,255,.08);font-family:Chillax,Arial,sans-serif;font-weight:500}
+    .mf-lang{position:relative;z-index:1;display:flex;gap:0;margin-left:24px;align-self:center;background:rgba(15,18,24,.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:999px;padding:4px;border:1px solid rgba(255,255,255,.08);font-family:Chillax,Arial,sans-serif;font-weight:500;pointer-events:all;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+    body.-is-pageLoaded .mf-lang{opacity:1;visibility:visible}
     .mf-lang button{appearance:none;border:0;background:transparent;color:rgba(255,255,255,.55);font-size:12px;letter-spacing:.08em;padding:6px 12px;border-radius:999px;cursor:pointer;transition:color .25s,background .25s;font-family:inherit;font-weight:inherit}
     .mf-lang button.is-active{color:#0b0f15;background:linear-gradient(135deg,#f4e3d6,#dfeaee)}
     .mf-lang button:hover:not(.is-active){color:#fff}
-    @media (max-width:767px){.mf-lang{top:14px;right:74px;padding:3px}.mf-lang button{font-size:10px;padding:4px 9px}}
+    @media (max-width:767px){.mf-lang{margin-left:auto;margin-right:48px;padding:3px}.mf-lang button{font-size:10px;padding:4px 9px}}
 
     /* Contact modal */
     .mf-modal{position:fixed;inset:0;z-index:100002;display:none;align-items:center;justify-content:center;padding:20px}
@@ -91,6 +92,17 @@
 
     body.mf-modal-open{overflow:hidden}
 
+    /* ---------- Wordmark crop safety ---------- */
+    #js-topConceptLeadTextWrap{overflow:visible;padding:.1em .24em .1em .04em;margin:-.1em -.24em -.1em -.04em}
+    #js-topConceptLeadText{box-sizing:content-box;overflow:visible;padding:.03em .18em .08em .03em;margin:-.03em -.18em -.08em -.03em;line-height:1.14}
+
+    /* ---------- Mobile splash logo crop fix ---------- */
+    @media screen and (max-width:767px){
+      .c-pageSplashLogo{-webkit-clip-path:inset(0) !important;clip-path:inset(0) !important;overflow:visible !important}
+      .c-pageSplashLogo_inner{width:auto !important;height:auto !important;background:none !important;-webkit-clip-path:none !important;clip-path:none !important;overflow:visible !important}
+      .c-pageSplashLogo .c-pageSplashLogoImage{position:static !important;display:block;width:clamp(112px,34vw,150px);height:auto}
+    }
+
     /* ---------- Navbar (slimmer, but keep original nav text size to preserve hover-ghost clipping) ---------- */
     .c-header{padding:52.8px 8vw !important}
     @media screen and (max-width:767px){.c-header{padding:24px 6vw !important}}
@@ -100,9 +112,6 @@
     .c-headerNav_a{overflow:hidden}
     .c-hamburgerBtn{transform:scale(.85);transform-origin:right center}
 
-    /* Lang pill follows the slimmer navbar */
-    .mf-lang{top:16px;right:104px}
-    @media (max-width:767px){.mf-lang{top:12px;right:64px}}
   </style>
 </head>
 
@@ -146,14 +155,13 @@
           <li class="c-headerNav_items"><a href="#contact" data-mf-contact class="js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.contact">Kontakt</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.contact">Kontakt</span></a></li>
         </ul>
       </div><!-- .c-header_nav -->
+      <div class="mf-lang" role="group" aria-label="Language">
+        <button type="button" data-lang="sr" class="is-active" aria-label="Srpski">SR</button>
+        <button type="button" data-lang="en" aria-label="English">EN</button>
+      </div>
       <div class="c-hamburgerBtn js-hamburgerBtn"><span class="c-hamburger"><span class="c-hamburger_vessel"><span class="c-hamburger_line"></span><span class="c-hamburger_line"></span></span></span></div>
     </div><!-- .c-header_vessel -->
   </header><!-- .c-header -->
-
-  <div class="mf-lang" role="group" aria-label="Language">
-    <button type="button" data-lang="sr" class="is-active" aria-label="Srpski">SR</button>
-    <button type="button" data-lang="en" aria-label="English">EN</button>
-  </div>
 
   <div class="c-navHamburgerW js-navMenuGlobal js-hamburgerGlobalMenu">
     <div class="c-navHamburgerW_vessel">
@@ -310,7 +318,7 @@
 
           <div class="c-topConceptBox">
             <h3 class="c-topConceptBox_head" data-i18n="concept.heading">Softver i bezbednost koji rade za prihod, procese i poverenje korisnika</h3>
-            <p class="c-topConceptBox_text" data-i18n="concept.body">MojFlow je product, engineering i security partner za kompanije koje žele više od „lepog ekrana”. Projektujemo i razvijamo web sajtove, web aplikacije, mobilne aplikacije i AI sisteme — i postavljamo sloj cyber security zaštite oko njih. Rezultat je digitalni proizvod koji donosi prihod, ubrzava operacije i izdržava napade.</p>
+            <p class="c-topConceptBox_text" data-i18n="concept.body">MojFlow je product, engineering i security partner za kompanije koje žele više od „lepog ekrana”. Projektujemo i razvijamo web sajtove, web aplikacije, mobilne aplikacije i AI sisteme, uz cyber security sloj oko njih. Rezultat je digitalni proizvod koji donosi prihod, ubrzava operacije i izdržava napade.</p>
           </div><!-- .c-topConceptBox -->
 
           <div class="c-topConceptStream">
@@ -350,7 +358,7 @@
 
         <div class="c-topService_header">
           <h2 class="c-headLv2" data-i18n="service.title">Usluge</h2>
-          <p class="c-topService_lead" data-i18n="service.lead" data-i18n-html>Web, mobile i AI proizvodi<br>koji prodaju, automatizuju<br>i skaliraju poslovanje — uz cyber security osnovu od prvog dana.</p>
+          <p class="c-topService_lead" data-i18n="service.lead" data-i18n-html>Web, mobile i AI proizvodi<br>koji prodaju, automatizuju<br>i skaliraju poslovanje, uz cyber security osnovu od prvog dana.</p>
         </div><!-- .c-topService_header -->
 
         <div class="c-topServiceBox">
@@ -361,7 +369,7 @@
               <div data-sticky-marker data-sticky-marker-content="serviceImg01" class="js-contentMarker c-topServiceBox_mainInner -no1">
                 <p class="c-topServiceBox_en">01 Web Sites &amp; Web Apps</p>
                 <h3 class="c-topServiceBox_head" data-i18n="service.s1.head" data-i18n-html>Sajtovi i web aplikacije<br>koji pretvaraju pažnju u prihod</h3>
-                <p class="c-topServiceBox_text" data-i18n="service.s1.text">Prodajne landing stranice, klijentski portali i SaaS MVP-jevi sa jasnom ponudom, brzim interfejsom i stabilnom tehničkom osnovom. Svaka sekcija i tok mora da podrži konkretan poslovni cilj — više leadova, više konverzija, kraći prodajni ciklus.</p>
+                <p class="c-topServiceBox_text" data-i18n="service.s1.text">Prodajne landing stranice, klijentski portali i SaaS MVP-jevi sa jasnom ponudom, brzim interfejsom i stabilnom tehničkom osnovom. Svaka sekcija i tok mora da podrži konkretan poslovni cilj: više leadova, više konverzija, kraći prodajni ciklus.</p>
                 <ul class="c-topServiceList">
                   <li class="c-topServiceList_items" data-i18n="service.s1.b1">Prodajni sajtovi i landing stranice</li>
                   <li class="c-topServiceList_items" data-i18n="service.s1.b2">Klijentski i partner portali</li>
@@ -379,7 +387,7 @@
               <div data-sticky-marker data-sticky-marker-content="serviceImg02" class="js-contentMarker c-topServiceBox_mainInner -no2">
                 <p class="c-topServiceBox_en">02 Mobile, AI &amp; Cyber Security</p>
                 <h3 class="c-topServiceBox_head" data-i18n="service.s2.head" data-i18n-html>Mobilne aplikacije, AI sistemi i<br>cyber security koji štite rast</h3>
-                <p class="c-topServiceBox_text" data-i18n="service.s2.text">Dizajniramo mobilne proizvode, AI agente, RAG sisteme i automatizacije za timove kojima rast više ne sme da zavisi od ručnog rada. Uz svaki sistem isporučujemo i sloj zaštite: pen-test, hardening, monitoring i incident response — da skaliranje ne otvori vrata napadima.</p>
+                <p class="c-topServiceBox_text" data-i18n="service.s2.text">Dizajniramo mobilne proizvode, AI agente, RAG sisteme i automatizacije za timove kojima rast više ne sme da zavisi od ručnog rada. Uz svaki sistem isporučujemo i sloj zaštite: pen-test, hardening, monitoring i incident response, da skaliranje ne otvori vrata napadima.</p>
 
                 <div class="c-viewall -details">
                   <a href="#contact" data-mf-contact class="js-holon-button-mask c-viewall_a">
@@ -452,12 +460,12 @@
                 <div class="topPersonList_imageInner">
                   <div class="js-person-clip-image topPersonList_imageItem topPersonList_imageItem01 imageItemWrap" data-anime-start="bottom">
                     <figure>
-                      <img class="js-person-scale-image imageItem" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy">
+                      <img class="js-person-scale-image imageItem" src="/assets/images/top/img_person_01_01.png" alt="" loading="lazy">
                     </figure>
                   </div>
                   <div class="js-person-clip-image topPersonList_imageItem topPersonList_imageItem02 imageItemWrap" data-anime-start="top">
                     <figure>
-                      <img class="js-person-scale-image imageItem" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy">
+                      <img class="js-person-scale-image imageItem" src="/assets/images/top/img_person_01_02.png" alt="" loading="lazy">
                     </figure>
                   </div>
                 </div>
@@ -478,17 +486,17 @@
                 <div class="topPersonList_imageInner">
                   <div class="js-person-clip-image topPersonList_imageItem topPersonList_imageItem01 imageItemWrap" data-anime-start="bottom">
                     <figure>
-                      <img class="js-person-scale-image imageItem" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy">
+                      <img class="js-person-scale-image imageItem" src="/assets/images/top/img_person_02_01.png" alt="" loading="lazy">
                     </figure>
                   </div>
                   <div class="js-person-clip-image topPersonList_imageItem topPersonList_imageItem02 imageItemWrap" data-anime-start="top">
                     <figure>
-                      <img class="js-person-scale-image imageItem" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy">
+                      <img class="js-person-scale-image imageItem" src="/assets/images/top/img_person_02_02.png" alt="" loading="lazy">
                     </figure>
                   </div>
                   <div class="js-person-clip-image topPersonList_imageItem topPersonList_imageItem03 imageItemWrap" data-anime-start="bottom">
                     <figure>
-                      <img class="js-person-scale-image imageItem" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy">
+                      <img class="js-person-scale-image imageItem" src="/assets/images/top/img_person_02_03.png" alt="" loading="lazy">
                     </figure>
                   </div>
                 </div>
@@ -519,7 +527,7 @@
                   <div class="js-news-text c-topNewsList_cat" data-i18n="security.i1.cat">PENTEST</div>
                 </div><!-- .c-topNewsList_info -->
                 <div class="c-topNewsList_main">
-                  <p class="js-news-text c-topNewsList_head" data-i18n="security.i1.head">Penetration testing web sajtova, API-ja i mobilnih aplikacija — pre nego što napadač to uradi za vas.</p>
+                  <p class="js-news-text c-topNewsList_head" data-i18n="security.i1.head">Penetration testing web sajtova, API-ja i mobilnih aplikacija pre nego što napadač to uradi za vas.</p>
                 </div><!-- .c-topNewsList_main -->
               </div>
             </span>
@@ -549,7 +557,7 @@
                   <div class="js-news-text c-topNewsList_cat" data-i18n="security.i3.cat">MONITORING</div>
                 </div><!-- .c-topNewsList_info -->
                 <div class="c-topNewsList_main">
-                  <p class="js-news-text c-topNewsList_head" data-i18n="security.i3.head">24/7 monitoring, log korelacija, alarmiranje i incident response — incidenti se otkrivaju u minutima, ne u nedeljama.</p>
+                  <p class="js-news-text c-topNewsList_head" data-i18n="security.i3.head">24/7 monitoring, log korelacija, alarmiranje i incident response, da se incidenti otkrivaju u minutima, ne u nedeljama.</p>
                 </div><!-- .c-topNewsList_main -->
               </div>
             </span>
@@ -657,7 +665,7 @@
       <div class="c-topRecruit">
         <h2 class="c-headLv2" data-i18n="process.title">Proces</h2>
         <div class="c-topRecruit_box">
-          <p class="c-topRecruit_lead" data-i18n="process.lead">Tražite tim koji vodi digitalni proizvod od ideje do produkcije — i obezbeđuje ga? MojFlow preuzima strategiju, UX, dizajn, razvoj, AI integracije i cyber security tako da svaki sprint ima jasan poslovni razlog i jasan vlasnik rizika.</p>
+          <p class="c-topRecruit_lead" data-i18n="process.lead">Tražite tim koji vodi digitalni proizvod od ideje do produkcije i obezbeđuje ga? MojFlow preuzima strategiju, UX, dizajn, razvoj, AI integracije i cyber security tako da svaki sprint ima jasan poslovni razlog i jasan vlasnik rizika.</p>
           <div class="c-viewall -details">
             <a href="#contact" data-mf-contact class="js-holon-button-mask c-viewall_a">
               <span class="c-viewall_text c-viewall_text_hover">
@@ -779,7 +787,7 @@
       <button type="button" class="mf-modal_close" data-mf-close aria-label="Close">×</button>
       <p class="mf-modal_eyebrow" data-i18n="form.eyebrow">Razgovor o projektu</p>
       <h3 class="mf-modal_title" id="mfContactTitle" data-i18n="form.title">Ispričaj nam šta gradiš.</h3>
-      <p class="mf-modal_sub" data-i18n="form.sub">Odgovaramo u toku 24 sata sa konkretnim sledećim korakom — bez šablonskih ponuda.</p>
+      <p class="mf-modal_sub" data-i18n="form.sub">Odgovaramo u toku 24 sata sa konkretnim sledećim korakom, bez šablonskih ponuda.</p>
       <form class="mf-form" id="mfContactForm" novalidate>
         <div class="mf-form_row">
           <div class="mf-field">
@@ -825,14 +833,14 @@
         "hero.line1":"Gradimo softver koji donosi","hero.line2":"Rast<span data-mv-spilit-text class=\"c-mv-copy-mark_and\">&</span>","hero.line3":"Profit",
         "concept.title":"Koncept",
         "concept.heading":"Softver i bezbednost koji rade za prihod, procese i poverenje korisnika",
-        "concept.body":"MojFlow je product, engineering i security partner za kompanije koje žele više od „lepog ekrana”. Projektujemo i razvijamo web sajtove, web aplikacije, mobilne aplikacije i AI sisteme — i postavljamo sloj cyber security zaštite oko njih. Rezultat je digitalni proizvod koji donosi prihod, ubrzava operacije i izdržava napade.",
+        "concept.body":"MojFlow je product, engineering i security partner za kompanije koje žele više od „lepog ekrana”. Projektujemo i razvijamo web sajtove, web aplikacije, mobilne aplikacije i AI sisteme, uz cyber security sloj oko njih. Rezultat je digitalni proizvod koji donosi prihod, ubrzava operacije i izdržava napade.",
         "service.title":"Usluge",
-        "service.lead":"Web, mobile i AI proizvodi<br>koji prodaju, automatizuju<br>i skaliraju poslovanje — uz cyber security osnovu od prvog dana.",
+        "service.lead":"Web, mobile i AI proizvodi<br>koji prodaju, automatizuju<br>i skaliraju poslovanje, uz cyber security osnovu od prvog dana.",
         "service.s1.head":"Sajtovi i web aplikacije<br>koji pretvaraju pažnju u prihod",
-        "service.s1.text":"Prodajne landing stranice, klijentski portali i SaaS MVP-jevi sa jasnom ponudom, brzim interfejsom i stabilnom tehničkom osnovom. Svaka sekcija i tok mora da podrži konkretan poslovni cilj — više leadova, više konverzija, kraći prodajni ciklus.",
+        "service.s1.text":"Prodajne landing stranice, klijentski portali i SaaS MVP-jevi sa jasnom ponudom, brzim interfejsom i stabilnom tehničkom osnovom. Svaka sekcija i tok mora da podrži konkretan poslovni cilj: više leadova, više konverzija, kraći prodajni ciklus.",
         "service.s1.b1":"Prodajni sajtovi i landing stranice","service.s1.b2":"Klijentski i partner portali","service.s1.b3":"SaaS MVP-jevi i interni alati",
         "service.s2.head":"Mobilne aplikacije, AI sistemi i<br>cyber security koji štite rast",
-        "service.s2.text":"Dizajniramo mobilne proizvode, AI agente, RAG sisteme i automatizacije za timove kojima rast više ne sme da zavisi od ručnog rada. Uz svaki sistem isporučujemo i sloj zaštite: pen-test, hardening, monitoring i incident response — da skaliranje ne otvori vrata napadima.",
+        "service.s2.text":"Dizajniramo mobilne proizvode, AI agente, RAG sisteme i automatizacije za timove kojima rast više ne sme da zavisi od ručnog rada. Uz svaki sistem isporučujemo i sloj zaštite: pen-test, hardening, monitoring i incident response, da skaliranje ne otvori vrata napadima.",
         "approach.title":"Pristup",
         "approach.p1.head":"Šta klijent dobija sa MojFlow timom",
         "approach.p1.text":"Jedan partner koji spaja strategiju, dizajn, razvoj i security u jednu isporuku: sajt koji bolje prodaje, aplikaciju koja rasterećuje operacije, AI sistem koji preuzima ponavljajući posao i zaštitu koja sve to drži stabilno i van vesti o curenju podataka.",
@@ -841,12 +849,12 @@
         "approach.p2.text":"Prvo definišemo gde softver treba da donese prihod, ušteđeno vreme ili smanjeni rizik. Onda u kratkim sprintovima isporučujemo prvu verziju, ugrađujemo bezbednosne kontrole već u arhitekturi, merimo reakciju korisnika i unapređujemo ono što dokazano donosi ROI.",
         "approach.p2.cta":"Saznaj više",
         "security.title":"Cyber Security",
-        "security.i1.tag":"01","security.i1.cat":"PENTEST","security.i1.head":"Penetration testing web sajtova, API-ja i mobilnih aplikacija — pre nego što napadač to uradi za vas.",
+        "security.i1.tag":"01","security.i1.cat":"PENTEST","security.i1.head":"Penetration testing web sajtova, API-ja i mobilnih aplikacija pre nego što napadač to uradi za vas.",
         "security.i2.tag":"02","security.i2.cat":"HARDENING","security.i2.head":"Cloud i server hardening, identity & access kontrole, zero-trust postavka i bezbedna CI/CD pipeline.",
-        "security.i3.tag":"03","security.i3.cat":"MONITORING","security.i3.head":"24/7 monitoring, log korelacija, alarmiranje i incident response — incidenti se otkrivaju u minutima, ne u nedeljama.",
+        "security.i3.tag":"03","security.i3.cat":"MONITORING","security.i3.head":"24/7 monitoring, log korelacija, alarmiranje i incident response, da se incidenti otkrivaju u minutima, ne u nedeljama.",
         "security.i4.tag":"04","security.i4.cat":"COMPLIANCE","security.i4.head":"GDPR, ISO 27001 i NIS2 priprema: politike, procedure, dokazi i tehnički kontroli koji prolaze reviziju.",
         "process.title":"Proces",
-        "process.lead":"Tražite tim koji vodi digitalni proizvod od ideje do produkcije — i obezbeđuje ga? MojFlow preuzima strategiju, UX, dizajn, razvoj, AI integracije i cyber security tako da svaki sprint ima jasan poslovni razlog i jasan vlasnik rizika.",
+        "process.lead":"Tražite tim koji vodi digitalni proizvod od ideje do produkcije i obezbeđuje ga? MojFlow preuzima strategiju, UX, dizajn, razvoj, AI integracije i cyber security tako da svaki sprint ima jasan poslovni razlog i jasan vlasnik rizika.",
         "company.title":"Kompanija",
         "company.name":"Ime","company.location":"Lokacija","company.locationVal":"Beograd + London<br>rad sa klijentima globalno",
         "company.focus":"Fokus","company.focusVal":"Web, mobile, AI sistemi i cyber security",
@@ -855,7 +863,7 @@
         "company.team":"Tim","company.teamVal":"Senior tim za strategiju, UX/UI, engineering, AI delivery i cyber security",
         "company.contact":"Kontakt",
         "cta.contact":"Kontakt","cta.startProject":"Pokreni projekat",
-        "form.eyebrow":"Razgovor o projektu","form.title":"Ispričaj nam šta gradiš.","form.sub":"Odgovaramo u toku 24 sata sa konkretnim sledećim korakom — bez šablonskih ponuda.",
+        "form.eyebrow":"Razgovor o projektu","form.title":"Ispričaj nam šta gradiš.","form.sub":"Odgovaramo u toku 24 sata sa konkretnim sledećim korakom, bez šablonskih ponuda.",
         "form.name":"Ime","form.email":"Email","form.company":"Kompanija","form.topic":"Tema",
         "form.topic.web":"Web sajt / web aplikacija","form.topic.mobile":"Mobilna aplikacija","form.topic.ai":"AI sistem / automatizacija","form.topic.security":"Cyber security","form.topic.other":"Drugo",
         "form.message":"Poruka","form.submit":"Pošalji poruku","form.note":"Slanjem se otvara mail klijent sa pripremljenom porukom za contact@mojflow.com. Ako ti je lakše, piši nam direktno."
@@ -865,14 +873,14 @@
         "hero.line1":"We build software that drives","hero.line2":"Growth<span data-mv-spilit-text class=\"c-mv-copy-mark_and\">&</span>","hero.line3":"Profit",
         "concept.title":"Concept",
         "concept.heading":"Software and security that work for revenue, operations and user trust",
-        "concept.body":"MojFlow is a product, engineering and security partner for companies that want more than a pretty screen. We design and build web sites, web applications, mobile apps and AI systems — and wrap a cyber security layer around them. The result is a digital product that earns revenue, accelerates operations and withstands attacks.",
+        "concept.body":"MojFlow is a product, engineering and security partner for companies that want more than a pretty screen. We design and build web sites, web applications, mobile apps and AI systems, with a cyber security layer around them. The result is a digital product that earns revenue, accelerates operations and withstands attacks.",
         "service.title":"Services",
-        "service.lead":"Web, mobile and AI products<br>that sell, automate and scale<br>the business — with a cyber security foundation from day one.",
+        "service.lead":"Web, mobile and AI products<br>that sell, automate and scale<br>the business, with a cyber security foundation from day one.",
         "service.s1.head":"Web sites and web apps<br>that turn attention into revenue",
-        "service.s1.text":"Sales landing pages, client portals and SaaS MVPs with a sharp offer, a fast interface and a stable technical foundation. Every section and flow must serve a concrete business goal — more leads, more conversions, shorter sales cycle.",
+        "service.s1.text":"Sales landing pages, client portals and SaaS MVPs with a sharp offer, a fast interface and a stable technical foundation. Every section and flow must serve a concrete business goal: more leads, more conversions, a shorter sales cycle.",
         "service.s1.b1":"Sales sites and landing pages","service.s1.b2":"Client and partner portals","service.s1.b3":"SaaS MVPs and internal tools",
         "service.s2.head":"Mobile, AI systems and<br>cyber security that protect growth",
-        "service.s2.text":"We design mobile products, AI agents, RAG systems and automations for teams whose growth can no longer depend on manual work. With every system we ship a protection layer: pen-tests, hardening, monitoring and incident response — so scaling doesn't open the door to attackers.",
+        "service.s2.text":"We design mobile products, AI agents, RAG systems and automations for teams whose growth can no longer depend on manual work. With every system we ship a protection layer: pen-tests, hardening, monitoring and incident response, so scaling doesn't open the door to attackers.",
         "approach.title":"Approach",
         "approach.p1.head":"What a client gets with the MojFlow team",
         "approach.p1.text":"One partner who joins strategy, design, engineering and security into a single delivery: a site that sells better, an app that takes load off operations, an AI system that absorbs repetitive work, and protection that keeps it all stable and out of the data-breach news.",
@@ -881,12 +889,12 @@
         "approach.p2.text":"First we define where the software should produce revenue, saved hours or reduced risk. Then we ship the first version in short sprints, bake security controls into the architecture, measure user response and double down on what proves ROI.",
         "approach.p2.cta":"Learn more",
         "security.title":"Cyber Security",
-        "security.i1.tag":"01","security.i1.cat":"PENTEST","security.i1.head":"Penetration testing of websites, APIs and mobile apps — before an attacker does it for you.",
+        "security.i1.tag":"01","security.i1.cat":"PENTEST","security.i1.head":"Penetration testing of websites, APIs and mobile apps before an attacker does it for you.",
         "security.i2.tag":"02","security.i2.cat":"HARDENING","security.i2.head":"Cloud and server hardening, identity & access controls, zero-trust setup and a secure CI/CD pipeline.",
-        "security.i3.tag":"03","security.i3.cat":"MONITORING","security.i3.head":"24/7 monitoring, log correlation, alerting and incident response — incidents surface in minutes, not weeks.",
+        "security.i3.tag":"03","security.i3.cat":"MONITORING","security.i3.head":"24/7 monitoring, log correlation, alerting and incident response, so incidents surface in minutes, not weeks.",
         "security.i4.tag":"04","security.i4.cat":"COMPLIANCE","security.i4.head":"GDPR, ISO 27001 and NIS2 readiness: policies, procedures, evidence and technical controls that survive an audit.",
         "process.title":"Process",
-        "process.lead":"Looking for a team that takes a digital product from idea to production — and secures it on the way? MojFlow owns strategy, UX, design, engineering, AI integration and cyber security, so every sprint has a clear business reason and a clear owner of risk.",
+        "process.lead":"Looking for a team that takes a digital product from idea to production and secures it on the way? MojFlow owns strategy, UX, design, engineering, AI integration and cyber security, so every sprint has a clear business reason and a clear owner of risk.",
         "company.title":"Company",
         "company.name":"Name","company.location":"Location","company.locationVal":"Belgrade + London<br>working with clients globally",
         "company.focus":"Focus","company.focusVal":"Web, mobile, AI systems and cyber security",
@@ -895,7 +903,7 @@
         "company.team":"Team","company.teamVal":"Senior team for strategy, UX/UI, engineering, AI delivery and cyber security",
         "company.contact":"Contact",
         "cta.contact":"Contact","cta.startProject":"Start a project",
-        "form.eyebrow":"Project conversation","form.title":"Tell us what you're building.","form.sub":"We reply within 24 hours with a concrete next step — no template proposals.",
+        "form.eyebrow":"Project conversation","form.title":"Tell us what you're building.","form.sub":"We reply within 24 hours with a concrete next step, no template proposals.",
         "form.name":"Name","form.email":"Email","form.company":"Company","form.topic":"Topic",
         "form.topic.web":"Web site / web app","form.topic.mobile":"Mobile app","form.topic.ai":"AI system / automation","form.topic.security":"Cyber security","form.topic.other":"Other",
         "form.message":"Message","form.submit":"Send message","form.note":"Submitting opens your mail client with a prepared message to contact@mojflow.com. Or just write us directly."
@@ -980,7 +988,7 @@
         );
         return;
       }
-      const subject = `MojFlow inquiry — ${topic} — ${name}${company?` (${company})`:""}`;
+      const subject = `MojFlow inquiry: ${topic}: ${name}${company?` (${company})`:""}`;
       const bodyText = `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nTopic: ${topic}\n\n${message}`;
       window.location.href = `mailto:contact@mojflow.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
     });
