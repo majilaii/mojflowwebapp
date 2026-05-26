@@ -2643,7 +2643,8 @@ body:not(.-is-touchDevice)
   position: relative;
 }
 .c-mv-copy .animationTextInner {
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
+  font-variant-ligatures: none;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294 816" fill="none" role="img" aria-label="Network topology constellation">
+  <defs>
+    <linearGradient id="d3-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.78"/>
+      <stop offset="100%" stop-color="#fbfaf8" stop-opacity="0.45"/>
+    </linearGradient>
+    <linearGradient id="d3-link" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a2c45" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#a96f57" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="d3-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a96f57"/>
+      <stop offset="100%" stop-color="#1a2c45"/>
+    </linearGradient>
+    <radialGradient id="d3-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fce2d4" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fce2d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ambient glow -->
+  <circle cx="147" cy="408" r="240" fill="url(#d3-glow)"/>
+
+  <!-- outer frame -->
+  <rect x="18" y="40" width="258" height="736" rx="18" fill="url(#d3-card)" stroke="#1a2c45" stroke-opacity="0.16"/>
+
+  <!-- header -->
+  <g transform="translate(34 64)">
+    <text font-family="Chillax, Inter, system-ui, sans-serif" font-size="9" letter-spacing="3" fill="#a96f57">SYSTEM · TOPOLOGY</text>
+    <text y="26" font-family="Chillax, Inter, system-ui, sans-serif" font-size="16" font-weight="500" fill="#0b0f15">Always-on mesh</text>
+    <text y="46" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#1a2c45" fill-opacity="0.55">12 services · 4 regions · 99.99%</text>
+  </g>
+
+  <!-- separator -->
+  <line x1="34" y1="138" x2="260" y2="138" stroke="#1a2c45" stroke-opacity="0.1"/>
+
+  <!-- network area -->
+  <g transform="translate(0 140)">
+
+    <!-- connection lines (drawn first, beneath nodes) -->
+    <g stroke="url(#d3-link)" stroke-width="0.9" fill="none" stroke-linecap="round">
+      <!-- core hub at (147, 220) connects to many -->
+      <path d="M147 220 L72 96"/>
+      <path d="M147 220 L222 96"/>
+      <path d="M147 220 L56 200"/>
+      <path d="M147 220 L240 192"/>
+      <path d="M147 220 L74 340"/>
+      <path d="M147 220 L226 338"/>
+      <path d="M147 220 L100 430"/>
+      <path d="M147 220 L196 432"/>
+      <!-- secondary ring -->
+      <path d="M72 96 L222 96" stroke-dasharray="2 4" stroke-opacity="0.6"/>
+      <path d="M56 200 L74 340" stroke-dasharray="2 4" stroke-opacity="0.6"/>
+      <path d="M240 192 L226 338" stroke-dasharray="2 4" stroke-opacity="0.6"/>
+      <path d="M100 430 L196 432" stroke-dasharray="2 4" stroke-opacity="0.6"/>
+      <!-- to lower fleet -->
+      <path d="M100 430 L82 540"/>
+      <path d="M196 432 L214 540"/>
+      <path d="M147 220 L147 562"/>
+    </g>
+
+    <!-- nodes -->
+    <!-- core hub -->
+    <g>
+      <circle cx="147" cy="220" r="22" fill="#ffffff" stroke="url(#d3-accent)" stroke-width="1.4"/>
+      <circle cx="147" cy="220" r="8" fill="url(#d3-accent)"/>
+      <circle cx="147" cy="220" r="34" fill="none" stroke="#a96f57" stroke-opacity="0.18"/>
+      <circle cx="147" cy="220" r="46" fill="none" stroke="#a96f57" stroke-opacity="0.08"/>
+      <text x="147" y="260" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#1a2c45" fill-opacity="0.7">core</text>
+    </g>
+
+    <!-- outer service nodes -->
+    <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="8" fill="#1a2c45" fill-opacity="0.6" text-anchor="middle">
+      <!-- top row -->
+      <g><circle cx="72" cy="96" r="9" fill="#ffffff" stroke="#1a2c45" stroke-opacity="0.5"/><circle cx="72" cy="96" r="3" fill="#1a2c45"/><text x="72" y="78">web</text></g>
+      <g><circle cx="222" cy="96" r="9" fill="#ffffff" stroke="#1a2c45" stroke-opacity="0.5"/><circle cx="222" cy="96" r="3" fill="#1a2c45"/><text x="222" y="78">api</text></g>
+      <!-- mid row -->
+      <g><circle cx="56" cy="200" r="9" fill="#ffffff" stroke="#a96f57" stroke-opacity="0.7"/><circle cx="56" cy="200" r="3" fill="#a96f57"/><text x="42" y="204" text-anchor="end">auth</text></g>
+      <g><circle cx="240" cy="192" r="9" fill="#ffffff" stroke="#a96f57" stroke-opacity="0.7"/><circle cx="240" cy="192" r="3" fill="#a96f57"/><text x="254" y="196" text-anchor="start">cdn</text></g>
+      <!-- lower row -->
+      <g><circle cx="74" cy="340" r="9" fill="#ffffff" stroke="#1a2c45" stroke-opacity="0.5"/><circle cx="74" cy="340" r="3" fill="#1a2c45"/><text x="74" y="362">queue</text></g>
+      <g><circle cx="226" cy="338" r="9" fill="#ffffff" stroke="#1a2c45" stroke-opacity="0.5"/><circle cx="226" cy="338" r="3" fill="#1a2c45"/><text x="226" y="360">cache</text></g>
+      <!-- bottom row -->
+      <g><circle cx="100" cy="430" r="9" fill="#ffffff" stroke="#1a2c45" stroke-opacity="0.5"/><circle cx="100" cy="430" r="3" fill="#1a2c45"/><text x="100" y="452">db</text></g>
+      <g><circle cx="196" cy="432" r="9" fill="#ffffff" stroke="#1a2c45" stroke-opacity="0.5"/><circle cx="196" cy="432" r="3" fill="#1a2c45"/><text x="196" y="454">ai</text></g>
+
+      <!-- bottom fleet -->
+      <g><circle cx="82" cy="540" r="7" fill="#ffffff" stroke="#1a2c45" stroke-opacity="0.4"/><text x="82" y="560">eu</text></g>
+      <g><circle cx="147" cy="562" r="7" fill="#ffffff" stroke="#1a2c45" stroke-opacity="0.4"/><text x="147" y="582">us</text></g>
+      <g><circle cx="214" cy="540" r="7" fill="#ffffff" stroke="#1a2c45" stroke-opacity="0.4"/><text x="214" y="560">apac</text></g>
+    </g>
+
+    <!-- ping pulses -->
+    <circle cx="222" cy="96" r="3" fill="#a96f57">
+      <animate attributeName="r" values="3;9;3" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0;1" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="74" cy="340" r="3" fill="#a96f57">
+      <animate attributeName="r" values="3;9;3" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0;1" dur="3s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="196" cy="432" r="3" fill="#a96f57">
+      <animate attributeName="r" values="3;9;3" dur="2.8s" begin="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0;1" dur="2.8s" begin="1.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- footer metrics -->
+  <g transform="translate(34 700)">
+    <line x1="0" y1="-14" x2="226" y2="-14" stroke="#1a2c45" stroke-opacity="0.1"/>
+    <g font-family="Chillax, Inter, system-ui, sans-serif">
+      <text font-size="9" letter-spacing="2" fill="#a96f57">LIVE METRICS</text>
+    </g>
+    <g transform="translate(0 18)" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#1a2c45">
+      <text fill-opacity="0.55">requests</text>
+      <text x="226" text-anchor="end" font-weight="500">28.4k / s</text>
+    </g>
+    <g transform="translate(0 36)" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#1a2c45">
+      <text fill-opacity="0.55">p95 latency</text>
+      <text x="226" text-anchor="end" font-weight="500">142 ms</text>
+    </g>
+    <g transform="translate(0 54)" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#1a2c45">
+      <text fill-opacity="0.55">uptime · 30d</text>
+      <text x="226" text-anchor="end" font-weight="500">99.992 %</text>
+    </g>
+  </g>
+</svg>
