@@ -107,6 +107,17 @@
     .c-headerNav_a{overflow:hidden}
     .c-hamburgerBtn{transform:scale(.85);transform-origin:right center}
 
+    /* ---------- Serbian diacritics fix: dnp-shuei-gothic-gin-std has broken advance widths for U+0107 ć / U+010D č etc.
+       Adobe Typekit's @font-face for dnp wins over a same-name override, so we define a separate family scoped to
+       Latin Extended-A/B and put it first in the font stack — browser uses system Latin font only for those chars. ---------- */
+    @font-face{
+      font-family:'MFLatinExt';
+      src:local('Segoe UI'),local('Helvetica Neue'),local('Arial');
+      unicode-range:U+0100-017F,U+0180-024F;
+      size-adjust:115%;
+      font-display:swap;
+    }
+
     /* ---------- Delivery (#02) single illustration ---------- */
     .-no2 .c-topPersonList_image .mf-delivery-team{position:absolute;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
     .-no2 .c-topPersonList_image .mf-delivery-team figure{margin:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
@@ -379,7 +390,7 @@
                 <div class="c-topServiceBox_image_sp">
                   <div class="imageItemWrap">
                     <figure>
-                      <img class="imageItem showSp" src="/assets/images/top/img_service_01.png" alt="" width="1312" height="1000" loading="lazy" decoding="async" srcset="/assets/images/top/img_service_01-640.png 640w, /assets/images/top/img_service_01.png 1312w" sizes="(max-width: 767px) 82vw, 38vw">
+                      <img class="imageItem showSp" src="/assets/images/top/img_service_01_sp.png" alt="" width="868" height="541" loading="lazy" decoding="async" sizes="(max-width: 767px) 82vw, 38vw">
                     </figure>
                   </div>
                 </div><!-- .c-topServiceBox_image -->
@@ -410,7 +421,7 @@
                 <div class="c-topServiceBox_image_sp">
                   <div class="imageItemWrap">
                     <figure>
-                      <img class="imageItem" src="/assets/images/top/img_service_02.png" alt="" width="1314" height="1000" loading="lazy" decoding="async" srcset="/assets/images/top/img_service_02-640.png 640w, /assets/images/top/img_service_02.png 1314w" sizes="(max-width: 767px) 82vw, 38vw">
+                      <img class="imageItem" src="/assets/images/top/img_service_02.png" alt="" width="1314" height="1000" loading="lazy" decoding="async" sizes="(max-width: 767px) 82vw, 38vw">
                     </figure>
                   </div>
                 </div><!-- .c-topServiceBox_image -->
@@ -422,13 +433,13 @@
 
               <div id="serviceImg01" class="imageItemWrap -no1">
                 <figure>
-                  <img class="imageItem showPc" src="/assets/images/top/img_service_01.png" alt="" width="1312" height="1000" loading="lazy" decoding="async" srcset="/assets/images/top/img_service_01-640.png 640w, /assets/images/top/img_service_01.png 1312w" sizes="(max-width: 767px) 82vw, 38vw">
+                  <img class="imageItem showPc" src="/assets/images/top/img_service_01.png" alt="" width="1312" height="1000" loading="lazy" decoding="async" sizes="(max-width: 767px) 82vw, 38vw">
                 </figure>
               </div>
 
               <div id="serviceImg02" class="imageItemWrap -no2">
                 <figure>
-                  <img class="imageItem" src="/assets/images/top/img_service_02.png" alt="" width="1314" height="1000" loading="lazy" decoding="async" srcset="/assets/images/top/img_service_02-640.png 640w, /assets/images/top/img_service_02.png 1314w" sizes="(max-width: 767px) 82vw, 38vw">
+                  <img class="imageItem" src="/assets/images/top/img_service_02.png" alt="" width="1314" height="1000" loading="lazy" decoding="async" sizes="(max-width: 767px) 82vw, 38vw">
                 </figure>
               </div>
 

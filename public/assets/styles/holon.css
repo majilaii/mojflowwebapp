@@ -203,12 +203,11 @@ em {
 body {
   background: #eff0f0;
   color: #000;
-  font-family: YakuHanJP, 'dnp-shuei-gothic-gin-std', sans-serif;
+  font-family: 'MFLatinExt', YakuHanJP, 'dnp-shuei-gothic-gin-std', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
-  font-feature-settings: 'palt';
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -966,7 +965,7 @@ body.-is-view-footer .fixedBackGroundImage::before {
   z-index: 3;
 }
 .c-viewall.jp {
-  font-family: YakuHanJP, 'dnp-shuei-gothic-gin-std', sans-serif;
+  font-family: 'MFLatinExt', YakuHanJP, 'dnp-shuei-gothic-gin-std', sans-serif;
 }
 .c-topNewsList + .c-viewall {
   margin-top: 70px;
