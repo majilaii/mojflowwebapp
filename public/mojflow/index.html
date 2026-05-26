@@ -11,16 +11,25 @@
   <meta property="og:title" content="MojFlow | Web, mobile, AI i Cyber Security">
   <meta property="og:description" content="Gradimo digitalne sisteme i bezbednosna rešenja koja kompanije pretvaraju u sigurnije, brže i profitabilnije organizacije.">
   <meta property="og:url" content="https://mojflow.com/">
-  <meta property="og:image" content="https://mojflow.com/ogp.png">
+  <meta property="og:image" content="https://mojflow.com/api/og">
   <meta property="og:site_name" content="MojFlow | Web, mobile, AI i Cyber Security">
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MojFlow | Web, mobile, AI i Cyber Security" />
   <meta name="twitter:description" content="Gradimo digitalne sisteme i bezbednosna rešenja koja kompanije pretvaraju u sigurnije, brže i profitabilnije organizacije." />
-  <meta name="twitter:image" content="https://mojflow.com/ogp.png" />
+  <meta name="twitter:image" content="https://mojflow.com/api/og" />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YW60B68CQK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YW60B68CQK');
+  </script>
 
   <link rel="shortcut icon" href="/favicon.jpg">
-  <link rel="apple-touch-icon" type="image/png" href="https://mojflow.com/ogp.png">
+  <link rel="apple-touch-icon" type="image/png" href="https://mojflow.com/api/og">
 
   <title>MojFlow | Web, mobile, AI i Cyber Security</title>
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
@@ -815,7 +824,7 @@
           <textarea id="mfMessage" name="message" rows="5" required></textarea>
         </div>
         <button type="submit" class="mf-submit" data-i18n="form.submit">Pošalji poruku</button>
-        <p class="mf-modal_note" data-i18n="form.note">Slanjem se otvara mail klijent sa pripremljenom porukom za contact@mojflow.com. Ako ti je lakše, piši nam direktno.</p>
+        <p class="mf-modal_note" data-i18n="form.note">Poruka se šalje direktno na contact@mojflow.com. Odgovaramo u toku 24 sata.</p>
       </form>
     </div>
   </div>
@@ -861,7 +870,7 @@
         "form.eyebrow":"Razgovor o projektu","form.title":"Ispričaj nam šta gradiš.","form.sub":"Odgovaramo u toku 24 sata sa konkretnim sledećim korakom, bez šablonskih ponuda.",
         "form.name":"Ime","form.email":"Email","form.company":"Kompanija","form.topic":"Tema",
         "form.topic.web":"Web sajt / web aplikacija","form.topic.mobile":"Mobilna aplikacija","form.topic.ai":"AI sistem / automatizacija","form.topic.security":"Cyber security","form.topic.other":"Drugo",
-        "form.message":"Poruka","form.submit":"Pošalji poruku","form.note":"Slanjem se otvara mail klijent sa pripremljenom porukom za contact@mojflow.com. Ako ti je lakše, piši nam direktno."
+        "form.message":"Poruka","form.submit":"Pošalji poruku","form.note":"Poruka se šalje direktno na contact@mojflow.com. Odgovaramo u toku 24 sata."
       },
       en: {
         "nav.concept":"Concept","nav.services":"Services","nav.security":"Security","nav.company":"Company","nav.process":"Process","nav.contact":"Contact",
@@ -901,7 +910,7 @@
         "form.eyebrow":"Project conversation","form.title":"Tell us what you're building.","form.sub":"We reply within 24 hours with a concrete next step, no template proposals.",
         "form.name":"Name","form.email":"Email","form.company":"Company","form.topic":"Topic",
         "form.topic.web":"Web site / web app","form.topic.mobile":"Mobile app","form.topic.ai":"AI system / automation","form.topic.security":"Cyber security","form.topic.other":"Other",
-        "form.message":"Message","form.submit":"Send message","form.note":"Submitting opens your mail client with a prepared message to contact@mojflow.com. Or just write us directly."
+        "form.message":"Message","form.submit":"Send message","form.note":"Your message is sent directly to contact@mojflow.com. We reply within 24 hours."
       }
     };
 
@@ -966,7 +975,7 @@
       if(e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
     });
 
-    document.getElementById("mfContactForm").addEventListener("submit", function(e){
+    document.getElementById("mfContactForm").addEventListener("submit", async function(e){
       e.preventDefault();
       const fd = new FormData(this);
       const name = (fd.get("name")||"").toString().trim();
@@ -974,16 +983,36 @@
       const company = (fd.get("company")||"").toString().trim();
       const topic = (fd.get("topic")||"").toString().trim();
       const message = (fd.get("message")||"").toString().trim();
+      const btn = this.querySelector(".mf-submit");
       if(!name || !email || !message){
-        this.querySelector(".mf-submit").animate(
+        btn.animate(
           [{transform:"translateX(0)"},{transform:"translateX(-6px)"},{transform:"translateX(6px)"},{transform:"translateX(0)"}],
           {duration:280}
         );
         return;
       }
-      const subject = `MojFlow inquiry: ${topic}: ${name}${company?` (${company})`:""}`;
-      const bodyText = `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nTopic: ${topic}\n\n${message}`;
-      window.location.href = `mailto:contact@mojflow.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+      btn.disabled = true;
+      const origText = btn.textContent;
+      btn.textContent = "...";
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: {"Content-Type":"application/json"},
+          body: JSON.stringify({name, email, company, topic, message})
+        });
+        if(!res.ok) throw new Error("send failed");
+        btn.textContent = "✓";
+        btn.style.background = "#1b6b4a";
+        this.reset();
+        setTimeout(()=>{ closeModal(); btn.textContent = origText; btn.style.background = ""; btn.disabled = false; }, 2000);
+      } catch(err) {
+        btn.textContent = origText;
+        btn.disabled = false;
+        // Fallback to mailto if API fails
+        const subject = `MojFlow inquiry: ${topic}: ${name}${company?` (${company})`:""}`;
+        const bodyText = `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nTopic: ${topic}\n\n${message}`;
+        window.location.href = `mailto:contact@mojflow.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+      }
     });
 
     /* ---------- Navbar scroll background ---------- */
