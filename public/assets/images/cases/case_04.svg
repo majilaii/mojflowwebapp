@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 800">
+  <rect width="380" height="800" fill="#0d1119"/>
+  <text x="28" y="38" font-family="Arial" font-size="15" font-weight="bold" fill="#e8e6e3">09:41</text>
+  <circle cx="330" cy="33" r="4" fill="#3a4456"/><circle cx="344" cy="33" r="4" fill="#3a4456"/><circle cx="358" cy="33" r="4" fill="#3a4456"/>
+  <!-- header -->
+  <text x="28" y="92" font-family="Arial" font-size="22" font-weight="bold" fill="#f2efeb">Jun 2026</text>
+  <rect x="284" y="66" width="76" height="36" rx="18" fill="#141a25"/>
+  <path d="M302 84 l-6 0 M310 78 l-6 6 6 6 M338 84 l6 0 M330 78 l6 6 -6 6" stroke="#8ea0b8" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- week strip -->
+  <g font-family="Arial" font-size="13" fill="#5a6a82" text-anchor="middle">
+    <text x="48" y="138">P</text><text x="96" y="138">U</text><text x="144" y="138">S</text><text x="192" y="138">Č</text><text x="240" y="138">P</text><text x="288" y="138">S</text><text x="336" y="138">N</text>
+  </g>
+  <g font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle">
+    <text x="48" y="172" fill="#8ea0b8">8</text><text x="96" y="172" fill="#8ea0b8">9</text>
+    <circle cx="144" cy="167" r="19" fill="#a8d8c8"/>
+    <text x="144" y="172" fill="#0d1119">10</text>
+    <text x="192" y="172" fill="#8ea0b8">11</text><text x="240" y="172" fill="#8ea0b8">12</text><text x="288" y="172" fill="#5a6a82">13</text><text x="336" y="172" fill="#5a6a82">14</text>
+  </g>
+  <circle cx="96" cy="186" r="3" fill="#a8d8c8"/><circle cx="192" cy="186" r="3" fill="#a8d8c8"/>
+  <!-- slots label -->
+  <text x="28" y="240" font-family="Arial" font-size="15" font-weight="bold" fill="#8ea0b8">Slobodni termini</text>
+  <!-- time slots grid -->
+  <rect x="20" y="258" width="106" height="46" rx="23" fill="#141a25"/><text x="73" y="287" font-family="Arial" font-size="14" fill="#c7d2e0" text-anchor="middle">09:00</text>
+  <rect x="137" y="258" width="106" height="46" rx="23" fill="#a8d8c8"/><text x="190" y="287" font-family="Arial" font-size="14" font-weight="bold" fill="#0d1119" text-anchor="middle">10:30</text>
+  <rect x="254" y="258" width="106" height="46" rx="23" fill="#141a25"/><text x="307" y="287" font-family="Arial" font-size="14" fill="#c7d2e0" text-anchor="middle">11:15</text>
+  <rect x="20" y="316" width="106" height="46" rx="23" fill="#141a25"/><text x="73" y="345" font-family="Arial" font-size="14" fill="#c7d2e0" text-anchor="middle">12:00</text>
+  <rect x="137" y="316" width="106" height="46" rx="23" fill="#141a25"/><text x="190" y="345" font-family="Arial" font-size="14" fill="#c7d2e0" text-anchor="middle">13:45</text>
+  <rect x="254" y="316" width="106" height="46" rx="23" fill="#0f141d"/><text x="307" y="345" font-family="Arial" font-size="14" fill="#3a4456" text-anchor="middle">15:00</text>
+  <!-- appointment card -->
+  <rect x="20" y="404" width="340" height="108" rx="20" fill="#141a25"/>
+  <rect x="20" y="404" width="6" height="108" rx="3" fill="#a8d8c8"/>
+  <circle cx="66" cy="444" r="20" fill="#1f2836"/>
+  <path d="M58 444 a8 8 0 0 1 16 0 M66 436 v-3" stroke="#a8d8c8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <rect x="100" y="428" width="160" height="12" rx="6" fill="#2a3447"/>
+  <rect x="100" y="450" width="110" height="10" rx="5" fill="#1d2533"/>
+  <text x="340" y="448" font-family="Arial" font-size="15" font-weight="bold" fill="#a8d8c8" text-anchor="end">10:30</text>
+  <rect x="100" y="478" width="80" height="20" rx="10" fill="#1b2c28"/>
+  <text x="140" y="492" font-family="Arial" font-size="11" font-weight="bold" fill="#a8d8c8" text-anchor="middle">potvrđeno</text>
+  <!-- reminder row -->
+  <rect x="20" y="528" width="340" height="76" rx="20" fill="#11161f"/>
+  <circle cx="58" cy="566" r="16" fill="#1f2836"/>
+  <path d="M52 566 a6 7 0 0 1 12 0 c0 5 2 6 2 6 h-16 c0 0 2 -1 2 -6 M56 576 a3 3 0 0 0 5 0" stroke="#a8d8c8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="88" y="550" width="180" height="11" rx="5.5" fill="#2a3447"/>
+  <rect x="88" y="572" width="130" height="9" rx="4.5" fill="#1d2533"/>
+  <!-- CTA -->
+  <rect x="20" y="660" width="340" height="58" rx="29" fill="#a8d8c8"/>
+  <text x="190" y="696" font-family="Arial" font-size="17" font-weight="bold" fill="#0d1119" text-anchor="middle">Zakaži termin</text>
+</svg>

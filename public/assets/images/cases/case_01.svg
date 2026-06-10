@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 800">
+  <rect width="380" height="800" fill="#0d1119"/>
+  <!-- status bar -->
+  <text x="28" y="38" font-family="Arial" font-size="15" font-weight="bold" fill="#e8e6e3">09:41</text>
+  <circle cx="330" cy="33" r="4" fill="#3a4456"/><circle cx="344" cy="33" r="4" fill="#3a4456"/><circle cx="358" cy="33" r="4" fill="#3a4456"/>
+  <!-- header -->
+  <text x="28" y="92" font-family="Arial" font-size="22" font-weight="bold" fill="#f2efeb">Rute · danas</text>
+  <rect x="296" y="68" width="56" height="34" rx="17" fill="#a96f57"/>
+  <text x="324" y="90" font-family="Arial" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">+12</text>
+  <!-- map area -->
+  <rect x="20" y="120" width="340" height="330" rx="20" fill="#11161f"/>
+  <path d="M20 230 H360 M20 340 H360 M130 120 V450 M250 120 V450" stroke="#1a2230" stroke-width="1.5"/>
+  <path d="M55 410 C 110 360, 95 290, 160 270 S 290 230, 320 160" stroke="#e8a87c" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="2 9"/>
+  <circle cx="55" cy="410" r="11" fill="#e8a87c"/>
+  <circle cx="160" cy="270" r="8" fill="#e8a87c" opacity=".75"/>
+  <circle cx="320" cy="160" r="11" fill="#fff"/>
+  <circle cx="320" cy="160" r="20" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="2"/>
+  <!-- bottom sheet rows -->
+  <rect x="20" y="474" width="340" height="86" rx="18" fill="#141a25"/>
+  <circle cx="58" cy="517" r="17" fill="#1f2836"/><path d="M51 517 l5 5 10 -11" stroke="#e8a87c" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <rect x="90" y="500" width="150" height="12" rx="6" fill="#2a3447"/>
+  <rect x="90" y="522" width="100" height="9" rx="4.5" fill="#1d2533"/>
+  <text x="338" y="523" font-family="Arial" font-size="14" font-weight="bold" fill="#e8a87c" text-anchor="end">08:30</text>
+  <rect x="20" y="574" width="340" height="86" rx="18" fill="#141a25"/>
+  <circle cx="58" cy="617" r="17" fill="#1f2836"/><circle cx="58" cy="617" r="6" fill="#e8a87c"/>
+  <rect x="90" y="600" width="170" height="12" rx="6" fill="#2a3447"/>
+  <rect x="90" y="622" width="90" height="9" rx="4.5" fill="#1d2533"/>
+  <text x="338" y="623" font-family="Arial" font-size="14" font-weight="bold" fill="#8ea0b8" text-anchor="end">11:15</text>
+  <rect x="20" y="674" width="340" height="86" rx="18" fill="#141a25"/>
+  <circle cx="58" cy="717" r="17" fill="#1f2836"/><circle cx="58" cy="717" r="6" fill="#3a4456"/>
+  <rect x="90" y="700" width="140" height="12" rx="6" fill="#2a3447"/>
+  <rect x="90" y="722" width="110" height="9" rx="4.5" fill="#1d2533"/>
+  <text x="338" y="723" font-family="Arial" font-size="14" font-weight="bold" fill="#8ea0b8" text-anchor="end">13:40</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 800">
+  <rect width="380" height="800" fill="#0d1119"/>
+  <text x="28" y="38" font-family="Arial" font-size="15" font-weight="bold" fill="#e8e6e3">09:41</text>
+  <circle cx="330" cy="33" r="4" fill="#3a4456"/><circle cx="344" cy="33" r="4" fill="#3a4456"/><circle cx="358" cy="33" r="4" fill="#3a4456"/>
+  <!-- search bar -->
+  <rect x="20" y="64" width="288" height="44" rx="22" fill="#141a25"/>
+  <circle cx="46" cy="86" r="8" fill="none" stroke="#5a6a82" stroke-width="2.5"/><path d="M52 92 l7 7" stroke="#5a6a82" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="66" y="80" width="120" height="11" rx="5.5" fill="#1f2836"/>
+  <rect x="318" y="64" width="44" height="44" rx="22" fill="#9fc2d4"/>
+  <path d="M333 86 h14 M340 79 v14" stroke="#0d1119" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- product grid 2x2 -->
+  <rect x="20" y="128" width="164" height="200" rx="18" fill="#141a25"/>
+  <rect x="36" y="144" width="132" height="110" rx="12" fill="#1d2738"/>
+  <circle cx="102" cy="199" r="34" fill="#26354c"/>
+  <rect x="36" y="268" width="96" height="11" rx="5.5" fill="#2a3447"/>
+  <text x="36" y="310" font-family="Arial" font-size="17" font-weight="bold" fill="#9fc2d4">€89</text>
+  <rect x="196" y="128" width="164" height="200" rx="18" fill="#141a25"/>
+  <rect x="212" y="144" width="132" height="110" rx="12" fill="#1d2738"/>
+  <rect x="244" y="165" width="68" height="68" rx="10" fill="#26354c"/>
+  <rect x="212" y="268" width="80" height="11" rx="5.5" fill="#2a3447"/>
+  <text x="212" y="310" font-family="Arial" font-size="17" font-weight="bold" fill="#9fc2d4">€124</text>
+  <rect x="20" y="344" width="164" height="200" rx="18" fill="#141a25"/>
+  <rect x="36" y="360" width="132" height="110" rx="12" fill="#1d2738"/>
+  <path d="M60 450 l30 -38 22 26 16 -18 26 30 z" fill="#26354c"/>
+  <rect x="36" y="484" width="104" height="11" rx="5.5" fill="#2a3447"/>
+  <text x="36" y="526" font-family="Arial" font-size="17" font-weight="bold" fill="#9fc2d4">€56</text>
+  <rect x="196" y="344" width="164" height="200" rx="18" fill="#141a25"/>
+  <rect x="212" y="360" width="132" height="110" rx="12" fill="#1d2738"/>
+  <circle cx="278" cy="415" r="30" fill="none" stroke="#26354c" stroke-width="10"/>
+  <rect x="212" y="484" width="88" height="11" rx="5.5" fill="#2a3447"/>
+  <text x="212" y="526" font-family="Arial" font-size="17" font-weight="bold" fill="#9fc2d4">€210</text>
+  <!-- checkout CTA -->
+  <rect x="20" y="576" width="340" height="58" rx="29" fill="#9fc2d4"/>
+  <text x="190" y="612" font-family="Arial" font-size="17" font-weight="bold" fill="#0d1119" text-anchor="middle">Checkout · €479</text>
+  <!-- bottom nav -->
+  <rect x="76" y="700" width="228" height="56" rx="28" fill="#141a25"/>
+  <circle cx="124" cy="728" r="6" fill="#9fc2d4"/>
+  <circle cx="190" cy="728" r="6" fill="#2a3447"/>
+  <circle cx="256" cy="728" r="6" fill="#2a3447"/>
+</svg>
