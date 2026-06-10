@@ -7,7 +7,7 @@ Brief context so any Claude session in this repo can pick up work without spelun
 - **Stack:** Next.js 14 shell that serves a static HTML at `/`. The actual site lives in `public/mojflow/index.html` (forked from a Japanese template — Holon).
 - **Single entry:** `src/app/route.ts` reads `public/mojflow/index.html` and returns it as the response. There are no React components for the marketing site itself.
 - **Styles:** `public/assets/styles/holon.css` is the main stylesheet (Japanese template's CSS). Inline `<style>` in `index.html` carries scoped overrides for the MojFlow rebrand.
-- **Repo:** [nvc-n8n/mojflowwebapp](https://github.com/nvc-n8n/mojflowwebapp). Push to `main` → Vercel auto-deploys to `imporvizacijamojflow.vercel.app`.
+- **Repo:** [majilaii/mojflowwebapp](https://github.com/majilaii/mojflowwebapp). Push to `main` → Vercel auto-deploys to mojflow.com.
 
 ## Running locally
 

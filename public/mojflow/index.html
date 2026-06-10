@@ -135,6 +135,52 @@
     .-no2 .c-topPersonList_image .mf-delivery-team figure{margin:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
     .-no2 .c-topPersonList_image .mf-delivery-team_img{width:100% !important;min-width:0 !important;height:100%;max-width:100%;object-fit:contain;display:block}
 
+    /* ============================================================
+       Case Studies (#CASES) + Careers (#CAREERS) — namespaced add-on UI
+       ============================================================ */
+    .mf-section{padding:clamp(90px,13vh,170px) 8vw;position:relative}
+    .mf-section_lead{max-width:680px;margin:22px 0 0;font-family:Inter,Arial,sans-serif;font-size:clamp(15px,1.5vw,18px);line-height:1.7;color:rgba(15,20,30,.62)}
+    @media (max-width:767px){.mf-section{padding:70px 6vw}}
+
+    /* ---------- Case Studies grid ---------- */
+    .mf-cases_grid{margin-top:clamp(38px,5vw,64px);display:grid;gap:22px;grid-template-columns:repeat(3,1fr)}
+    @media (max-width:1024px){.mf-cases_grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:767px){.mf-cases_grid{grid-template-columns:1fr;gap:18px}}
+
+    .mf-case{display:flex;flex-direction:column;background:rgba(255,255,255,.62);border:1px solid rgba(15,20,30,.09);border-radius:18px;padding:28px 26px 26px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .35s ease}
+    .mf-case:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(15,20,30,.1);border-color:rgba(169,111,87,.4)}
+    .mf-case_tags{font-family:Chillax,Arial,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a96f57;margin:0 0 16px}
+    .mf-case_title{font-family:Chillax,Arial,sans-serif;font-weight:500;font-size:clamp(19px,2vw,23px);line-height:1.2;color:#0b0f15;margin:0 0 20px}
+    .mf-case_block{margin:0 0 16px}
+    .mf-case_label{font-family:Chillax,Arial,sans-serif;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(15,20,30,.4);margin:0 0 5px}
+    .mf-case_text{font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.6;color:rgba(15,20,30,.7);margin:0}
+    .mf-case_result{margin-top:auto;padding-top:18px;border-top:1px solid rgba(15,20,30,.08)}
+    .mf-case_resultText{font-family:Chillax,Arial,sans-serif;font-weight:500;font-size:clamp(15px,1.6vw,17px);line-height:1.35;margin:0;background:linear-gradient(120deg,#1b3847,#a96f57);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#1b3847}
+    .mf-case_disclaimer{margin:clamp(30px,4vw,46px) 0 0;font-family:Inter,Arial,sans-serif;font-size:12px;line-height:1.6;color:rgba(15,20,30,.38)}
+
+    /* ---------- Careers ---------- */
+    .mf-careers_jobs{margin-top:clamp(38px,5vw,64px);display:flex;flex-direction:column;gap:18px}
+    .mf-job{display:grid;grid-template-columns:1fr auto;grid-template-areas:"head apply" "body apply";gap:6px 32px;align-items:start;background:rgba(255,255,255,.62);border:1px solid rgba(15,20,30,.09);border-radius:18px;padding:30px 30px;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .35s ease}
+    .mf-job:hover{transform:translateY(-3px);box-shadow:0 20px 46px rgba(15,20,30,.09);border-color:rgba(169,111,87,.4)}
+    .mf-job_head{grid-area:head}
+    .mf-job_role{font-family:Chillax,Arial,sans-serif;font-weight:500;font-size:clamp(20px,2.2vw,26px);line-height:1.15;color:#0b0f15;margin:0 0 8px}
+    .mf-job_meta{font-family:Chillax,Arial,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a96f57;margin:0}
+    .mf-job_body{grid-area:body;max-width:680px}
+    .mf-job_text{font-family:Inter,Arial,sans-serif;font-size:14.5px;line-height:1.65;color:rgba(15,20,30,.7);margin:14px 0 14px}
+    .mf-job_list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+    .mf-job_list li{position:relative;padding-left:20px;font-family:Inter,Arial,sans-serif;font-size:13.5px;line-height:1.55;color:rgba(15,20,30,.66)}
+    .mf-job_list li::before{content:"";position:absolute;left:2px;top:8px;width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,#1b3847,#a96f57)}
+    .mf-job_apply{grid-area:apply;align-self:center;justify-self:end}
+    .mf-applyBtn{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;padding:13px 24px;border-radius:999px;border:0;background:linear-gradient(135deg,#1b3847 0%,#a96f57 100%);color:#fff;font-family:Chillax,Arial,sans-serif;font-size:13px;letter-spacing:.06em;text-decoration:none;cursor:pointer;transition:transform .2s,filter .2s}
+    .mf-applyBtn:hover{transform:translateY(-1px);filter:brightness(1.1)}
+    .mf-applyBtn svg{width:14px;height:14px;flex:none}
+    .mf-careers_foot{margin:clamp(26px,3vw,40px) 0 0;font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;color:rgba(15,20,30,.5)}
+    .mf-careers_foot a{color:#a96f57;text-decoration:none;border-bottom:1px solid rgba(169,111,87,.4)}
+    @media (max-width:767px){
+      .mf-job{grid-template-columns:1fr;grid-template-areas:"head" "body" "apply";gap:4px;padding:26px 22px}
+      .mf-job_apply{justify-self:start;margin-top:20px}
+    }
+
   </style>
 </head>
 
@@ -172,9 +218,11 @@
         <ul class="c-headerNav">
           <li class="c-headerNav_items"><a href="#CONCEPT" class="js-link-scroll js-hover-moveY c-headerNav_a"><span class="js-hover-text headerNav_inner" data-i18n="nav.concept">Koncept</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.concept">Koncept</span></a></li>
           <li class="c-headerNav_items"><a href="#SERVICE" class="js-link-scroll js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.services">Usluge</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.services">Usluge</span></a></li>
+          <li class="c-headerNav_items"><a href="#CASES" class="js-link-scroll js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.cases">Reference</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.cases">Reference</span></a></li>
           <li class="c-headerNav_items"><a href="#SECURITY" class="js-link-scroll js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.security">Bezbednost</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.security">Bezbednost</span></a></li>
           <li class="c-headerNav_items"><a href="#COMPANY" class="js-link-scroll js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.company">Kompanija</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.company">Kompanija</span></a></li>
           <li class="c-headerNav_items"><a href="#RECRUIT" class="js-link-scroll js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.process">Proces</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.process">Proces</span></a></li>
+          <li class="c-headerNav_items"><a href="#CAREERS" class="js-link-scroll js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.careers">Karijera</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.careers">Karijera</span></a></li>
           <li class="c-headerNav_items"><a href="#contact" data-mf-contact class="js-hover-moveY c-headerNav_a" data-ease-y="CustomEase01" data-value-y="-1em"><span class="js-hover-text headerNav_inner" data-i18n="nav.contact">Kontakt</span><span class="js-hover-text-goast js-hover-gradient-text headerNav_inner" data-i18n="nav.contact">Kontakt</span></a></li>
         </ul>
       </div><!-- .c-header_nav -->
@@ -193,9 +241,11 @@
         <ul class="js-sp-menuc-navHamburger_list c-navHamburger_list">
           <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#CONCEPT" class="js-sp-menu-item-text js-link-scroll c-navHamburger_listA" data-i18n="nav.concept">Koncept</a></span></li>
           <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#SERVICE" class="js-sp-menu-item-text js-link-scroll c-navHamburger_listA" data-i18n="nav.services">Usluge</a></span></li>
+          <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#CASES" class="js-sp-menu-item-text js-link-scroll c-navHamburger_listA" data-i18n="nav.cases">Reference</a></span></li>
           <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#SECURITY" class="js-sp-menu-item-text js-link-scroll c-navHamburger_listA" data-i18n="nav.security">Bezbednost</a></span></li>
           <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#COMPANY" class="js-sp-menu-item-text js-link-scroll c-navHamburger_listA" data-i18n="nav.company">Kompanija</a></span></li>
           <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#RECRUIT" class="js-sp-menu-item-text js-link-scroll c-navHamburger_listA" data-i18n="nav.process">Proces</a></span></li>
+          <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#CAREERS" class="js-sp-menu-item-text js-link-scroll c-navHamburger_listA" data-i18n="nav.careers">Karijera</a></span></li>
           <li class="js-sp-menu-item c-navHamburger_listItems"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="#contact" data-mf-contact class="js-sp-menu-item-text c-navHamburger_listA" data-i18n="nav.contact">Kontakt</a></span></li>
 
           <li class="js-sp-menu-item c-navHamburger_listItems -small"><span class="js-sp-menu-item-inner c-navHamburger_listItemsInner"><a href="https://mojflow.com" target="_blank" class="js-sp-menu-item-text c-navHamburger_listA">Website</a></span></li>
@@ -526,6 +576,68 @@
       </div><!-- .c-topPerson -->
     </section><!-- section-person -->
 
+    <section id="CASES" class="c-topSection mf-section" data-scroll-section data-scroll-section-id="section-cases">
+      <h2 class="c-headLv2" data-i18n="cases.title">Reference</h2>
+      <p class="mf-section_lead" data-i18n="cases.lead">Izbor projekata koji pokazuju kako MojFlow spaja proizvod, inženjering i bezbednost u merljiv rezultat. Brojevi su ilustrativni primeri tipičnih ishoda.</p>
+
+      <div class="mf-cases_grid">
+
+        <article class="mf-case">
+          <p class="mf-case_tags" data-i18n="cases.c1.tags">Logistika · Web App + Automatizacija</p>
+          <h3 class="mf-case_title" data-i18n="cases.c1.title">SaaS platforma za logistiku</h3>
+          <div class="mf-case_block">
+            <p class="mf-case_label" data-i18n="cases.challengeLabel">Izazov</p>
+            <p class="mf-case_text" data-i18n="cases.c1.challenge">Dispečeri su gubili sate na ručni unos naloga i planiranje ruta, a greške su kočile isporuke.</p>
+          </div>
+          <div class="mf-case_block">
+            <p class="mf-case_label" data-i18n="cases.solutionLabel">Rešenje</p>
+            <p class="mf-case_text" data-i18n="cases.c1.solution">Klijentski portal i mašina za automatsko planiranje ruta, sa bezbednosnim slojem od prvog dana.</p>
+          </div>
+          <div class="mf-case_result">
+            <p class="mf-case_label" data-i18n="cases.resultLabel">Rezultat</p>
+            <p class="mf-case_resultText" data-i18n="cases.c1.result">−38% ručnog unosa · +24% isporuka na vreme</p>
+          </div>
+        </article>
+
+        <article class="mf-case">
+          <p class="mf-case_tags" data-i18n="cases.c2.tags">Retail · Web + Performanse</p>
+          <h3 class="mf-case_title" data-i18n="cases.c2.title">E-commerce brend</h3>
+          <div class="mf-case_block">
+            <p class="mf-case_label" data-i18n="cases.challengeLabel">Izazov</p>
+            <p class="mf-case_text" data-i18n="cases.c2.challenge">Spor sajt je curio konverzije na mobilnom, a checkout je gubio kupce pred kraj.</p>
+          </div>
+          <div class="mf-case_block">
+            <p class="mf-case_label" data-i18n="cases.solutionLabel">Rešenje</p>
+            <p class="mf-case_text" data-i18n="cases.c2.solution">Iznova izgrađen storefront sa 1.9s LCP i redizajniran tok plaćanja.</p>
+          </div>
+          <div class="mf-case_result">
+            <p class="mf-case_label" data-i18n="cases.resultLabel">Rezultat</p>
+            <p class="mf-case_resultText" data-i18n="cases.c2.result">+31% konverzija · 2.4× brže učitavanje</p>
+          </div>
+        </article>
+
+        <article class="mf-case">
+          <p class="mf-case_tags" data-i18n="cases.c3.tags">Fintech · AI + Cyber Security</p>
+          <h3 class="mf-case_title" data-i18n="cases.c3.title">Fintech startup</h3>
+          <div class="mf-case_block">
+            <p class="mf-case_label" data-i18n="cases.challengeLabel">Izazov</p>
+            <p class="mf-case_text" data-i18n="cases.c3.challenge">Prva linija podrške bila je zatrpana, a lansiranje je blokirala bezbednosna provera.</p>
+          </div>
+          <div class="mf-case_block">
+            <p class="mf-case_label" data-i18n="cases.solutionLabel">Rešenje</p>
+            <p class="mf-case_text" data-i18n="cases.c3.solution">AI agent za podršku zasnovan na RAG-u, uz pen-test i hardening pre lansiranja.</p>
+          </div>
+          <div class="mf-case_result">
+            <p class="mf-case_label" data-i18n="cases.resultLabel">Rezultat</p>
+            <p class="mf-case_resultText" data-i18n="cases.c3.result">−52% tiketa prve linije · prošao pen-test pre lansiranja</p>
+          </div>
+        </article>
+
+      </div><!-- .mf-cases_grid -->
+
+      <p class="mf-case_disclaimer" data-i18n="cases.disclaimer">* Prikazane reference su reprezentativni primeri tipičnih projekata i ishoda; konkretni nazivi klijenata i brojevi dostupni su na zahtev.</p>
+    </section><!-- section-cases -->
+
     <section id="SECURITY" data-iso-item data-iso-call="addBodyClass" data-iso-body-class="-is-view-news" class="c-topSection -news" data-scroll-section data-scroll-section-id="section-news">
       <div class="c-topNews">
         <h2 class="c-headLv2" data-i18n="security.title">Cyber Security</h2>
@@ -756,6 +868,80 @@
       </div><!-- .c-topCompany -->
     </section><!-- section-company -->
 
+    <section id="CAREERS" class="c-topSection mf-section" data-scroll-section data-scroll-section-id="section-careers">
+      <h2 class="c-headLv2" data-i18n="careers.title">Karijera</h2>
+      <p class="mf-section_lead" data-i18n="careers.lead">Gradimo proizvode i bezbednosna rešenja za klijente širom sveta. Tražimo ljude koji vole da isporučuju rezultat — u prodaji i u inženjeringu.</p>
+
+      <div class="mf-careers_jobs">
+
+        <article class="mf-job">
+          <div class="mf-job_head">
+            <h3 class="mf-job_role" data-i18n="careers.j1.role">Sales Development Representative (SDR)</h3>
+            <p class="mf-job_meta" data-i18n="careers.j1.meta">Full-time · Beograd / Hybrid</p>
+          </div>
+          <div class="mf-job_body">
+            <p class="mf-job_text" data-i18n="careers.j1.text">Otvaraš prve razgovore: pronalaziš prave kompanije, kvalifikuješ dolazne lidove i zakazuješ sastanke za Account Executive tim.</p>
+            <ul class="mf-job_list">
+              <li data-i18n="careers.j1.b1">Outbound prospecting i kvalifikacija dolaznih lidova</li>
+              <li data-i18n="careers.j1.b2">Zakazivanje discovery poziva i uredno vođenje CRM-a</li>
+              <li data-i18n="careers.j1.b3">1+ godina iskustva u prodaji, tečan srpski i engleski</li>
+            </ul>
+          </div>
+          <div class="mf-job_apply">
+            <a class="mf-applyBtn" href="mailto:careers@mojflow.com?subject=Prijava:%20Sales%20Development%20Representative%20%E2%80%94%20MojFlow">
+              <span data-i18n="careers.apply">Prijavi se</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="mf-job">
+          <div class="mf-job_head">
+            <h3 class="mf-job_role" data-i18n="careers.j2.role">Account Executive</h3>
+            <p class="mf-job_meta" data-i18n="careers.j2.meta">Full-time · Beograd / Remote</p>
+          </div>
+          <div class="mf-job_body">
+            <p class="mf-job_text" data-i18n="careers.j2.text">Vodiš pipeline od početka do kraja: konsultativna prodaja web, AI i security projekata, skopiranje sa delivery timom i zatvaranje.</p>
+            <ul class="mf-job_list">
+              <li data-i18n="careers.j2.b1">Vlasništvo nad pipeline-om i zatvaranje poslova</li>
+              <li data-i18n="careers.j2.b2">Konsultativna prodaja web, AI i security projekata</li>
+              <li data-i18n="careers.j2.b3">2+ godine B2B closing-a, tehnička pismenost, SR + EN</li>
+            </ul>
+          </div>
+          <div class="mf-job_apply">
+            <a class="mf-applyBtn" href="mailto:careers@mojflow.com?subject=Prijava:%20Account%20Executive%20%E2%80%94%20MojFlow">
+              <span data-i18n="careers.apply">Prijavi se</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="mf-job">
+          <div class="mf-job_head">
+            <h3 class="mf-job_role" data-i18n="careers.j3.role">AI Engineer</h3>
+            <p class="mf-job_meta" data-i18n="careers.j3.meta">Full-time · Remote / Beograd</p>
+          </div>
+          <div class="mf-job_body">
+            <p class="mf-job_text" data-i18n="careers.j3.text">Gradiš AI agente, RAG sisteme i LLM integracije; isporučuješ produkcioni Python/TypeScript i sarađuješ sa security timom na proveri.</p>
+            <ul class="mf-job_list">
+              <li data-i18n="careers.j3.b1">Razvoj AI agenata, RAG sistema i LLM integracija</li>
+              <li data-i18n="careers.j3.b2">Produkcioni Python i TypeScript</li>
+              <li data-i18n="careers.j3.b3">Iskustvo sa LLM/RAG i pragmatičan pristup isporuci</li>
+            </ul>
+          </div>
+          <div class="mf-job_apply">
+            <a class="mf-applyBtn" href="mailto:careers@mojflow.com?subject=Prijava:%20AI%20Engineer%20%E2%80%94%20MojFlow">
+              <span data-i18n="careers.apply">Prijavi se</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div><!-- .mf-careers_jobs -->
+
+      <p class="mf-careers_foot" data-i18n="careers.foot" data-i18n-html>Ne vidiš svoju ulogu, a misliš da nam vrediš? Piši nam na <a href="mailto:careers@mojflow.com">careers@mojflow.com</a>.</p>
+    </section><!-- section-careers -->
+
     <section data-iso-item data-iso-call="addBodyClass" data-iso-body-class="-is-view-footer" class="c-section -footer" data-scroll-section data-scroll-section-id="section-footer">
       <footer class="c-footer">
         <div class="c-footer_vessel">
@@ -768,9 +954,11 @@
             <ul class="c-footerNav">
               <li class="c-footerNav_items"><a href="#CONCEPT" class="js-link-scroll c-footerNav_a" data-i18n="nav.concept">Koncept</a></li>
               <li class="c-footerNav_items"><a href="#SERVICE" class="js-link-scroll c-footerNav_a" data-i18n="nav.services">Usluge</a></li>
+              <li class="c-footerNav_items"><a href="#CASES" class="js-link-scroll c-footerNav_a" data-i18n="nav.cases">Reference</a></li>
               <li class="c-footerNav_items"><a href="#SECURITY" class="js-link-scroll c-footerNav_a" data-i18n="nav.security">Bezbednost</a></li>
               <li class="c-footerNav_items"><a href="#COMPANY" class="js-link-scroll c-footerNav_a" data-i18n="nav.company">Kompanija</a></li>
               <li class="c-footerNav_items"><a href="#RECRUIT" class="js-link-scroll c-footerNav_a" data-i18n="nav.process">Proces</a></li>
+              <li class="c-footerNav_items"><a href="#CAREERS" class="js-link-scroll c-footerNav_a" data-i18n="nav.careers">Karijera</a></li>
               <li class="c-footerNav_items"><a href="#contact" data-mf-contact class="c-footerNav_a" data-i18n="nav.contact">Kontakt</a></li>
             </ul>
           </div><!-- .c-footer_nav -->
@@ -836,7 +1024,7 @@
     /* ---------- i18n dictionary ---------- */
     const MF_I18N = {
       sr: {
-        "nav.concept":"Koncept","nav.services":"Usluge","nav.security":"Bezbednost","nav.company":"Kompanija","nav.process":"Proces","nav.contact":"Kontakt",
+        "nav.concept":"Koncept","nav.services":"Usluge","nav.cases":"Reference","nav.security":"Bezbednost","nav.company":"Kompanija","nav.process":"Proces","nav.careers":"Karijera","nav.contact":"Kontakt",
         "hero.line1":"Gradimo softver koji donosi","hero.line2":"Profit<span data-mv-spilit-text class=\"c-mv-copy-mark_and\">&</span>","hero.line3":"Rast",
         "concept.title":"Koncept",
         "concept.heading":"Softver i bezbednost koji rade za prihod, procese i poverenje korisnika",
@@ -870,13 +1058,42 @@
         "company.team":"Tim","company.teamVal":"Senior tim za strategiju, UX/UI, engineering, AI delivery i cyber security",
         "company.contact":"Kontakt",
         "cta.contact":"Kontakt","cta.startProject":"Pokreni projekat",
+        "cases.title":"Reference",
+        "cases.lead":"Izbor projekata koji pokazuju kako MojFlow spaja proizvod, inženjering i bezbednost u merljiv rezultat. Brojevi su ilustrativni primeri tipičnih ishoda.",
+        "cases.challengeLabel":"Izazov","cases.solutionLabel":"Rešenje","cases.resultLabel":"Rezultat",
+        "cases.c1.tags":"Logistika · Web App + Automatizacija","cases.c1.title":"SaaS platforma za logistiku",
+        "cases.c1.challenge":"Dispečeri su gubili sate na ručni unos naloga i planiranje ruta, a greške su kočile isporuke.",
+        "cases.c1.solution":"Klijentski portal i mašina za automatsko planiranje ruta, sa bezbednosnim slojem od prvog dana.",
+        "cases.c1.result":"−38% ručnog unosa · +24% isporuka na vreme",
+        "cases.c2.tags":"Retail · Web + Performanse","cases.c2.title":"E-commerce brend",
+        "cases.c2.challenge":"Spor sajt je curio konverzije na mobilnom, a checkout je gubio kupce pred kraj.",
+        "cases.c2.solution":"Iznova izgrađen storefront sa 1.9s LCP i redizajniran tok plaćanja.",
+        "cases.c2.result":"+31% konverzija · 2.4× brže učitavanje",
+        "cases.c3.tags":"Fintech · AI + Cyber Security","cases.c3.title":"Fintech startup",
+        "cases.c3.challenge":"Prva linija podrške bila je zatrpana, a lansiranje je blokirala bezbednosna provera.",
+        "cases.c3.solution":"AI agent za podršku zasnovan na RAG-u, uz pen-test i hardening pre lansiranja.",
+        "cases.c3.result":"−52% tiketa prve linije · prošao pen-test pre lansiranja",
+        "cases.disclaimer":"* Prikazane reference su reprezentativni primeri tipičnih projekata i ishoda; konkretni nazivi klijenata i brojevi dostupni su na zahtev.",
+        "careers.title":"Karijera",
+        "careers.lead":"Gradimo proizvode i bezbednosna rešenja za klijente širom sveta. Tražimo ljude koji vole da isporučuju rezultat — u prodaji i u inženjeringu.",
+        "careers.apply":"Prijavi se",
+        "careers.j1.role":"Sales Development Representative (SDR)","careers.j1.meta":"Full-time · Beograd / Hybrid",
+        "careers.j1.text":"Otvaraš prve razgovore: pronalaziš prave kompanije, kvalifikuješ dolazne lidove i zakazuješ sastanke za Account Executive tim.",
+        "careers.j1.b1":"Outbound prospecting i kvalifikacija dolaznih lidova","careers.j1.b2":"Zakazivanje discovery poziva i uredno vođenje CRM-a","careers.j1.b3":"1+ godina iskustva u prodaji, tečan srpski i engleski",
+        "careers.j2.role":"Account Executive","careers.j2.meta":"Full-time · Beograd / Remote",
+        "careers.j2.text":"Vodiš pipeline od početka do kraja: konsultativna prodaja web, AI i security projekata, skopiranje sa delivery timom i zatvaranje.",
+        "careers.j2.b1":"Vlasništvo nad pipeline-om i zatvaranje poslova","careers.j2.b2":"Konsultativna prodaja web, AI i security projekata","careers.j2.b3":"2+ godine B2B closing-a, tehnička pismenost, SR + EN",
+        "careers.j3.role":"AI Engineer","careers.j3.meta":"Full-time · Remote / Beograd",
+        "careers.j3.text":"Gradiš AI agente, RAG sisteme i LLM integracije; isporučuješ produkcioni Python/TypeScript i sarađuješ sa security timom na proveri.",
+        "careers.j3.b1":"Razvoj AI agenata, RAG sistema i LLM integracija","careers.j3.b2":"Produkcioni Python i TypeScript","careers.j3.b3":"Iskustvo sa LLM/RAG i pragmatičan pristup isporuci",
+        "careers.foot":"Ne vidiš svoju ulogu, a misliš da nam vrediš? Piši nam na <a href=\"mailto:careers@mojflow.com\">careers@mojflow.com</a>.",
         "form.eyebrow":"Razgovor o projektu","form.title":"Ispričaj nam šta gradiš.","form.sub":"Odgovaramo u toku 24 sata sa konkretnim sledećim korakom, bez šablonskih ponuda.",
         "form.name":"Ime","form.email":"Email","form.company":"Kompanija","form.topic":"Tema",
         "form.topic.web":"Web sajt / web aplikacija","form.topic.mobile":"Mobilna aplikacija","form.topic.ai":"AI sistem / automatizacija","form.topic.security":"Cyber security","form.topic.other":"Drugo",
         "form.message":"Poruka","form.submit":"Pošalji poruku","form.note":"Poruka se šalje direktno na contact@mojflow.com. Odgovaramo u toku 24 sata."
       },
       en: {
-        "nav.concept":"Concept","nav.services":"Services","nav.security":"Security","nav.company":"Company","nav.process":"Process","nav.contact":"Contact",
+        "nav.concept":"Concept","nav.services":"Services","nav.cases":"Case Studies","nav.security":"Security","nav.company":"Company","nav.process":"Process","nav.careers":"Careers","nav.contact":"Contact",
         "hero.line1":"We build software that drives","hero.line2":"Profit<span data-mv-spilit-text class=\"c-mv-copy-mark_and\">&</span>","hero.line3":"Scale",
         "concept.title":"Concept",
         "concept.heading":"Software and security that work for revenue, operations and user trust",
@@ -910,6 +1127,35 @@
         "company.team":"Team","company.teamVal":"Senior team for strategy, UX/UI, engineering, AI delivery and cyber security",
         "company.contact":"Contact",
         "cta.contact":"Contact","cta.startProject":"Start a project",
+        "cases.title":"Case Studies",
+        "cases.lead":"A selection of projects showing how MojFlow joins product, engineering and security into a measurable result. Figures are illustrative examples of typical outcomes.",
+        "cases.challengeLabel":"Challenge","cases.solutionLabel":"Solution","cases.resultLabel":"Result",
+        "cases.c1.tags":"Logistics · Web App + Automation","cases.c1.title":"Logistics SaaS platform",
+        "cases.c1.challenge":"Dispatchers were losing hours to manual order entry and route planning, and errors were stalling deliveries.",
+        "cases.c1.solution":"A client portal and an automatic route-planning engine, hardened with a security layer from day one.",
+        "cases.c1.result":"−38% manual entry · +24% on-time deliveries",
+        "cases.c2.tags":"Retail · Web + Performance","cases.c2.title":"E-commerce brand",
+        "cases.c2.challenge":"A slow site was leaking conversions on mobile, and checkout was losing buyers near the end.",
+        "cases.c2.solution":"A rebuilt storefront at 1.9s LCP and a redesigned checkout flow.",
+        "cases.c2.result":"+31% conversion · 2.4× faster load",
+        "cases.c3.tags":"Fintech · AI + Cyber Security","cases.c3.title":"Fintech startup",
+        "cases.c3.challenge":"First-line support was overwhelmed, and launch was blocked on a security review.",
+        "cases.c3.solution":"A RAG-based AI support agent, plus pen-test and hardening before launch.",
+        "cases.c3.result":"−52% first-line tickets · passed pre-launch pen-test",
+        "cases.disclaimer":"* The references shown are representative examples of typical projects and outcomes; specific client names and figures are available on request.",
+        "careers.title":"Careers",
+        "careers.lead":"We build products and security solutions for clients worldwide. We're looking for people who love to ship a result — in sales and in engineering.",
+        "careers.apply":"Apply",
+        "careers.j1.role":"Sales Development Representative (SDR)","careers.j1.meta":"Full-time · Belgrade / Hybrid",
+        "careers.j1.text":"You open the first conversations: finding the right companies, qualifying inbound leads and booking meetings for the Account Executive team.",
+        "careers.j1.b1":"Outbound prospecting and qualifying inbound leads","careers.j1.b2":"Booking discovery calls and keeping the CRM clean","careers.j1.b3":"1+ year of sales experience, fluent Serbian and English",
+        "careers.j2.role":"Account Executive","careers.j2.meta":"Full-time · Belgrade / Remote",
+        "careers.j2.text":"You own the pipeline end-to-end: consultative selling of web, AI and security projects, scoping with the delivery team, and closing.",
+        "careers.j2.b1":"Ownership of the pipeline and closing deals","careers.j2.b2":"Consultative selling of web, AI and security projects","careers.j2.b3":"2+ years of B2B closing, technical fluency, SR + EN",
+        "careers.j3.role":"AI Engineer","careers.j3.meta":"Full-time · Remote / Belgrade",
+        "careers.j3.text":"You build AI agents, RAG systems and LLM integrations; ship production Python/TypeScript and collaborate with the security team on review.",
+        "careers.j3.b1":"Building AI agents, RAG systems and LLM integrations","careers.j3.b2":"Production Python and TypeScript","careers.j3.b3":"LLM/RAG experience and a pragmatic shipping mindset",
+        "careers.foot":"Don't see your role but think you're worth it? Write to us at <a href=\"mailto:careers@mojflow.com\">careers@mojflow.com</a>.",
         "form.eyebrow":"Project conversation","form.title":"Tell us what you're building.","form.sub":"We reply within 24 hours with a concrete next step, no template proposals.",
         "form.name":"Name","form.email":"Email","form.company":"Company","form.topic":"Topic",
         "form.topic.web":"Web site / web app","form.topic.mobile":"Mobile app","form.topic.ai":"AI system / automation","form.topic.security":"Cyber security","form.topic.other":"Other",
