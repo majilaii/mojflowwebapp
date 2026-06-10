@@ -37,7 +37,8 @@
   </script>
 
   <link rel="canonical" href="https://mojflow.com/">
-  <link rel="shortcut icon" href="/favicon.jpg">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <title>MojFlow | Web, mobile, AI i Cyber Security</title>
@@ -1112,7 +1113,7 @@
             </ul>
           </div>
           <div class="mf-job_apply">
-            <a class="mf-applyBtn" href="mailto:careers@mojflow.com?subject=Prijava:%20Sales%20Development%20Representative%20%E2%80%94%20MojFlow">
+            <a class="mf-applyBtn" data-mf-apply="j1" href="mailto:careers@mojflow.com?subject=Prijava:%20Sales%20Development%20Representative%20%E2%80%94%20MojFlow">
               <span data-i18n="careers.apply">Prijavi se</span>
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -1133,7 +1134,7 @@
             </ul>
           </div>
           <div class="mf-job_apply">
-            <a class="mf-applyBtn" href="mailto:careers@mojflow.com?subject=Prijava:%20Account%20Executive%20%E2%80%94%20MojFlow">
+            <a class="mf-applyBtn" data-mf-apply="j2" href="mailto:careers@mojflow.com?subject=Prijava:%20Account%20Executive%20%E2%80%94%20MojFlow">
               <span data-i18n="careers.apply">Prijavi se</span>
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -1154,7 +1155,7 @@
             </ul>
           </div>
           <div class="mf-job_apply">
-            <a class="mf-applyBtn" href="mailto:careers@mojflow.com?subject=Prijava:%20AI%20Engineer%20%E2%80%94%20MojFlow">
+            <a class="mf-applyBtn" data-mf-apply="j3" href="mailto:careers@mojflow.com?subject=Prijava:%20AI%20Engineer%20%E2%80%94%20MojFlow">
               <span data-i18n="careers.apply">Prijavi se</span>
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -1343,6 +1344,9 @@
         "careers.title":"Karijera",
         "careers.lead":"Gradimo proizvode i bezbednosna rešenja za klijente širom sveta. Tražimo ljude koji vole da isporučuju rezultat — u prodaji i u inženjeringu.",
         "careers.apply":"Prijavi se",
+        "careers.j1.subject":"Prijava: Sales Development Representative — MojFlow",
+        "careers.j2.subject":"Prijava: Account Executive — MojFlow",
+        "careers.j3.subject":"Prijava: AI Engineer — MojFlow",
         "careers.j1.role":"Sales Development Representative (SDR)","careers.j1.meta":"Full-time · Beograd / Hybrid",
         "careers.j1.text":"Otvaraš prve razgovore: pronalaziš prave kompanije, kvalifikuješ dolazne lidove i zakazuješ sastanke za Account Executive tim.",
         "careers.j1.b1":"Outbound prospecting i kvalifikacija dolaznih lidova","careers.j1.b2":"Zakazivanje discovery poziva i uredno vođenje CRM-a","careers.j1.b3":"1+ godina iskustva u prodaji, tečan srpski i engleski",
@@ -1430,6 +1434,9 @@
         "careers.title":"Careers",
         "careers.lead":"We build products and security solutions for clients worldwide. We're looking for people who love to ship a result — in sales and in engineering.",
         "careers.apply":"Apply",
+        "careers.j1.subject":"Application: Sales Development Representative — MojFlow",
+        "careers.j2.subject":"Application: Account Executive — MojFlow",
+        "careers.j3.subject":"Application: AI Engineer — MojFlow",
         "careers.j1.role":"Sales Development Representative (SDR)","careers.j1.meta":"Full-time · Belgrade / Hybrid",
         "careers.j1.text":"You open the first conversations: finding the right companies, qualifying inbound leads and booking meetings for the Account Executive team.",
         "careers.j1.b1":"Outbound prospecting and qualifying inbound leads","careers.j1.b2":"Booking discovery calls and keeping the CRM clean","careers.j1.b3":"1+ year of sales experience, fluent Serbian and English",
@@ -1474,6 +1481,10 @@
       });
       document.querySelectorAll(".mf-lang button").forEach(btn=>{
         btn.classList.toggle("is-active", btn.getAttribute("data-lang")===lang);
+      });
+      document.querySelectorAll("[data-mf-apply]").forEach(a=>{
+        const subj = dict["careers." + a.getAttribute("data-mf-apply") + ".subject"];
+        if(subj) a.href = "mailto:careers@mojflow.com?subject=" + encodeURIComponent(subj);
       });
       try{ localStorage.setItem(MF_LANG_KEY, lang); }catch(e){}
     }
