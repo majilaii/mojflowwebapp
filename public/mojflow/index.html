@@ -19,13 +19,21 @@
   <meta name="twitter:description" content="Gradimo digitalne sisteme i bezbednosna rešenja koja kompanije pretvaraju u sigurnije, brže i profitabilnije organizacije." />
   <meta name="twitter:image" content="https://mojflow.com/api/og" />
 
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YW60B68CQK"></script>
+  <!-- Google Analytics 4 — loads only after cookie consent (mf-consent in localStorage) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YW60B68CQK');
+    window.mfLoadGA = function(){
+      if(window.mfGALoaded) return;
+      window.mfGALoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YW60B68CQK';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-YW60B68CQK');
+    };
+    try{ if(localStorage.getItem('mf-consent') === 'granted') window.mfLoadGA(); }catch(e){}
   </script>
 
   <link rel="canonical" href="https://mojflow.com/">
@@ -185,6 +193,19 @@
       .mf-job{grid-template-columns:1fr;grid-template-areas:"head" "body" "apply";gap:4px;padding:26px 22px}
       .mf-job_apply{justify-self:start;margin-top:20px}
     }
+
+    /* ---------- Cookie consent banner ---------- */
+    .mf-consent{position:fixed;left:18px;bottom:18px;z-index:100001;width:min(390px,calc(100vw - 36px));background:#0d1119;color:#f4f4f4;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px 20px 18px;box-shadow:0 24px 60px rgba(0,0,0,.45);opacity:0;transform:translateY(14px);transition:opacity .4s cubic-bezier(.2,.7,.2,1),transform .4s cubic-bezier(.2,.7,.2,1)}
+    .mf-consent.is-show{opacity:1;transform:none}
+    .mf-consent_text{font-family:Inter,Arial,sans-serif;font-size:13px;line-height:1.6;color:rgba(255,255,255,.78);margin:0 0 14px}
+    .mf-consent_text a{color:#dfa583;text-decoration:none;border-bottom:1px solid rgba(223,165,131,.45)}
+    .mf-consent_actions{display:flex;gap:10px}
+    .mf-consent_btn{appearance:none;border:0;border-radius:999px;padding:10px 18px;font-family:Chillax,Arial,sans-serif;font-size:12.5px;letter-spacing:.05em;cursor:pointer;transition:transform .2s,filter .2s,background .2s}
+    .mf-consent_btn:hover{transform:translateY(-1px)}
+    .mf-consent_btn.-accept{background:linear-gradient(135deg,#1b3847 0%,#a96f57 100%);color:#fff}
+    .mf-consent_btn.-accept:hover{filter:brightness(1.12)}
+    .mf-consent_btn.-decline{background:rgba(255,255,255,.07);color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.14)}
+    .mf-consent_btn.-decline:hover{background:rgba(255,255,255,.12)}
 
   </style>
 
@@ -1066,6 +1087,7 @@
               <li class="c-footerNav_items"><a href="#RECRUIT" class="js-link-scroll c-footerNav_a" data-i18n="nav.process">Proces</a></li>
               <li class="c-footerNav_items"><a href="#CAREERS" class="js-link-scroll c-footerNav_a" data-i18n="nav.careers">Karijera</a></li>
               <li class="c-footerNav_items"><a href="#contact" data-mf-contact class="c-footerNav_a" data-i18n="nav.contact">Kontakt</a></li>
+              <li class="c-footerNav_items"><a href="/privacy" class="c-footerNav_a" data-i18n="nav.privacy">Privatnost</a></li>
             </ul>
           </div><!-- .c-footer_nav -->
           <div class="c-footer_sns">
@@ -1080,6 +1102,15 @@
     </section><!-- section-footer -->
 
   </div><!-- .js-scroll-container -->
+
+  <!-- Cookie consent -->
+  <div class="mf-consent" id="mfConsent" role="region" aria-label="Cookie consent" hidden>
+    <p class="mf-consent_text" data-i18n="consent.text" data-i18n-html>Koristimo kolačiće samo za anonimnu analitiku posete (Google Analytics). Detalji su u <a href="/privacy">politici privatnosti</a>.</p>
+    <div class="mf-consent_actions">
+      <button type="button" class="mf-consent_btn -accept" data-mf-consent="granted" data-i18n="consent.accept">Prihvati</button>
+      <button type="button" class="mf-consent_btn -decline" data-mf-consent="denied" data-i18n="consent.decline">Odbij</button>
+    </div>
+  </div>
 
   <!-- Contact modal -->
   <div class="mf-modal" id="mfContactModal" role="dialog" aria-modal="true" aria-labelledby="mfContactTitle" aria-hidden="true">
@@ -1130,7 +1161,9 @@
     /* ---------- i18n dictionary ---------- */
     const MF_I18N = {
       sr: {
-        "nav.concept":"Koncept","nav.services":"Usluge","nav.cases":"Reference","nav.security":"Bezbednost","nav.company":"Kompanija","nav.process":"Proces","nav.careers":"Karijera","nav.contact":"Kontakt",
+        "nav.concept":"Koncept","nav.services":"Usluge","nav.cases":"Reference","nav.security":"Bezbednost","nav.company":"Kompanija","nav.process":"Proces","nav.careers":"Karijera","nav.contact":"Kontakt","nav.privacy":"Privatnost",
+        "consent.text":"Koristimo kolačiće samo za anonimnu analitiku posete (Google Analytics). Detalji su u <a href=\"/privacy\">politici privatnosti</a>.",
+        "consent.accept":"Prihvati","consent.decline":"Odbij",
         "hero.line1":"Gradimo softver koji donosi","hero.line2":"Profit<span data-mv-spilit-text class=\"c-mv-copy-mark_and\">&</span>","hero.line3":"Rast",
         "concept.title":"Koncept",
         "concept.heading":"Softver i bezbednost koji rade za prihod, procese i poverenje korisnika",
@@ -1199,7 +1232,9 @@
         "form.message":"Poruka","form.submit":"Pošalji poruku","form.note":"Poruka se šalje direktno na contact@mojflow.com. Odgovaramo u toku 24 sata."
       },
       en: {
-        "nav.concept":"Concept","nav.services":"Services","nav.cases":"Case Studies","nav.security":"Security","nav.company":"Company","nav.process":"Process","nav.careers":"Careers","nav.contact":"Contact",
+        "nav.concept":"Concept","nav.services":"Services","nav.cases":"Case Studies","nav.security":"Security","nav.company":"Company","nav.process":"Process","nav.careers":"Careers","nav.contact":"Contact","nav.privacy":"Privacy",
+        "consent.text":"We use cookies only for anonymous visit analytics (Google Analytics). Details in our <a href=\"/privacy\">privacy policy</a>.",
+        "consent.accept":"Accept","consent.decline":"Decline",
         "hero.line1":"We build software that drives","hero.line2":"Profit<span data-mv-spilit-text class=\"c-mv-copy-mark_and\">&</span>","hero.line3":"Scale",
         "concept.title":"Concept",
         "concept.heading":"Software and security that work for revenue, operations and user trust",
@@ -1427,6 +1462,28 @@
         });
       }, {threshold:.2, rootMargin:"0px 0px -8% 0px"});
       rows.forEach(r=>io.observe(r));
+    })();
+
+    /* ---------- Cookie consent ---------- */
+    (function(){
+      const box = document.getElementById("mfConsent");
+      if(!box) return;
+      let choice = null;
+      try{ choice = localStorage.getItem("mf-consent"); }catch(e){}
+      if(choice === "granted" || choice === "denied") return;
+      setTimeout(()=>{
+        box.hidden = false;
+        setTimeout(()=>box.classList.add("is-show"), 30);
+      }, 1400);
+      box.addEventListener("click", function(e){
+        const btn = e.target.closest("[data-mf-consent]");
+        if(!btn) return;
+        const val = btn.getAttribute("data-mf-consent");
+        try{ localStorage.setItem("mf-consent", val); }catch(e){}
+        if(val === "granted" && window.mfLoadGA) window.mfLoadGA();
+        box.classList.remove("is-show");
+        setTimeout(()=>{ box.hidden = true; }, 420);
+      });
     })();
 
     /* ---------- init ---------- */
