@@ -5,7 +5,8 @@ Brief context so any Claude session in this repo can pick up work without spelun
 ## Project structure
 
 - **Stack:** Next.js 14 shell that serves a static HTML at `/`. The actual site lives in `public/mojflow/index.html` (forked from a Japanese template — Holon).
-- **Single entry:** `src/app/route.ts` reads `public/mojflow/index.html` and returns it as the response. There are no React components for the marketing site itself.
+- **Single entry:** `src/app/route.ts` reads `public/mojflow/index.html` and returns it as the response. There are no React components for the marketing site itself. Same pattern: `src/app/privacy/route.ts` serves `public/mojflow/privacy.html` at `/privacy` (bilingual, noindex).
+- **Analytics:** GA4 is consent-gated — it loads only via `window.mfLoadGA()` after the cookie banner is accepted (`mf-consent` in localStorage). Don't re-add a direct gtag `<script src>` to the head.
 - **Styles:** `public/assets/styles/holon.css` is the main stylesheet (Japanese template's CSS). Inline `<style>` in `index.html` carries scoped overrides for the MojFlow rebrand.
 - **Repo:** [majilaii/mojflowwebapp](https://github.com/majilaii/mojflowwebapp). Push to `main` → Vercel auto-deploys to mojflow.com.
 
@@ -47,7 +48,7 @@ Inline `<style>` has a `Mobile splash logo crop fix` block at `@media (max-width
 
 ## i18n
 
-Bilingual EN/SR. Translation strings in `<script>` block in `index.html` (search `i18nDict`). Hero copy bug pattern: when SR text overflows a fixed-size hero area, **shorten the content**, don't retune CSS (that's how "Bezbednost" became "Cyber" briefly, then "Profit" stuck).
+Bilingual EN/SR. Translation strings in `<script>` block in `index.html` (search `MF_I18N`). Every `data-i18n` node needs a key in BOTH dicts. `applyLang` also rewrites careers mailto subjects (`data-mf-apply` + `careers.jX.subject` keys). Hero copy bug pattern: when SR text overflows a fixed-size hero area, **shorten the content**, don't retune CSS (that's how "Bezbednost" became "Cyber" briefly, then "Profit" stuck).
 
 ## Deploy
 
