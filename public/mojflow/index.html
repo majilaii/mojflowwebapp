@@ -142,21 +142,49 @@
     .mf-section_lead{max-width:680px;margin:22px 0 0;font-family:Inter,Arial,sans-serif;font-size:clamp(15px,1.5vw,18px);line-height:1.7;color:rgba(15,20,30,.62)}
     @media (max-width:767px){.mf-section{padding:70px 6vw}}
 
-    /* ---------- Case Studies grid ---------- */
-    .mf-cases_grid{margin-top:clamp(38px,5vw,64px);display:grid;gap:22px;grid-template-columns:repeat(3,1fr)}
-    @media (max-width:1024px){.mf-cases_grid{grid-template-columns:1fr 1fr}}
-    @media (max-width:767px){.mf-cases_grid{grid-template-columns:1fr;gap:18px}}
+    /* ---------- Case Studies — dark dossier panel ---------- */
+    .mf-cs_panel{position:relative;margin-top:clamp(38px,5vw,64px);background:linear-gradient(160deg,#0d1119 0%,#0b1016 55%,#0e131c 100%);border:1px solid rgba(255,255,255,.07);border-radius:26px;overflow:hidden}
+    .mf-cs_panel::before{content:"";position:absolute;top:-30%;right:-12%;width:58%;aspect-ratio:1;background:radial-gradient(circle,rgba(169,111,87,.18),transparent 62%);pointer-events:none}
+    .mf-cs_panel::after{content:"";position:absolute;bottom:-35%;left:-10%;width:62%;aspect-ratio:1;background:radial-gradient(circle,rgba(54,98,122,.16),transparent 62%);pointer-events:none}
+    .mf-cs_bgGrid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 90% 85% at 50% 0%,#000 0%,transparent 78%);mask-image:radial-gradient(ellipse 90% 85% at 50% 0%,#000 0%,transparent 78%);pointer-events:none}
 
-    .mf-case{display:flex;flex-direction:column;background:rgba(255,255,255,.62);border:1px solid rgba(15,20,30,.09);border-radius:18px;padding:28px 26px 26px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .35s ease}
-    .mf-case:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(15,20,30,.1);border-color:rgba(169,111,87,.4)}
-    .mf-case_tags{font-family:Chillax,Arial,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a96f57;margin:0 0 16px}
-    .mf-case_title{font-family:Chillax,Arial,sans-serif;font-weight:500;font-size:clamp(19px,2vw,23px);line-height:1.2;color:#0b0f15;margin:0 0 20px}
-    .mf-case_block{margin:0 0 16px}
-    .mf-case_label{font-family:Chillax,Arial,sans-serif;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(15,20,30,.4);margin:0 0 5px}
-    .mf-case_text{font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.6;color:rgba(15,20,30,.7);margin:0}
-    .mf-case_result{margin-top:auto;padding-top:18px;border-top:1px solid rgba(15,20,30,.08)}
-    .mf-case_resultText{font-family:Chillax,Arial,sans-serif;font-weight:500;font-size:clamp(15px,1.6vw,17px);line-height:1.35;margin:0;background:linear-gradient(120deg,#1b3847,#a96f57);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#1b3847}
-    .mf-case_disclaimer{margin:clamp(30px,4vw,46px) 0 0;font-family:Inter,Arial,sans-serif;font-size:12px;line-height:1.6;color:rgba(15,20,30,.38)}
+    .mf-cs_row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) auto;gap:clamp(26px,3.5vw,64px);padding:clamp(36px,4.5vw,58px) clamp(26px,4vw,58px);transition:background .45s ease}
+    .mf-cs_row + .mf-cs_row{border-top:1px solid rgba(255,255,255,.07)}
+    .mf-cs_row:hover{background:rgba(255,255,255,.025)}
+
+    .mf-cs_index{font-family:Chillax,Arial,sans-serif;font-size:12px;letter-spacing:.22em;color:rgba(255,255,255,.34);margin:0 0 18px;transition:color .4s ease}
+    .mf-cs_row:hover .mf-cs_index{color:#c98e72}
+    .mf-cs_pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;padding:0;list-style:none}
+    .mf-cs_pill{font-family:Chillax,Arial,sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:6px 12px;white-space:nowrap}
+    .mf-cs_title{font-family:Chillax,Arial,sans-serif;font-weight:500;font-size:clamp(22px,2.4vw,32px);line-height:1.15;color:#fff;margin:0}
+
+    .mf-cs_body{display:flex;flex-direction:column;gap:18px;justify-content:center}
+    .mf-cs_label{font-family:Chillax,Arial,sans-serif;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.38);margin:0 0 6px}
+    .mf-cs_text{font-family:Inter,Arial,sans-serif;font-size:14px;line-height:1.65;color:rgba(255,255,255,.72);margin:0}
+
+    .mf-cs_metrics{display:flex;flex-direction:column;justify-content:center;gap:26px;text-align:right;min-width:210px}
+    .mf-cs_value{font-family:Chillax,Arial,sans-serif;font-weight:500;line-height:1;margin:0;white-space:nowrap;background:linear-gradient(110deg,#f6e7da 0%,#dfa583 45%,#9fc2d4 100%);background-size:220% 100%;background-position:0% 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#f6e7da;transition:background-position .9s cubic-bezier(.2,.7,.2,1)}
+    .mf-cs_row:hover .mf-cs_value{background-position:85% 0}
+    .mf-cs_metric.-primary .mf-cs_value{font-size:clamp(44px,4.6vw,66px)}
+    .mf-cs_metric:not(.-primary) .mf-cs_value{font-size:clamp(22px,2vw,28px)}
+    .mf-cs_metricLabel{font-family:Inter,Arial,sans-serif;font-size:12.5px;line-height:1.45;color:rgba(255,255,255,.5);margin:7px 0 0}
+    .mf-cs_badge{display:inline-flex;align-items:center;gap:8px;font-family:Chillax,Arial,sans-serif;font-size:11.5px;letter-spacing:.08em;color:#fff;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);border-radius:999px;padding:9px 15px;margin:0;text-align:left}
+    .mf-cs_badge svg{width:13px;height:13px;flex:none;color:#dfa583}
+    .mf-cs_disclaimer{margin:clamp(26px,3.5vw,42px) 0 0;font-family:Inter,Arial,sans-serif;font-size:12px;line-height:1.6;color:rgba(15,20,30,.38)}
+
+    /* reveal animation — armed via JS so content stays visible without it */
+    .mf-cs-anim .mf-cs_row{opacity:0;transform:translateY(30px)}
+    .mf-cs-anim .mf-cs_row.is-in{opacity:1;transform:none;transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1),background .45s ease}
+
+    @media (max-width:1024px){
+      .mf-cs_row{grid-template-columns:1fr;gap:24px}
+      .mf-cs_metrics{flex-direction:row;align-items:flex-end;text-align:left;gap:clamp(28px,6vw,56px);min-width:0;flex-wrap:wrap;row-gap:18px}
+    }
+    @media (max-width:767px){
+      .mf-cs_panel{border-radius:20px}
+      .mf-cs_row{padding:30px 22px}
+      .mf-cs_metric.-primary .mf-cs_value{font-size:clamp(40px,12vw,54px)}
+    }
 
     /* ---------- Careers ---------- */
     .mf-careers_jobs{margin-top:clamp(38px,5vw,64px);display:flex;flex-direction:column;gap:18px}
@@ -580,62 +608,104 @@
       <h2 class="c-headLv2" data-i18n="cases.title">Reference</h2>
       <p class="mf-section_lead" data-i18n="cases.lead">Izbor projekata koji pokazuju kako MojFlow spaja proizvod, inženjering i bezbednost u merljiv rezultat. Brojevi su ilustrativni primeri tipičnih ishoda.</p>
 
-      <div class="mf-cases_grid">
+      <div class="mf-cs_panel" id="mfCasesPanel">
+        <div class="mf-cs_bgGrid" aria-hidden="true"></div>
 
-        <article class="mf-case">
-          <p class="mf-case_tags" data-i18n="cases.c1.tags">Logistika · Web App + Automatizacija</p>
-          <h3 class="mf-case_title" data-i18n="cases.c1.title">SaaS platforma za logistiku</h3>
-          <div class="mf-case_block">
-            <p class="mf-case_label" data-i18n="cases.challengeLabel">Izazov</p>
-            <p class="mf-case_text" data-i18n="cases.c1.challenge">Dispečeri su gubili sate na ručni unos naloga i planiranje ruta, a greške su kočile isporuke.</p>
+        <article class="mf-cs_row">
+          <div class="mf-cs_meta">
+            <p class="mf-cs_index">01</p>
+            <ul class="mf-cs_pills">
+              <li class="mf-cs_pill" data-i18n="cases.c1.tag1">Logistika</li>
+              <li class="mf-cs_pill" data-i18n="cases.c1.tag2">Web App + Automatizacija</li>
+            </ul>
+            <h3 class="mf-cs_title" data-i18n="cases.c1.title">SaaS platforma za logistiku</h3>
           </div>
-          <div class="mf-case_block">
-            <p class="mf-case_label" data-i18n="cases.solutionLabel">Rešenje</p>
-            <p class="mf-case_text" data-i18n="cases.c1.solution">Klijentski portal i mašina za automatsko planiranje ruta, sa bezbednosnim slojem od prvog dana.</p>
+          <div class="mf-cs_body">
+            <div class="mf-cs_block">
+              <p class="mf-cs_label" data-i18n="cases.challengeLabel">Izazov</p>
+              <p class="mf-cs_text" data-i18n="cases.c1.challenge">Dispečeri su gubili sate na ručni unos naloga i planiranje ruta, a greške su kočile isporuke.</p>
+            </div>
+            <div class="mf-cs_block">
+              <p class="mf-cs_label" data-i18n="cases.solutionLabel">Rešenje</p>
+              <p class="mf-cs_text" data-i18n="cases.c1.solution">Klijentski portal i mašina za automatsko planiranje ruta, sa bezbednosnim slojem od prvog dana.</p>
+            </div>
           </div>
-          <div class="mf-case_result">
-            <p class="mf-case_label" data-i18n="cases.resultLabel">Rezultat</p>
-            <p class="mf-case_resultText" data-i18n="cases.c1.result">−38% ručnog unosa · +24% isporuka na vreme</p>
+          <div class="mf-cs_metrics">
+            <div class="mf-cs_metric -primary">
+              <p class="mf-cs_value">−<span data-mf-count="38">38</span>%</p>
+              <p class="mf-cs_metricLabel" data-i18n="cases.c1.m1">ručnog unosa</p>
+            </div>
+            <div class="mf-cs_metric">
+              <p class="mf-cs_value">+<span data-mf-count="24">24</span>%</p>
+              <p class="mf-cs_metricLabel" data-i18n="cases.c1.m2">isporuka na vreme</p>
+            </div>
           </div>
         </article>
 
-        <article class="mf-case">
-          <p class="mf-case_tags" data-i18n="cases.c2.tags">Retail · Web + Performanse</p>
-          <h3 class="mf-case_title" data-i18n="cases.c2.title">E-commerce brend</h3>
-          <div class="mf-case_block">
-            <p class="mf-case_label" data-i18n="cases.challengeLabel">Izazov</p>
-            <p class="mf-case_text" data-i18n="cases.c2.challenge">Spor sajt je curio konverzije na mobilnom, a checkout je gubio kupce pred kraj.</p>
+        <article class="mf-cs_row">
+          <div class="mf-cs_meta">
+            <p class="mf-cs_index">02</p>
+            <ul class="mf-cs_pills">
+              <li class="mf-cs_pill" data-i18n="cases.c2.tag1">Retail</li>
+              <li class="mf-cs_pill" data-i18n="cases.c2.tag2">Web + Performanse</li>
+            </ul>
+            <h3 class="mf-cs_title" data-i18n="cases.c2.title">E-commerce brend</h3>
           </div>
-          <div class="mf-case_block">
-            <p class="mf-case_label" data-i18n="cases.solutionLabel">Rešenje</p>
-            <p class="mf-case_text" data-i18n="cases.c2.solution">Iznova izgrađen storefront sa 1.9s LCP i redizajniran tok plaćanja.</p>
+          <div class="mf-cs_body">
+            <div class="mf-cs_block">
+              <p class="mf-cs_label" data-i18n="cases.challengeLabel">Izazov</p>
+              <p class="mf-cs_text" data-i18n="cases.c2.challenge">Spor sajt je curio konverzije na mobilnom, a checkout je gubio kupce pred kraj.</p>
+            </div>
+            <div class="mf-cs_block">
+              <p class="mf-cs_label" data-i18n="cases.solutionLabel">Rešenje</p>
+              <p class="mf-cs_text" data-i18n="cases.c2.solution">Iznova izgrađen storefront sa 1.9s LCP i redizajniran tok plaćanja.</p>
+            </div>
           </div>
-          <div class="mf-case_result">
-            <p class="mf-case_label" data-i18n="cases.resultLabel">Rezultat</p>
-            <p class="mf-case_resultText" data-i18n="cases.c2.result">+31% konverzija · 2.4× brže učitavanje</p>
-          </div>
-        </article>
-
-        <article class="mf-case">
-          <p class="mf-case_tags" data-i18n="cases.c3.tags">Fintech · AI + Cyber Security</p>
-          <h3 class="mf-case_title" data-i18n="cases.c3.title">Fintech startup</h3>
-          <div class="mf-case_block">
-            <p class="mf-case_label" data-i18n="cases.challengeLabel">Izazov</p>
-            <p class="mf-case_text" data-i18n="cases.c3.challenge">Prva linija podrške bila je zatrpana, a lansiranje je blokirala bezbednosna provera.</p>
-          </div>
-          <div class="mf-case_block">
-            <p class="mf-case_label" data-i18n="cases.solutionLabel">Rešenje</p>
-            <p class="mf-case_text" data-i18n="cases.c3.solution">AI agent za podršku zasnovan na RAG-u, uz pen-test i hardening pre lansiranja.</p>
-          </div>
-          <div class="mf-case_result">
-            <p class="mf-case_label" data-i18n="cases.resultLabel">Rezultat</p>
-            <p class="mf-case_resultText" data-i18n="cases.c3.result">−52% tiketa prve linije · prošao pen-test pre lansiranja</p>
+          <div class="mf-cs_metrics">
+            <div class="mf-cs_metric -primary">
+              <p class="mf-cs_value">+<span data-mf-count="31">31</span>%</p>
+              <p class="mf-cs_metricLabel" data-i18n="cases.c2.m1">konverzija</p>
+            </div>
+            <div class="mf-cs_metric">
+              <p class="mf-cs_value"><span data-mf-count="2.4" data-mf-dec="1">2.4</span>×</p>
+              <p class="mf-cs_metricLabel" data-i18n="cases.c2.m2">brže učitavanje</p>
+            </div>
           </div>
         </article>
 
-      </div><!-- .mf-cases_grid -->
+        <article class="mf-cs_row">
+          <div class="mf-cs_meta">
+            <p class="mf-cs_index">03</p>
+            <ul class="mf-cs_pills">
+              <li class="mf-cs_pill" data-i18n="cases.c3.tag1">Fintech</li>
+              <li class="mf-cs_pill" data-i18n="cases.c3.tag2">AI + Cyber Security</li>
+            </ul>
+            <h3 class="mf-cs_title" data-i18n="cases.c3.title">Fintech startup</h3>
+          </div>
+          <div class="mf-cs_body">
+            <div class="mf-cs_block">
+              <p class="mf-cs_label" data-i18n="cases.challengeLabel">Izazov</p>
+              <p class="mf-cs_text" data-i18n="cases.c3.challenge">Prva linija podrške bila je zatrpana, a lansiranje je blokirala bezbednosna provera.</p>
+            </div>
+            <div class="mf-cs_block">
+              <p class="mf-cs_label" data-i18n="cases.solutionLabel">Rešenje</p>
+              <p class="mf-cs_text" data-i18n="cases.c3.solution">AI agent za podršku zasnovan na RAG-u, uz pen-test i hardening pre lansiranja.</p>
+            </div>
+          </div>
+          <div class="mf-cs_metrics">
+            <div class="mf-cs_metric -primary">
+              <p class="mf-cs_value">−<span data-mf-count="52">52</span>%</p>
+              <p class="mf-cs_metricLabel" data-i18n="cases.c3.m1">tiketa prve linije</p>
+            </div>
+            <div class="mf-cs_metric">
+              <p class="mf-cs_badge"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="cases.c3.m2">Pen-test prošao pre lansiranja</span></p>
+            </div>
+          </div>
+        </article>
 
-      <p class="mf-case_disclaimer" data-i18n="cases.disclaimer">* Prikazane reference su reprezentativni primeri tipičnih projekata i ishoda; konkretni nazivi klijenata i brojevi dostupni su na zahtev.</p>
+      </div><!-- .mf-cs_panel -->
+
+      <p class="mf-cs_disclaimer" data-i18n="cases.disclaimer">* Prikazane reference su reprezentativni primeri tipičnih projekata i ishoda; konkretni nazivi klijenata i brojevi dostupni su na zahtev.</p>
     </section><!-- section-cases -->
 
     <section id="SECURITY" data-iso-item data-iso-call="addBodyClass" data-iso-body-class="-is-view-news" class="c-topSection -news" data-scroll-section data-scroll-section-id="section-news">
@@ -1060,19 +1130,19 @@
         "cta.contact":"Kontakt","cta.startProject":"Pokreni projekat",
         "cases.title":"Reference",
         "cases.lead":"Izbor projekata koji pokazuju kako MojFlow spaja proizvod, inženjering i bezbednost u merljiv rezultat. Brojevi su ilustrativni primeri tipičnih ishoda.",
-        "cases.challengeLabel":"Izazov","cases.solutionLabel":"Rešenje","cases.resultLabel":"Rezultat",
-        "cases.c1.tags":"Logistika · Web App + Automatizacija","cases.c1.title":"SaaS platforma za logistiku",
+        "cases.challengeLabel":"Izazov","cases.solutionLabel":"Rešenje",
+        "cases.c1.tag1":"Logistika","cases.c1.tag2":"Web App + Automatizacija","cases.c1.title":"SaaS platforma za logistiku",
         "cases.c1.challenge":"Dispečeri su gubili sate na ručni unos naloga i planiranje ruta, a greške su kočile isporuke.",
         "cases.c1.solution":"Klijentski portal i mašina za automatsko planiranje ruta, sa bezbednosnim slojem od prvog dana.",
-        "cases.c1.result":"−38% ručnog unosa · +24% isporuka na vreme",
-        "cases.c2.tags":"Retail · Web + Performanse","cases.c2.title":"E-commerce brend",
+        "cases.c1.m1":"ručnog unosa","cases.c1.m2":"isporuka na vreme",
+        "cases.c2.tag1":"Retail","cases.c2.tag2":"Web + Performanse","cases.c2.title":"E-commerce brend",
         "cases.c2.challenge":"Spor sajt je curio konverzije na mobilnom, a checkout je gubio kupce pred kraj.",
         "cases.c2.solution":"Iznova izgrađen storefront sa 1.9s LCP i redizajniran tok plaćanja.",
-        "cases.c2.result":"+31% konverzija · 2.4× brže učitavanje",
-        "cases.c3.tags":"Fintech · AI + Cyber Security","cases.c3.title":"Fintech startup",
+        "cases.c2.m1":"konverzija","cases.c2.m2":"brže učitavanje",
+        "cases.c3.tag1":"Fintech","cases.c3.tag2":"AI + Cyber Security","cases.c3.title":"Fintech startup",
         "cases.c3.challenge":"Prva linija podrške bila je zatrpana, a lansiranje je blokirala bezbednosna provera.",
         "cases.c3.solution":"AI agent za podršku zasnovan na RAG-u, uz pen-test i hardening pre lansiranja.",
-        "cases.c3.result":"−52% tiketa prve linije · prošao pen-test pre lansiranja",
+        "cases.c3.m1":"tiketa prve linije","cases.c3.m2":"Pen-test prošao pre lansiranja",
         "cases.disclaimer":"* Prikazane reference su reprezentativni primeri tipičnih projekata i ishoda; konkretni nazivi klijenata i brojevi dostupni su na zahtev.",
         "careers.title":"Karijera",
         "careers.lead":"Gradimo proizvode i bezbednosna rešenja za klijente širom sveta. Tražimo ljude koji vole da isporučuju rezultat — u prodaji i u inženjeringu.",
@@ -1129,19 +1199,19 @@
         "cta.contact":"Contact","cta.startProject":"Start a project",
         "cases.title":"Case Studies",
         "cases.lead":"A selection of projects showing how MojFlow joins product, engineering and security into a measurable result. Figures are illustrative examples of typical outcomes.",
-        "cases.challengeLabel":"Challenge","cases.solutionLabel":"Solution","cases.resultLabel":"Result",
-        "cases.c1.tags":"Logistics · Web App + Automation","cases.c1.title":"Logistics SaaS platform",
+        "cases.challengeLabel":"Challenge","cases.solutionLabel":"Solution",
+        "cases.c1.tag1":"Logistics","cases.c1.tag2":"Web App + Automation","cases.c1.title":"Logistics SaaS platform",
         "cases.c1.challenge":"Dispatchers were losing hours to manual order entry and route planning, and errors were stalling deliveries.",
         "cases.c1.solution":"A client portal and an automatic route-planning engine, hardened with a security layer from day one.",
-        "cases.c1.result":"−38% manual entry · +24% on-time deliveries",
-        "cases.c2.tags":"Retail · Web + Performance","cases.c2.title":"E-commerce brand",
+        "cases.c1.m1":"manual entry","cases.c1.m2":"on-time deliveries",
+        "cases.c2.tag1":"Retail","cases.c2.tag2":"Web + Performance","cases.c2.title":"E-commerce brand",
         "cases.c2.challenge":"A slow site was leaking conversions on mobile, and checkout was losing buyers near the end.",
         "cases.c2.solution":"A rebuilt storefront at 1.9s LCP and a redesigned checkout flow.",
-        "cases.c2.result":"+31% conversion · 2.4× faster load",
-        "cases.c3.tags":"Fintech · AI + Cyber Security","cases.c3.title":"Fintech startup",
+        "cases.c2.m1":"conversion","cases.c2.m2":"faster load",
+        "cases.c3.tag1":"Fintech","cases.c3.tag2":"AI + Cyber Security","cases.c3.title":"Fintech startup",
         "cases.c3.challenge":"First-line support was overwhelmed, and launch was blocked on a security review.",
         "cases.c3.solution":"A RAG-based AI support agent, plus pen-test and hardening before launch.",
-        "cases.c3.result":"−52% first-line tickets · passed pre-launch pen-test",
+        "cases.c3.m1":"first-line tickets","cases.c3.m2":"Passed pre-launch pen-test",
         "cases.disclaimer":"* The references shown are representative examples of typical projects and outcomes; specific client names and figures are available on request.",
         "careers.title":"Careers",
         "careers.lead":"We build products and security solutions for clients worldwide. We're looking for people who love to ship a result — in sales and in engineering.",
@@ -1279,6 +1349,49 @@
       if(!mfScrollTicking){ requestAnimationFrame(mfUpdateScrollClass); mfScrollTicking = true; }
     }, true);
     mfUpdateScrollClass();
+
+    /* ---------- Case studies: staggered reveal + metric count-up ---------- */
+    (function(){
+      const panel = document.getElementById("mfCasesPanel");
+      if(!panel || !("IntersectionObserver" in window)) return;
+      if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      panel.classList.add("mf-cs-anim");
+      const rows = Array.from(panel.querySelectorAll(".mf-cs_row"));
+
+      // park counters at 0 until they scroll into view
+      panel.querySelectorAll("[data-mf-count]").forEach(n=>{
+        n.textContent = n.getAttribute("data-mf-dec") === "1" ? "0.0" : "0";
+      });
+
+      const easeOut = t => 1 - Math.pow(1 - t, 3);
+      function countUp(el){
+        const final = parseFloat(el.getAttribute("data-mf-count") || "0");
+        const dec = el.getAttribute("data-mf-dec") === "1" ? 1 : 0;
+        const dur = 1400;
+        let start = null;
+        function frame(ts){
+          if(start === null) start = ts;
+          const p = Math.min((ts - start) / dur, 1);
+          el.textContent = (final * easeOut(p)).toFixed(dec);
+          if(p < 1) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      }
+
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(!entry.isIntersecting) return;
+          const row = entry.target;
+          io.unobserve(row);
+          setTimeout(()=>{
+            row.classList.add("is-in");
+            row.querySelectorAll("[data-mf-count]").forEach(countUp);
+          }, Math.max(0, rows.indexOf(row) * 110));
+        });
+      }, {threshold:.2, rootMargin:"0px 0px -8% 0px"});
+      rows.forEach(r=>io.observe(r));
+    })();
 
     /* ---------- init ---------- */
     applyLang(detectInitialLang());
