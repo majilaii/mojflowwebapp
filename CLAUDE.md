@@ -25,16 +25,9 @@ npm run dev   # → http://localhost:3000
 - **New UI** (modals, language switcher, etc.) → scoped inline `<style>` in `index.html` with `mf-*` class names. Keeps additions namespaced.
 - **`!important` carefully** — many holon.css rules cascade through inherited font-family. Aggressive `body *` overrides will clobber `Chillax` (brand display font) on hero / KONCEPT / section labels. Override at the body level or on specific selectors instead.
 
-## Font stack quirks (Serbian diacritics)
+## Fonts
 
-The Japanese template uses Adobe Typekit fonts whose Latin Extended-A glyphs (ć/č/š/ž/đ) have **broken advance widths** — the diacritic mark visually shifts to the next character. The fix is in place:
-
-- `holon.css` body font-family is `'MFLatinExt', YakuHanJP, 'dnp-shuei-gothic-gin-std', sans-serif`
-- `MFLatinExt` is an inline `@font-face` in `index.html` that pulls a system Latin font (`local('Segoe UI'), local('Helvetica Neue'), local('Arial')`) and applies it ONLY to `unicode-range: U+0100-017F, U+0180-024F`
-- `size-adjust: 115%` makes the system font match dnp's x-height — same visual size as surrounding glyphs
-- `font-feature-settings: 'palt'` was removed (Japanese proportional kerning was compressing Latin Extended chars further)
-
-**Do not** put a Latin font first in the body font-family without `unicode-range` — it'll replace Chillax-equivalent visuals for Latin Basic too.
+Two webfonts only: **Inter** (body, Google Fonts) and **Chillax** (display/headings, Fontshare). The old Japanese-template stack (Adobe Typekit `dnp-shuei-gothic-gin-std`, YakuHanJP, and the `MFLatinExt` unicode-range diacritics fix) was fully removed after the Inter switch — Inter has correct Latin Extended glyphs, so Serbian diacritics (ć/č/š/ž/đ) need no workaround. Don't re-add Typekit/YakuHanJP.
 
 ## Services section duplicate HTML
 
