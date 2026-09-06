@@ -58,7 +58,7 @@
       <ul>
         <li><strong>Kontakt forma:</strong> ime, email, kompanija (opciono), tema i poruka. Koristimo ih isključivo da odgovorimo na tvoj upit. Poruka se prosleđuje na contact@mojflow.com preko servisa Resend.</li>
         <li><strong>Prijave za posao:</strong> podaci koje pošalješ na careers@mojflow.com (CV, propratno pismo) koriste se samo u procesu selekcije.</li>
-        <li><strong>Analitika:</strong> Google Analytics 4 — učitava se <strong>samo uz tvoju saglasnost</strong> datu kroz baner za kolačiće. Podaci o poseti su agregirani i ne koristimo ih za identifikaciju pojedinaca.</li>
+        <li><strong>Analitika:</strong> Google Analytics 4, učitava se <strong>samo uz tvoju saglasnost</strong> datu kroz baner za kolačiće. Podaci o poseti su agregirani i ne koristimo ih za identifikaciju pojedinaca.</li>
       </ul>
 
       <h2>Pravni osnov</h2>
@@ -90,7 +90,7 @@
       <ul>
         <li><strong>Contact form:</strong> name, email, company (optional), topic and message. Used solely to reply to your inquiry. The message is forwarded to contact@mojflow.com via Resend.</li>
         <li><strong>Job applications:</strong> data you send to careers@mojflow.com (CV, cover letter) is used only in the hiring process.</li>
-        <li><strong>Analytics:</strong> Google Analytics 4 — loaded <strong>only with your consent</strong> given through the cookie banner. Visit data is aggregated and never used to identify individuals.</li>
+        <li><strong>Analytics:</strong> Google Analytics 4, loaded <strong>only with your consent</strong> given through the cookie banner. Visit data is aggregated and never used to identify individuals.</li>
       </ul>
 
       <h2>Legal basis</h2>
@@ -136,8 +136,8 @@
         btn.addEventListener("click", function(){
           try{ localStorage.removeItem("mf-consent"); }catch(e){}
           btn.textContent = document.documentElement.getAttribute("lang") === "sr"
-            ? "Izbor obrisan — baner će se ponovo prikazati na sajtu."
-            : "Choice cleared — the banner will show again on the site.";
+            ? "Izbor obrisan, baner će se ponovo prikazati na sajtu."
+            : "Choice cleared, the banner will show again on the site.";
         });
       });
     })();

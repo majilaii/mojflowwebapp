@@ -4,9 +4,9 @@ export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, company, topic, message } = await req.json();
+    const { name, email, company, topic, message, position } = await req.json();
 
-    if (!name || !email || !message) {
+    if (typeof name !== "string" || !name.trim() || typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || typeof message !== "string" || !message.trim()) {
       return NextResponse.json(
         { error: "Name, email, and message are required." },
         { status: 400 },
@@ -25,9 +25,13 @@ export async function POST(req: Request) {
     const { Resend } = await import("resend");
     const resend = new Resend(apiKey);
 
-    const subject = `MojFlow inquiry: ${topic}: ${name}${company ? ` (${company})` : ""}`;
+    const roles: Record<string, string> = { j1: "Sales Development Representative (SDR)", j2: "Account Executive", j3: "AI Engineer" };
+    if (position && (typeof position !== "string" || !Object.hasOwn(roles, position))) {
+      return NextResponse.json({ error: "Invalid position." }, { status: 400 });
+    }
+    const subject = position ? `Prijava za posao: ${roles[position]} - ${name}` : `MojFlow inquiry: ${topic}: ${name}${company ? ` (${company})` : ""}`;
 
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: "MojFlow Website <noreply@mojflow.com>",
       to: "contact@mojflow.com",
       replyTo: email,
@@ -35,12 +39,18 @@ export async function POST(req: Request) {
       text: [
         `Name: ${name}`,
         `Email: ${email}`,
-        `Company: ${company || "—"}`,
-        `Topic: ${topic || "—"}`,
+        `Company: ${company || "-"}`,
+        `Topic: ${topic || "-"}`,
+        ...(position ? [`Position: ${roles[position]}`] : []),
         "",
         message,
       ].join("\n"),
     });
+
+    if (result.error) {
+      console.error("Contact delivery failed:", result.error.name);
+      return NextResponse.json({ error: "Email delivery failed." }, { status: 502 });
+    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {

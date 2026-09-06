@@ -19,7 +19,7 @@
   <meta name="twitter:description" content="AI agenti, chatbotovi, RAG asistenti i integracije za automatizaciju poslovanja u Srbiji i regionu." />
   <meta name="twitter:image" content="https://mojflow.com/api/og" />
 
-  <!-- Google Analytics 4 — loads only after cookie consent (mf-consent in localStorage) -->
+  <!-- Google Analytics 4, loads only after cookie consent (mf-consent in localStorage) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -55,6 +55,8 @@
   </noscript>
 
   <style>
+.mf-field[hidden]{display:none!important}
+.c-headerLogo{width:auto!important}.mf-wordmark{display:inline-flex;align-items:center;gap:9px;font:500 27px/1 Chillax,Arial,sans-serif;letter-spacing:-1px;white-space:nowrap;color:#0b0f15}.mf-wordmark img{width:30px;height:30px}@media(max-width:767px){.mf-wordmark{font-size:30px}.mf-wordmark img{width:32px;height:32px}}
     /* Add-on UI only: does NOT override holon.css. New isolated class names (mf-*) */
 
     /* ---------- Navbar scroll background ---------- */
@@ -122,13 +124,13 @@
     .-no2 .c-topPersonList_image .mf-delivery-team_img{width:100% !important;min-width:0 !important;height:100%;max-width:100%;object-fit:contain;display:block}
 
     /* ============================================================
-       Case Studies (#CASES) + Careers (#CAREERS) — namespaced add-on UI
+       Case Studies (#CASES) + Careers (#CAREERS), namespaced add-on UI
        ============================================================ */
     .mf-section{padding:clamp(90px,13vh,170px) 8vw;position:relative}
     .mf-section_lead{max-width:680px;margin:22px 0 0;font-family:Inter,Arial,sans-serif;font-size:clamp(15px,1.5vw,18px);line-height:1.7;color:rgba(15,20,30,.62)}
     @media (max-width:767px){.mf-section{padding:70px 6vw}}
 
-    /* ---------- Case Studies — tilted-device carousel ---------- */
+    /* ---------- Case Studies, tilted-device carousel ---------- */
     .mf-csc_head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
     .mf-csc_controls{display:flex;align-items:center;gap:10px;flex:none;padding-bottom:6px}
     .mf-csc_idx{font-family:Chillax,Arial,sans-serif;font-size:12px;letter-spacing:.16em;color:rgba(15,20,30,.45);margin:0 8px 0 0;white-space:nowrap;font-variant-numeric:tabular-nums}
@@ -166,7 +168,7 @@
     .mf-csc_progressFill{height:100%;width:0%;background:linear-gradient(90deg,#1b3847,#a96f57);border-radius:999px;transition:width .15s linear}
     .mf-csc_disclaimer{margin:clamp(22px,3vw,34px) 0 0;font-family:Inter,Arial,sans-serif;font-size:12px;line-height:1.6;color:rgba(15,20,30,.38)}
 
-    /* reveal animation — armed via JS so content stays visible without it */
+    /* reveal animation, armed via JS so content stays visible without it */
     .mf-csc-anim .mf-csc_slide{opacity:0;transform:translateY(26px)}
     .mf-csc-anim .mf-csc_slide.is-in{opacity:1;transform:none;transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 
@@ -312,7 +314,7 @@
           {
             "@type": "Question",
             "name": "Kako počinje saradnja?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Kratkim discovery pozivom. Prođemo kroz cilj, obim i budžet, a u roku od nekoliko dana dobijate konkretan predlog sa fazama, rokovima i cenom — bez obaveze." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Kratkim discovery pozivom. Prođemo kroz cilj, obim i budžet, a u roku od nekoliko dana dobijate konkretan predlog sa fazama, rokovima i cenom, bez obaveze." }
           },
           {
             "@type": "Question",
@@ -322,7 +324,7 @@
           {
             "@type": "Question",
             "name": "Ko je vlasnik koda i dizajna?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Klijent — sto posto. Po isporuci predajemo kompletan repozitorijum, dizajn fajlove i dokumentaciju. Nema vendor lock-ina." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Klijent, sto posto. Po isporuci predajemo kompletan repozitorijum, dizajn fajlove i dokumentaciju. Nema vendor lock-ina." }
           },
           {
             "@type": "Question",
@@ -372,7 +374,7 @@
       <div class="c-header_logo">
         <h1 class="c-headerLogo">
           <a href="/">
-            <img src="/assets/images/common/logo_01.svg" alt="MojFlow" class="c-headerLogo_img" width="197" height="40">
+            <span class="mf-wordmark"><img src="/favicon.svg" width="32" height="32" alt=""><span>MojFlow</span></span>
           </a>
         </h1>
       </div><!-- .c-header_logo -->
@@ -723,7 +725,7 @@
                 <div class="topPersonList_imageInner">
                   <div class="js-person-clip-image topPersonList_imageItem mf-delivery-team imageItemWrap" data-anime-start="bottom">
                     <figure>
-                      <img class="js-person-scale-image imageItem mf-delivery-team_img" src="/assets/images/top/img_delivery_woman.png" alt="Smiling woman pointing — MojFlow delivery" loading="lazy" width="740" height="493" decoding="async">
+                      <img class="js-person-scale-image imageItem mf-delivery-team_img" src="/assets/images/top/img_delivery_woman.png" alt="Smiling woman pointing, MojFlow delivery" loading="lazy" width="740" height="493" decoding="async">
                     </figure>
                   </div>
                 </div>
@@ -903,7 +905,7 @@
     <section id="SECURITY" data-iso-item data-iso-call="addBodyClass" data-iso-body-class="-is-view-news" class="c-topSection -news" data-scroll-section data-scroll-section-id="section-news">
       <div class="c-topNews">
         <h2 class="c-headLv2" data-i18n="aiServices.title">AI usluge</h2>
-<p class="mf-section_lead"><a href="/ai-automatizacija" data-i18n="aiServices.more">AI automatizacija poslovanja — primene, proces i cena →</a></p>
+<p class="mf-section_lead"><a href="/ai-automatizacija" data-i18n="aiServices.more">AI automatizacija poslovanja, primene, proces i cena →</a></p>
         <ul class="js-topNewsList c-topNewsList">
 
           <li class="js-news-item c-topNewsList_items -is-noLink">
@@ -1086,12 +1088,12 @@
 
     <section id="FAQ" class="c-topSection mf-section" data-scroll-section data-scroll-section-id="section-faq">
       <h2 class="c-headLv2" data-i18n="faq.title">Pitanja</h2>
-      <p class="mf-section_lead" data-i18n="faq.lead">Najčešća pitanja pre početka saradnje. Ako tvoje nije ovde — piši nam, odgovaramo u roku od 24 sata.</p>
+      <p class="mf-section_lead" data-i18n="faq.lead">Najčešća pitanja pre početka saradnje. Ako tvoje nije ovde, piši nam, odgovaramo u roku od 24 sata.</p>
 
       <div class="mf-faq_list">
         <details class="mf-faq_item">
           <summary class="mf-faq_q"><span data-i18n="faq.q1">Kako počinje saradnja?</span><span class="mf-faq_icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
-          <p class="mf-faq_a" data-i18n="faq.a1">Kratkim discovery pozivom. Prođemo kroz cilj, obim i budžet, a u roku od nekoliko dana dobijaš konkretan predlog sa fazama, rokovima i cenom — bez obaveze.</p>
+          <p class="mf-faq_a" data-i18n="faq.a1">Kratkim discovery pozivom. Prođemo kroz cilj, obim i budžet, a u roku od nekoliko dana dobijaš konkretan predlog sa fazama, rokovima i cenom, bez obaveze.</p>
         </details>
         <details class="mf-faq_item">
           <summary class="mf-faq_q"><span data-i18n="faq.q2">Koliko traje tipičan projekat?</span><span class="mf-faq_icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
@@ -1099,7 +1101,7 @@
         </details>
         <details class="mf-faq_item">
           <summary class="mf-faq_q"><span data-i18n="faq.q3">Ko je vlasnik koda i dizajna?</span><span class="mf-faq_icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
-          <p class="mf-faq_a" data-i18n="faq.a3">Ti — sto posto. Po isporuci predajemo kompletan repozitorijum, dizajn fajlove i dokumentaciju. Nema vendor lock-ina.</p>
+          <p class="mf-faq_a" data-i18n="faq.a3">Ti, sto posto. Po isporuci predajemo kompletan repozitorijum, dizajn fajlove i dokumentaciju. Nema vendor lock-ina.</p>
         </details>
         <details class="mf-faq_item">
           <summary class="mf-faq_q"><span data-i18n="faq.q4">Šta se dešava posle lansiranja?</span><span class="mf-faq_icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
@@ -1107,7 +1109,7 @@
         </details>
         <details class="mf-faq_item">
           <summary class="mf-faq_q"><span data-i18n="faq.q5">Kako naplaćujete?</span><span class="mf-faq_icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
-          <p class="mf-faq_a" data-i18n="faq.a5">Fiksna cena za jasno definisan obim ili mesečni angažman za kontinuiran rad. Bez skrivenih troškova — sve stavke su u ponudi pre potpisa.</p>
+          <p class="mf-faq_a" data-i18n="faq.a5">Fiksna cena za jasno definisan obim ili mesečni angažman za kontinuiran rad. Bez skrivenih troškova, sve stavke su u ponudi pre potpisa.</p>
         </details>
         <details class="mf-faq_item">
           <summary class="mf-faq_q"><span data-i18n="faq.q6">Radite li sa postojećim sistemima i timovima?</span><span class="mf-faq_icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></summary>
@@ -1183,7 +1185,7 @@
             </ul>
           </div>
           <div class="mf-job_apply">
-            <a class="mf-applyBtn" data-mf-apply="j1" href="mailto:careers@mojflow.com?subject=Prijava:%20Sales%20Development%20Representative%20%E2%80%94%20MojFlow">
+            <a class="mf-applyBtn" data-mf-apply="j1" href="mailto:contact@mojflow.com?subject=Prijava:%20Sales%20Development%20Representative%20%2C%20MojFlow">
               <span data-i18n="careers.apply">Prijavi se</span>
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -1204,7 +1206,7 @@
             </ul>
           </div>
           <div class="mf-job_apply">
-            <a class="mf-applyBtn" data-mf-apply="j2" href="mailto:careers@mojflow.com?subject=Prijava:%20Account%20Executive%20%E2%80%94%20MojFlow">
+            <a class="mf-applyBtn" data-mf-apply="j2" href="mailto:contact@mojflow.com?subject=Prijava:%20Account%20Executive%20%2C%20MojFlow">
               <span data-i18n="careers.apply">Prijavi se</span>
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -1225,7 +1227,7 @@
             </ul>
           </div>
           <div class="mf-job_apply">
-            <a class="mf-applyBtn" data-mf-apply="j3" href="mailto:careers@mojflow.com?subject=Prijava:%20AI%20Engineer%20%E2%80%94%20MojFlow">
+            <a class="mf-applyBtn" data-mf-apply="j3" href="mailto:contact@mojflow.com?subject=Prijava:%20AI%20Engineer%20%2C%20MojFlow">
               <span data-i18n="careers.apply">Prijavi se</span>
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -1240,7 +1242,7 @@
     <section id="CTA" class="c-topSection mf-section" data-scroll-section data-scroll-section-id="section-cta">
       <div class="mf-cta_panel">
         <h2 class="mf-cta_title"><span data-i18n="cta.line1">Imaš projekat na umu?</span><span class="-grad" data-i18n="cta.line2">Hajde da ga izgradimo.</span></h2>
-        <p class="mf-cta_sub" data-i18n="cta.sub">Ispričaj nam ideju — odgovaramo u roku od 24 sata sa konkretnim sledećim korakom, bez šablonskih ponuda.</p>
+        <p class="mf-cta_sub" data-i18n="cta.sub">Ispričaj nam ideju, odgovaramo u roku od 24 sata sa konkretnim sledećim korakom, bez šablonskih ponuda.</p>
         <div class="mf-cta_actions">
           <button type="button" class="mf-cta_btn" data-mf-contact>
             <span data-i18n="cta.startProject">Pokreni projekat</span>
@@ -1303,7 +1305,7 @@
       <p class="mf-modal_eyebrow" data-i18n="form.eyebrow">Razgovor o projektu</p>
       <h3 class="mf-modal_title" id="mfContactTitle" data-i18n="form.title">Ispričaj nam šta gradiš.</h3>
       <p class="mf-modal_sub" data-i18n="form.sub">Odgovaramo u toku 24 sata sa konkretnim sledećim korakom, bez šablonskih ponuda.</p>
-      <form class="mf-form" id="mfContactForm" novalidate>
+      <form class="mf-form" id="mfContactForm">
         <div class="mf-form_row">
           <div class="mf-field">
             <label for="mfName" data-i18n="form.name">Ime</label>
@@ -1334,6 +1336,7 @@
           <label for="mfMessage" data-i18n="form.message">Poruka</label>
           <textarea id="mfMessage" name="message" rows="5" required></textarea>
         </div>
+        <p id="mfFormStatus" role="status" aria-live="polite"></p>
         <button type="submit" class="mf-submit" data-i18n="form.submit">Pošalji poruku</button>
         <p class="mf-modal_note" data-i18n="form.note">Poruka se šalje direktno na contact@mojflow.com. Odgovaramo u toku 24 sata.</p>
       </form>
@@ -1365,7 +1368,7 @@
         "approach.p2.head":"Kako vodimo projekat do rezultata",
         "approach.p2.text":"Prvo biramo proces u kom se gubi vreme i definišemo merila uspeha. Zatim razvijamo pilot, proveravamo ga na stvarnim primerima i širimo rešenje kada rezultati opravdaju sledeći korak.",
         "approach.p2.cta":"Saznaj više",
-        "aiServices.more":"AI automatizacija poslovanja — primene, proces i cena →","aiServices.title":"AI usluge",
+        "aiServices.more":"AI automatizacija poslovanja, primene, proces i cena →","aiServices.title":"AI usluge",
         "aiServices.i1.tag":"01","aiServices.i1.cat":"AI AGENTI","aiServices.i1.head":"AI agenti za obradu zahteva, pripremu podataka i izvršavanje koraka u poslovnim alatima, uz kontrolu dozvola i ljudsko odobrenje.",
         "aiServices.i2.tag":"02","aiServices.i2.cat":"CHATBOTOVI","aiServices.i2.head":"AI chatbotovi za korisničku podršku i prodaju: odgovori iz odobrene baze znanja i prosleđivanje složenih pitanja vašem timu.",
         "aiServices.i3.tag":"03","aiServices.i3.cat":"RAG ASISTENTI","aiServices.i3.head":"Asistenti za pretragu internih dokumenata, procedura i uputstava, sa izvorima odgovora i pristupom prema pravima korisnika.",
@@ -1381,19 +1384,19 @@
         "company.contact":"Kontakt",
         "cta.contact":"Kontakt","cta.startProject":"Pokreni projekat",
         "cta.line1":"Imaš projekat na umu?","cta.line2":"Hajde da ga izgradimo.",
-        "cta.sub":"Ispričaj nam ideju — odgovaramo u roku od 24 sata sa konkretnim sledećim korakom, bez šablonskih ponuda.",
+        "cta.sub":"Ispričaj nam ideju, odgovaramo u roku od 24 sata sa konkretnim sledećim korakom, bez šablonskih ponuda.",
         "faq.title":"Pitanja",
-        "faq.lead":"Najčešća pitanja pre početka saradnje. Ako tvoje nije ovde — piši nam, odgovaramo u roku od 24 sata.",
+        "faq.lead":"Najčešća pitanja pre početka saradnje. Ako tvoje nije ovde, piši nam, odgovaramo u roku od 24 sata.",
         "faq.q1":"Kako počinje saradnja?",
-        "faq.a1":"Kratkim discovery pozivom. Prođemo kroz cilj, obim i budžet, a u roku od nekoliko dana dobijaš konkretan predlog sa fazama, rokovima i cenom — bez obaveze.",
+        "faq.a1":"Kratkim discovery pozivom. Prođemo kroz cilj, obim i budžet, a u roku od nekoliko dana dobijaš konkretan predlog sa fazama, rokovima i cenom, bez obaveze.",
         "faq.q2":"Koliko traje tipičan projekat?",
         "faq.a2":"Prodajni sajt ili landing obično 2–4 nedelje, web aplikacija ili MVP 6–12 nedelja, u zavisnosti od obima. Tačan plan dobijaš pre početka i pratimo ga u kratkim sprintovima.",
         "faq.q3":"Ko je vlasnik koda i dizajna?",
-        "faq.a3":"Ti — sto posto. Po isporuci predajemo kompletan repozitorijum, dizajn fajlove i dokumentaciju. Nema vendor lock-ina.",
+        "faq.a3":"Ti, sto posto. Po isporuci predajemo kompletan repozitorijum, dizajn fajlove i dokumentaciju. Nema vendor lock-ina.",
         "faq.q4":"Šta se dešava posle lansiranja?",
         "faq.a4":"Ne nestajemo. Nudimo održavanje i rast: monitoring, bezbednosne zakrpe, nove funkcionalnosti i optimizaciju na osnovu podataka o korišćenju.",
         "faq.q5":"Kako naplaćujete?",
-        "faq.a5":"Fiksna cena za jasno definisan obim ili mesečni angažman za kontinuiran rad. Bez skrivenih troškova — sve stavke su u ponudi pre potpisa.",
+        "faq.a5":"Fiksna cena za jasno definisan obim ili mesečni angažman za kontinuiran rad. Bez skrivenih troškova, sve stavke su u ponudi pre potpisa.",
         "faq.q6":"Radite li sa postojećim sistemima i timovima?",
         "faq.a6":"Da. Preuzimamo postojeće kodebaze, radimo analizu koda i mogućnosti za automatizaciju i integrišemo se sa internim timovima ili alatima koje već koristiš.",
         "cases.title":"Reference",
@@ -1420,9 +1423,9 @@
         "careers.title":"Karijera",
         "careers.lead":"Gradimo AI rešenja i digitalne proizvode za poslovne timove. Tražimo ljude za prodaju, razvoj softvera i primenu AI sistema.",
         "careers.apply":"Prijavi se",
-        "careers.j1.subject":"Prijava: Sales Development Representative — MojFlow",
-        "careers.j2.subject":"Prijava: Account Executive — MojFlow",
-        "careers.j3.subject":"Prijava: AI Engineer — MojFlow",
+        "careers.j1.subject":"Prijava: Sales Development Representative, MojFlow",
+        "careers.j2.subject":"Prijava: Account Executive, MojFlow",
+        "careers.j3.subject":"Prijava: AI Engineer, MojFlow",
         "careers.j1.role":"Sales Development Representative (SDR)","careers.j1.meta":"Full-time · Beograd / Hybrid",
         "careers.j1.text":"Otvaraš prve razgovore: pronalaziš prave kompanije, kvalifikuješ dolazne lidove i zakazuješ sastanke za Account Executive tim.",
         "careers.j1.b1":"Outbound prospecting i kvalifikacija dolaznih lidova","careers.j1.b2":"Zakazivanje discovery poziva i uredno vođenje CRM-a","careers.j1.b3":"1+ godina iskustva u prodaji, tečan srpski i engleski",
@@ -1460,7 +1463,7 @@
         "approach.p2.head":"How we drive a project to outcomes",
         "approach.p2.text":"First we identify a time-consuming process and define success criteria. Then we build a pilot, evaluate it on real examples and expand when the results justify the next step.",
         "approach.p2.cta":"Learn more",
-        "aiServices.more":"AI automation — use cases, process and pricing (Serbian) →","aiServices.title":"AI services",
+        "aiServices.more":"AI automation, use cases, process and pricing (Serbian) →","aiServices.title":"AI services",
         "aiServices.i1.tag":"01","aiServices.i1.cat":"AI AGENTS","aiServices.i1.head":"AI agents that process requests, prepare data and perform steps in business tools, with scoped permissions and human approval.",
         "aiServices.i2.tag":"02","aiServices.i2.cat":"CHATBOTS","aiServices.i2.head":"AI chatbots for support and sales: answers from an approved knowledge base and handoff of complex questions to your team.",
         "aiServices.i3.tag":"03","aiServices.i3.cat":"RAG ASSISTANTS","aiServices.i3.head":"Assistants that search internal documents, procedures and manuals, with source references and access based on user permissions.",
@@ -1476,19 +1479,19 @@
         "company.contact":"Contact",
         "cta.contact":"Contact","cta.startProject":"Start a project",
         "cta.line1":"Have a project in mind?","cta.line2":"Let's build it.",
-        "cta.sub":"Tell us the idea — we reply within 24 hours with a concrete next step, no template proposals.",
+        "cta.sub":"Tell us the idea, we reply within 24 hours with a concrete next step, no template proposals.",
         "faq.title":"FAQ",
-        "faq.lead":"The questions we hear most before a project starts. If yours isn't here — write to us, we reply within 24 hours.",
+        "faq.lead":"The questions we hear most before a project starts. If yours isn't here, write to us, we reply within 24 hours.",
         "faq.q1":"How does a collaboration start?",
-        "faq.a1":"With a short discovery call. We go through the goal, scope and budget, and within a few days you get a concrete proposal with phases, timelines and price — no obligation.",
+        "faq.a1":"With a short discovery call. We go through the goal, scope and budget, and within a few days you get a concrete proposal with phases, timelines and price, no obligation.",
         "faq.q2":"How long does a typical project take?",
         "faq.a2":"A sales site or landing page usually takes 2–4 weeks, a web app or MVP 6–12 weeks, depending on scope. You get the exact plan before we start, and we track it in short sprints.",
         "faq.q3":"Who owns the code and the design?",
-        "faq.a3":"You do — one hundred percent. On delivery we hand over the complete repository, design files and documentation. No vendor lock-in.",
+        "faq.a3":"You do, one hundred percent. On delivery we hand over the complete repository, design files and documentation. No vendor lock-in.",
         "faq.q4":"What happens after launch?",
         "faq.a4":"We don't disappear. We offer maintenance and growth: monitoring, security patches, new features and optimisation based on real usage data.",
         "faq.q5":"How do you charge?",
-        "faq.a5":"Fixed price for a clearly defined scope, or a monthly engagement for ongoing work. No hidden costs — every item is in the proposal before signing.",
+        "faq.a5":"Fixed price for a clearly defined scope, or a monthly engagement for ongoing work. No hidden costs, every item is in the proposal before signing.",
         "faq.q6":"Do you work with existing systems and teams?",
         "faq.a6":"Yes. We take over existing codebases, run code and automation assessments, and integrate with in-house teams or the tools you already use.",
         "cases.title":"Case Studies",
@@ -1515,9 +1518,9 @@
         "careers.title":"Careers",
         "careers.lead":"We build AI solutions and digital products for business teams. We are looking for people in sales, software development and applied AI.",
         "careers.apply":"Apply",
-        "careers.j1.subject":"Application: Sales Development Representative — MojFlow",
-        "careers.j2.subject":"Application: Account Executive — MojFlow",
-        "careers.j3.subject":"Application: AI Engineer — MojFlow",
+        "careers.j1.subject":"Application: Sales Development Representative, MojFlow",
+        "careers.j2.subject":"Application: Account Executive, MojFlow",
+        "careers.j3.subject":"Application: AI Engineer, MojFlow",
         "careers.j1.role":"Sales Development Representative (SDR)","careers.j1.meta":"Full-time · Belgrade / Hybrid",
         "careers.j1.text":"You open the first conversations: finding the right companies, qualifying inbound leads and booking meetings for the Account Executive team.",
         "careers.j1.b1":"Outbound prospecting and qualifying inbound leads","careers.j1.b2":"Booking discovery calls and keeping the CRM clean","careers.j1.b3":"1+ year of sales experience, fluent Serbian and English",
@@ -1565,7 +1568,7 @@
       });
       document.querySelectorAll("[data-mf-apply]").forEach(a=>{
         const subj = dict["careers." + a.getAttribute("data-mf-apply") + ".subject"];
-        if(subj) a.href = "mailto:careers@mojflow.com?subject=" + encodeURIComponent(subj);
+        if(subj) a.href = "mailto:contact@mojflow.com?subject=" + encodeURIComponent(subj);
       });
       try{ localStorage.setItem(MF_LANG_KEY, lang); }catch(e){}
     }
@@ -1579,7 +1582,22 @@
     const modal = document.getElementById("mfContactModal");
     const body = document.body;
 
-    function openModal(){
+    let applicationPosition = '';
+    let modalOpener = null;
+    function openModal(position = '', opener = null){
+      applicationPosition = position;
+      modalOpener = opener;
+      const dict = MF_I18N[document.documentElement.lang] || MF_I18N.sr;
+      const en = document.documentElement.lang === 'en';
+      const roles = {j1:'Sales Development Representative (SDR)',j2:'Account Executive',j3:'AI Engineer'};
+      document.getElementById('mfFormStatus').textContent = '';
+      document.getElementById('mfContactTitle').textContent = position ? (en ? 'Apply: ' : 'Prijava: ') + roles[position] : dict['form.title'];
+      modal.querySelector('.mf-modal_eyebrow').textContent = position ? (en ? 'Careers' : 'Karijera') : dict['form.eyebrow'];
+      modal.querySelector('.mf-modal_sub').textContent = position ? (en ? 'Tell us about your experience. You can include a CV or portfolio link in your message.' : 'Napišite nešto o svom iskustvu. U poruci možete dodati link ka CV-u ili portfoliju.') : dict['form.sub'];
+      const topic = document.getElementById('mfTopic');
+      topic.closest('.mf-field').hidden = !!position;
+      document.getElementById('mfCompany').closest('.mf-field').hidden = !!position;
+      modal.querySelector('.mf-submit').textContent = position ? (en ? 'Send application' : 'Pošalji prijavu') : dict['form.submit'];
       modal.classList.add("is-open");
       modal.setAttribute("aria-hidden","false");
       body.classList.add("mf-modal-open");
@@ -1589,11 +1607,14 @@
       modal.classList.remove("is-open");
       modal.setAttribute("aria-hidden","true");
       body.classList.remove("mf-modal-open");
+      if(modalOpener) modalOpener.focus();
     }
 
     document.addEventListener("click", function(e){
+      const application = e.target.closest("[data-mf-apply]");
+      if(application){ e.preventDefault(); openModal(application.getAttribute("data-mf-apply"), application); return; }
       const opener = e.target.closest("[data-mf-contact]");
-      if(opener){ e.preventDefault(); openModal(); return; }
+      if(opener){ e.preventDefault(); openModal("", opener); return; }
       if(e.target.closest("[data-mf-close]")){ e.preventDefault(); closeModal(); }
     });
     document.addEventListener("keydown", function(e){
@@ -1602,6 +1623,9 @@
 
     document.getElementById("mfContactForm").addEventListener("submit", async function(e){
       e.preventDefault();
+      if(this.querySelector(".mf-submit").disabled || !this.reportValidity()) return;
+      const status = document.getElementById("mfFormStatus");
+      status.textContent = "";
       const fd = new FormData(this);
       const name = (fd.get("name")||"").toString().trim();
       const email = (fd.get("email")||"").toString().trim();
@@ -1623,9 +1647,10 @@
         const res = await fetch("/api/contact", {
           method: "POST",
           headers: {"Content-Type":"application/json"},
-          body: JSON.stringify({name, email, company, topic, message})
+          body: JSON.stringify({name, email, company: applicationPosition ? "" : company, topic: applicationPosition ? "Prijava za posao" : topic, message, position: applicationPosition || undefined})
         });
         if(!res.ok) throw new Error("send failed");
+        status.textContent = document.documentElement.lang === "en" ? "Your message has been sent." : "Vaša poruka je poslata.";
         btn.textContent = "✓";
         btn.style.background = "#1b6b4a";
         this.reset();
@@ -1633,10 +1658,7 @@
       } catch(err) {
         btn.textContent = origText;
         btn.disabled = false;
-        // Fallback to mailto if API fails
-        const subject = `MojFlow inquiry: ${topic}: ${name}${company?` (${company})`:""}`;
-        const bodyText = `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nTopic: ${topic}\n\n${message}`;
-        window.location.href = `mailto:contact@mojflow.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+        status.textContent = document.documentElement.lang === "en" ? "Sending failed. Please try again or email contact@mojflow.com. Your text has been kept." : "Slanje nije uspelo. Pokušajte ponovo ili pišite na contact@mojflow.com. Vaš tekst je sačuvan u formi.";
       }
     });
 
