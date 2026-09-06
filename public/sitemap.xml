@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mojflow.com/</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-05</lastmod>
   </url>
+  <url>
+    <loc>https://mojflow.com/ai-automatizacija</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url><loc>https://mojflow.com/blog</loc></url>
+  <url><loc>https://mojflow.com/blog/kako-poceti-sa-ai-automatizacijom</loc></url>
+<url><loc>https://mojflow.com/blog/ai-obrada-faktura-kalkula</loc></url>
 </urlset>

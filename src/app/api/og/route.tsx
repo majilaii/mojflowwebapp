@@ -65,7 +65,7 @@ export async function GET() {
             textTransform: "uppercase" as const,
           }}
         >
-          Web &bull; Mobile &bull; AI &bull; Cyber Security
+          AI Agents &bull; Automation &bull; Web &bull; Mobile
         </div>
 
         {/* Subtle gradient line */}
