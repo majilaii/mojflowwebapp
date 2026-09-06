@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mojflow.com/</loc>
+    <loc>https://www.mojflow.com/</loc>
     <lastmod>2026-09-05</lastmod>
   </url>
   <url>
-    <loc>https://mojflow.com/ai-automatizacija</loc>
+    <loc>https://www.mojflow.com/ai-automatizacija</loc>
     <lastmod>2026-09-05</lastmod>
   </url>
-  <url><loc>https://mojflow.com/blog</loc></url>
-  <url><loc>https://mojflow.com/blog/kako-poceti-sa-ai-automatizacijom</loc></url>
-<url><loc>https://mojflow.com/blog/ai-obrada-faktura-kalkula</loc></url>
+  <url><loc>https://www.mojflow.com/blog</loc></url>
+  <url><loc>https://www.mojflow.com/blog/kako-poceti-sa-ai-automatizacijom</loc></url>
+<url><loc>https://www.mojflow.com/blog/ai-obrada-faktura-kalkula</loc></url>
+<url><loc>https://www.mojflow.com/ai-resenja</loc></url>
 </urlset>
