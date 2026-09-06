@@ -5,6 +5,7 @@
 - Market: Serbia and region, Serbian first.
 - Search Console domain property: mojflow.com. Insights reports zero clicks over the last 28 days. Page indexing report is still processing; no indexed-page count or keyword position can be inferred yet.
 - Sitemap submission table was empty before this SEO pass.
+- Submitted https://www.mojflow.com/sitemap.xml in Search Console on 2026-09-06. Google confirmed the sitemap was processed, last read 2026-09-06, with 6 discovered pages. The initial fetch error cleared after processing. Discovery does not confirm indexing.
 - Live apex redirects to https://www.mojflow.com/. Canonicals, sitemap, structured data and social URLs now use the same www origin.
 - Public source HTML duplicates now permanently redirect to their clean routes.
 
@@ -22,7 +23,7 @@ These are editorial targets, not measured search volumes or ranking promises.
 ## Next evidence-driven work
 
 1. After Search Console processing completes, record impressions, clicks, CTR, position, country and landing page for a fixed 28-day window. Compare subsequent equal windows.
-2. Inspect indexing and Google-selected canonical for all five marketing/content URLs plus the homepage. Submit sitemap after production verification.
+2. Inspect indexing and Google-selected canonical for all five marketing/content URLs plus the homepage when the indexing report finishes processing. Sitemap submission and production verification are complete.
 3. Expand agent, chatbot and RAG pages only with distinct use cases, implementation detail and demonstrable work. Avoid near-duplicate location or keyword pages.
 4. Publish original project walkthroughs with permission and real screenshots. Do not invent testimonials, clients, percentage improvements or business addresses.
 5. Confirm company identity, public contact details and eligible business profiles with the owner before creating listings. Earn relevant links through actual projects and partnerships.

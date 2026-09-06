@@ -2,6 +2,10 @@
 const nextConfig = {
   async redirects() {
     return [
+      { source: "/mojflow/blog-ai-novinar.html", destination: "/blog/ai-novinar", permanent: true },
+      { source: "/mojflow/blog-ai-chatbot-za-biznis-i-ecommerce.html", destination: "/blog/ai-chatbot-za-biznis-i-ecommerce", permanent: true },
+      { source: "/mojflow/blog-ai-call-centar-agenti.html", destination: "/blog/ai-call-centar-agenti", permanent: true },
+      { source: "/mojflow/blog-workflow-ai-agenti.html", destination: "/blog/workflow-ai-agenti", permanent: true },
       { source: "/mojflow/index.html", destination: "/", permanent: true },
       { source: "/mojflow/privacy.html", destination: "/privacy", permanent: true },
       { source: "/mojflow/ai-resenja.html", destination: "/ai-resenja", permanent: true },
