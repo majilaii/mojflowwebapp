@@ -2,6 +2,9 @@
 const nextConfig = {
   async redirects() {
     return [
+      { source: "/mojflow/kontakt.html", destination: "/kontakt", permanent: true },
+      { source: "/mojflow/ai-pilot.html", destination: "/ai-pilot", permanent: true },
+      { source: "/mojflow/demo-workflow.html", destination: "/demo-workflow", permanent: true },
       { source: "/mojflow/blog-koliko-kosta-ai-agent.html", destination: "/blog/koliko-kosta-ai-agent", permanent: true },
       { source: "/mojflow/blog-ai-novinar.html", destination: "/blog/ai-novinar", permanent: true },
       { source: "/mojflow/blog-ai-chatbot-za-biznis-i-ecommerce.html", destination: "/blog/ai-chatbot-za-biznis-i-ecommerce", permanent: true },
