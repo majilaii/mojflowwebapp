@@ -14,7 +14,7 @@
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
-    window.gtag('config', gaId, {send_page_view:false, allow_google_signals:false, allow_ad_personalization_signals:false});
+    window.gtag('config', gaId, {send_page_view:false, page_location:location.origin + location.pathname, page_referrer:'', allow_google_signals:false, allow_ad_personalization_signals:false});
     window.gtag('event', 'page_view', {page_location:location.origin + location.pathname, page_title:document.title, page_referrer:''});
     const script = document.createElement('script');
     script.async = true;
