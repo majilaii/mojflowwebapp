@@ -2,6 +2,7 @@
 const nextConfig = {
   async redirects() {
     return [
+      { source: "/mojflow/blog-licni-ai-asistent.html", destination: "/blog/licni-ai-asistent", permanent: true },
       { source: "/mojflow/kontakt.html", destination: "/kontakt", permanent: true },
       { source: "/mojflow/ai-pilot.html", destination: "/ai-pilot", permanent: true },
       { source: "/mojflow/demo-workflow.html", destination: "/demo-workflow", permanent: true },
