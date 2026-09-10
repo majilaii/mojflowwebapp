@@ -5,25 +5,34 @@
   let consent = null;
   try { consent = localStorage.getItem('mf-consent'); } catch (_) {}
   let analyticsStarted = false;
-  const gaId = 'G-YW60B68CQK';
+  const gaId = 'G-VQ0FNNBE40';
+  const analyticsAllowed = () => consent === 'granted' && /^(www\.)?mojflow\.com$/.test(location.hostname);
+  function analyticsPage() {
+    let referrer = '';
+    try {
+      const url = new URL(document.referrer);
+      if (url.protocol === 'https:' || url.protocol === 'http:') referrer = url.origin + '/';
+    } catch (_) {}
+    return {page_location:location.origin + location.pathname, page_referrer:referrer};
+  }
   function loadAnalytics() {
-    if (consent !== 'granted') return;
+    if (!analyticsAllowed()) return;
     window['ga-disable-' + gaId] = false;
     if (analyticsStarted) return;
     analyticsStarted = true;
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
-    window.gtag('config', gaId, {send_page_view:false, page_location:location.origin + location.pathname, page_referrer:'', allow_google_signals:false, allow_ad_personalization_signals:false});
-    window.gtag('event', 'page_view', {page_location:location.origin + location.pathname, page_title:document.title, page_referrer:''});
+    window.gtag('config', gaId, {...analyticsPage(), send_page_view:false, allow_google_signals:false, allow_ad_personalization_signals:false});
+    window.gtag('event', 'page_view', {...analyticsPage(), page_title:document.title});
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
     document.head.append(script);
   }
   window.mfTrack = (event) => {
-    if (!['generate_lead','job_application_submit','demo_complete'].includes(event) || consent !== 'granted') return;
-    try { loadAnalytics(); window.gtag('event', event, {page_location:location.origin + location.pathname, page_referrer:'', form_id:event === 'job_application_submit' ? 'careers' : event === 'demo_complete' ? 'workflow_demo' : 'contact'}); } catch (_) {}
+    if (!['generate_lead','job_application_submit','demo_complete'].includes(event) || !analyticsAllowed()) return;
+    try { loadAnalytics(); window.gtag('event', event, {...analyticsPage(), form_id:event === 'job_application_submit' ? 'careers' : event === 'demo_complete' ? 'workflow_demo' : 'contact'}); } catch (_) {}
   };
   const banner = document.createElement('div');
   banner.className = 'mf-shared-consent';
