@@ -8,7 +8,7 @@ Jedna centralna stranica `/ai-resenja` predstavlja AI agente koji povezuju razgo
 
 ## Implementacija
 
-1. Zadržati URL i vizuelni identitet. Uvod: „Od razgovora do završenog posla“, uz jasan opis usluge.
+1. Zadržati URL i vizuelni identitet. Uvod: „AI agenti za prodaju, podršku i sadržaj“, uz opis posla koji se nastavlja van chata. Jednostavna tipografija i pregledni koraci, bez dekorativnih kartica i ponovljenih slogana. MojFlow u navigaciji je pun tekst bez podvlačenja i obruba.
 2. Prikazati tri ilustrativna procesa na istoj stranici: ulaz, podaci, radnja van razgovora, odobrenje i proverljiv rezultat. Interaktivni izbor olakšava poređenje; svi primeri ostaju dostupni bez JavaScript-a.
 3. Objasniti integracije sa katalogom, CRM-om, podrškom i CMS-om. Kompatibilnost se procenjuje prema dostupnim API-jima i podržanim načinima povezivanja.
 4. Objasniti ljudska odobrenja, neuspele radnje i predaju zaposlenom kroz konkretne situacije.
