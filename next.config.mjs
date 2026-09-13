@@ -2,6 +2,8 @@
 const nextConfig = {
   async redirects() {
     return [
+      { source: "/mojflow/blog-amodei-ai-razvoj.html", destination: "/blog/amodei-ai-razvoj", permanent: true },
+      { source: "/mojflow/blog-amodei-ai-razvoj-en.html", destination: "/blog/amodei-ai-razvoj/en", permanent: true },
       { source: "/mojflow/blog-ai-izrada-ponuda.html", destination: "/blog/ai-izrada-ponuda", permanent: true },
       { source: "/mojflow/blog-licni-ai-asistent.html", destination: "/blog/licni-ai-asistent", permanent: true },
       { source: "/mojflow/kontakt.html", destination: "/kontakt", permanent: true },
