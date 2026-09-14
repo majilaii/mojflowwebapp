@@ -2,6 +2,7 @@
 const nextConfig = {
   async redirects() {
     return [
+      { source: "/mojflow/blog-openai-ipo-2026.html", destination: "/blog/openai-ipo-2026", permanent: true },
       { source: "/mojflow/blog-amodei-ai-razvoj.html", destination: "/blog/amodei-ai-razvoj", permanent: true },
       { source: "/mojflow/blog-amodei-ai-razvoj-en.html", destination: "/blog/amodei-ai-razvoj/en", permanent: true },
       { source: "/mojflow/blog-ai-izrada-ponuda.html", destination: "/blog/ai-izrada-ponuda", permanent: true },
