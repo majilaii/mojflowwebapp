@@ -2,6 +2,7 @@
 const nextConfig = {
   async redirects() {
     return [
+      { source: "/mojflow/blog-decision-modeli-jev-laya.html", destination: "/blog/decision-modeli-jev-laya", permanent: true },
       { source: "/mojflow/blog-n8n-bird-automatizacija-poruka.html", destination: "/blog/n8n-bird-automatizacija-poruka", permanent: true },
       { source: "/mojflow/blog-openai-ipo-2026.html", destination: "/blog/openai-ipo-2026", permanent: true },
       { source: "/mojflow/blog-amodei-ai-razvoj.html", destination: "/blog/amodei-ai-razvoj", permanent: true },

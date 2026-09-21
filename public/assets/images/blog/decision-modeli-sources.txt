@@ -1,0 +1,17 @@
+Images for /blog/decision-modeli-jev-laya
+Retrieved: 2026-09-22 (Europe/Belgrade)
+
+typesafe-jev-official.png
+Creator: TypeSafe AI
+Official announcement: https://typesafe.ai/blog/introducing-system-one-models-and-jev
+Original asset: https://framerusercontent.com/images/GJQ5GxP1M9gB8CwqrvtTA9fAMA.png?height=1008&width=1230
+Unmodified editorial illustration; credit and source appear below the image.
+No open license is asserted for this image.
+
+laya-official-comparison.png
+Source project: https://github.com/NandhaKishorM/laya
+Model card: https://huggingface.co/convaiinnovations/laya
+Original asset: https://raw.githubusercontent.com/NandhaKishorM/laya/main/assets/laya_vs_jev_full.png
+Unmodified; repository Apache 2.0 license retained in laya-LICENSE.txt.
+The chart uses imported Jev reference figures. Jev was not run in this experiment.
+The article and caption explicitly distinguish this from a controlled direct comparison.
